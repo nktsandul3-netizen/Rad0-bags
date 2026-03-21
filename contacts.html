@@ -15,7 +15,15 @@
             <nav class="nav">
                 <a href="women.html">ЖЕНСКИЕ СУМКИ</a>
                 <a href="men.html">МУЖСКИЕ СУМКИ</a>
-                <a href="accessories.html">АКСЕССУАРЫ</a>
+                <div class="nav-dropdown">
+                <a href="accessories.html" class="nav-dropdown__trigger">АКСЕССУАРЫ</a>
+                <div class="nav-dropdown__menu">
+                    <div class="nav-dropdown__menu-inner">
+                        <a href="accessories.html#women">Для неё</a>
+                        <a href="accessories.html#men">Для него</a>
+                    </div>
+                </div>
+            </div>
                 <a href="about.html">О НАС</a>
                 <a href="contacts.html">КОНТАКТЫ</a>
             </nav>
@@ -148,56 +156,6 @@
 
     </main>
 
-    <footer class="site-footer">
-        <div class="site-footer__inner container">
-            <div class="site-footer__brand">
-                <a href="index.html" class="site-footer__logo">RADO BAGS</a>
-                <p class="site-footer__tagline">премиальные сумки</p>
-                <p class="site-footer__hours">Пн–Пт с 09:00 до 18:00</p>
-                <a href="tel:+37368935619" class="site-footer__link">+373 68 935 619</a>
-                <a href="mailto:rdn.o0790@gmail.com" class="site-footer__link">rdn.o0790@gmail.com</a>
-                <div class="site-footer__socials">
-                    <a href="https://www.instagram.com/radobags?igsh=MTducnJndjIyNTdrdw==" target="_blank" rel="noopener" class="site-footer__social" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener" class="site-footer__social" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                </div>
-            </div>
-            <div class="site-footer__nav">
-                <div class="site-footer__col">
-                    <h4 class="site-footer__col-title">КАТАЛОГ</h4>
-                    <a href="women.html">Женские сумки</a>
-                    <a href="men.html">Мужские сумки</a>
-                    <a href="accessories.html">Аксессуары</a>
-                </div>
-                <div class="site-footer__col">
-                    <h4 class="site-footer__col-title">КОМПАНИЯ</h4>
-                    <a href="about.html">О нас</a>
-                    <a href="contacts.html">Контакты</a>
-                </div>
-            </div>
-            <div class="site-footer__newsletter">
-                <p class="site-footer__newsletter-title">Узнавайте первыми о наших новинках</p>
-                <form class="site-footer__form" id="footer-newsletter-form" onsubmit="return false;">
-                    <input type="email" placeholder="Email адрес *" class="site-footer__input" required>
-                    <button type="submit" class="site-footer__btn">Подписаться</button>
-                </form>
-                <label class="site-footer__checkbox"><input type="checkbox" required> Даю согласие на обработку персональных данных</label>
-                <label class="site-footer__checkbox"><input type="checkbox"> Согласен на получение рассылки</label>
-            </div>
-        </div>
-        <div class="site-footer__extra container">
-            <div class="site-footer__payments">
-                <span class="site-footer__payment">Visa</span>
-                <span class="site-footer__payment">Mastercard</span>
-                <span class="site-footer__payment">Apple Pay</span>
-                <span class="site-footer__payment">Google Pay</span>
-            </div>
-            <p class="site-footer__trust">Over 500 happy customers</p>
-        </div>
-        <div class="site-footer__copy container">
-            <p>&copy; 2025 RADO BAGS. Все права защищены.</p>
-        </div>
-    </footer>
-
     <div class="cart-overlay" id="cart-overlay">
         <div class="cart-sidebar">
             <div class="cart-header">
@@ -222,22 +180,20 @@
             document.getElementById('contact-form').addEventListener('submit', function (e) {
                 e.preventDefault();
                 var form = this;
-                var apiBase = (typeof window.RADO_TELEGRAM_API !== 'undefined' && window.RADO_TELEGRAM_API) ? window.RADO_TELEGRAM_API : 'http://localhost:3000';
-                var apiUrl = apiBase.replace(/\/$/, '') + '/api/question';
-                var payload = {
-                    name: form.querySelector('[name="name"]').value.trim(),
-                    contact: form.querySelector('[name="email"]').value.trim(),
-                    subject: 'Сообщение с сайта',
-                    message: form.querySelector('[name="message"]').value.trim()
-                };
-                fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-                    .then(function (r) { return r.json(); })
-                    .then(function (data) {
-                        if (data && data.ok) {
-                            alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
-                        } else {
-                            alert('Спасибо! Ваше сообщение получено. Мы ответим вам в ближайшее время.');
-                        }
+                                var name = form.querySelector('[name="name"]').value.trim();
+                var email = form.querySelector('[name="email"]').value.trim();
+                var message = form.querySelector('[name="message"]').value.trim();
+                var text = '\u{1F4E9} Сообщение с сайта\n\n'
+                    + '\u{1F464} Имя: ' + name + '\n'
+                    + '\u2709\uFE0F Email: ' + email + '\n\n'
+                    + 'Сообщение:\n' + message;
+                fetch('https://api.telegram.org/bot8767333689:AAHM-TFa4rr3V1K14kr8Wm8ccMJgpyGIuXI/sendMessage', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ chat_id: '939743168', text: text })
+                })
+                    .then(function () {
+                        alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
                     })
                     .catch(function () {
                         alert('Спасибо! Ваше сообщение получено. Мы ответим вам в ближайшее время.');

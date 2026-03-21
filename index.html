@@ -17,11 +17,6 @@
         <header class="header header-premium header-over-banner">
                 <div class="container header-container">
                     <div class="header-left">
-                        <button type="button" class="header-hamburger" aria-label="Меню" aria-expanded="false">
-                            <span class="header-hamburger__line"></span>
-                            <span class="header-hamburger__line"></span>
-                            <span class="header-hamburger__line"></span>
-                        </button>
                     </div>
                     <div class="header-center">
                         <a href="index.html" class="logo">RADO BAGS</a>
@@ -44,7 +39,15 @@
                     <div class="container">
                         <a href="women.html">Женские сумки</a>
                         <a href="men.html">Мужские сумки</a>
-                        <a href="accessories.html">Аксессуары</a>
+                        <div class="nav-dropdown">
+                        <a href="accessories.html" class="nav-dropdown__trigger">Аксессуары</a>
+                        <div class="nav-dropdown__menu">
+                            <div class="nav-dropdown__menu-inner">
+                                <a href="accessories.html#women">Для неё</a>
+                                <a href="accessories.html#men">Для него</a>
+                            </div>
+                        </div>
+                    </div>
                         <a href="about.html">О нас</a>
                         <a href="contacts.html">Контакты</a>
                     </div>
@@ -160,55 +163,6 @@
         </div>
 
     </main>
-    <footer class="site-footer">
-        <div class="site-footer__inner container">
-            <div class="site-footer__brand">
-                <a href="index.html" class="site-footer__logo">RADO BAGS</a>
-                <p class="site-footer__tagline">премиальные сумки</p>
-                <p class="site-footer__hours">Пн–Пт с 09:00 до 18:00</p>
-                <a href="tel:+37368935619" class="site-footer__link">+373 68 935 619</a>
-                <a href="mailto:rdn.o0790@gmail.com" class="site-footer__link">rdn.o0790@gmail.com</a>
-                <div class="site-footer__socials">
-                    <a href="https://www.instagram.com/radobags?igsh=MTducnJndjIyNTdrdw==" target="_blank" rel="noopener" class="site-footer__social" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener" class="site-footer__social" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                </div>
-            </div>
-            <div class="site-footer__nav">
-                <div class="site-footer__col">
-                    <h4 class="site-footer__col-title">КАТАЛОГ</h4>
-                    <a href="women.html">Женские сумки</a>
-                    <a href="men.html">Мужские сумки</a>
-                    <a href="accessories.html">Аксессуары</a>
-                </div>
-                <div class="site-footer__col">
-                    <h4 class="site-footer__col-title">КОМПАНИЯ</h4>
-                    <a href="about.html">О нас</a>
-                    <a href="contacts.html">Контакты</a>
-                </div>
-            </div>
-            <div class="site-footer__newsletter">
-                <p class="site-footer__newsletter-title">Узнавайте первыми о наших новинках</p>
-                <form class="site-footer__form" id="footer-newsletter-form" onsubmit="return false;">
-                    <input type="email" placeholder="Email адрес *" class="site-footer__input" required>
-                    <button type="submit" class="site-footer__btn">Подписаться</button>
-                </form>
-                <label class="site-footer__checkbox"><input type="checkbox" required> Даю согласие на обработку персональных данных</label>
-                <label class="site-footer__checkbox"><input type="checkbox"> Согласен на получение рассылки</label>
-            </div>
-        </div>
-        <div class="site-footer__extra container">
-            <div class="site-footer__payments">
-                <span class="site-footer__payment">Visa</span>
-                <span class="site-footer__payment">Mastercard</span>
-                <span class="site-footer__payment">Apple Pay</span>
-                <span class="site-footer__payment">Google Pay</span>
-            </div>
-            <p class="site-footer__trust">Over 500 happy customers</p>
-        </div>
-        <div class="site-footer__copy container">
-            <p>&copy; 2025 RADO BAGS. Все права защищены.</p>
-        </div>
-    </footer>
 
     <!-- Поиск -->
     <div class="search-overlay" id="search-overlay" aria-hidden="true">
@@ -255,47 +209,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Slide-out sidebar menu -->
-    <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
-    <aside class="sidebar" id="sidebar" aria-hidden="true">
-        <div class="sidebar__header">
-            <span class="sidebar__city">Город — Кишинёв</span>
-            <button type="button" class="sidebar__close" id="sidebar-close" aria-label="Закрыть меню">✕</button>
-        </div>
-        <nav class="sidebar__nav">
-            <a href="contacts.html">Магазины</a>
-            <a href="#">Новости</a>
-            <a href="contacts.html">Клиентам</a>
-            <a href="about.html">О компании</a>
-            <a href="contacts.html">Доставка и оплата</a>
-            <a href="contacts.html">Качество и возврат</a>
-            <a href="contacts.html">Отследить заказ</a>
-        </nav>
-        <div class="sidebar__contact">
-            <p class="sidebar__contact-title">Служба поддержки</p>
-            <p class="sidebar__contact-hours">Пн–Вс 09:00 – 21:00</p>
-            <p><a href="tel:+37368935619" class="sidebar__contact-phone">+373 68 935 619</a></p>
-            <div class="sidebar__contact-btns">
-                <a href="https://wa.me/37368935619" target="_blank" rel="noopener" class="sidebar__btn-icon" aria-label="WhatsApp">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                    <span>WhatsApp</span>
-                </a>
-                <a href="https://t.me/+37368935619" target="_blank" rel="noopener" class="sidebar__btn-icon" aria-label="Telegram">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-                    <span>Telegram</span>
-                </a>
-            </div>
-        </div>
-        <div class="sidebar__app">
-            <p class="sidebar__app-title">Скачайте мобильное приложение</p>
-            <div class="sidebar__qr" aria-hidden="true"><span class="sidebar__qr-placeholder">QR</span></div>
-            <div class="sidebar__app-btns">
-                <a href="#" class="sidebar__app-btn">App Store</a>
-                <a href="#" class="sidebar__app-btn">Google Play</a>
-            </div>
-        </div>
-    </aside>
 
     <script src="script.js"></script>
     <script src="category.js"></script>

@@ -16,7 +16,15 @@
             <nav class="nav">
                 <a href="women.html">ЖЕНСКИЕ СУМКИ</a>
                 <a href="men.html">МУЖСКИЕ СУМКИ</a>
-                <a href="accessories.html">АКСЕССУАРЫ</a>
+                <div class="nav-dropdown">
+                <a href="accessories.html" class="nav-dropdown__trigger">АКСЕССУАРЫ</a>
+                <div class="nav-dropdown__menu">
+                    <div class="nav-dropdown__menu-inner">
+                        <a href="accessories.html#women">Для неё</a>
+                        <a href="accessories.html#men">Для него</a>
+                    </div>
+                </div>
+            </div>
                 <a href="about.html">О НАС</a>
                 <a href="contacts.html">КОНТАКТЫ</a>
             </nav>
@@ -117,10 +125,6 @@
                         <div class="product-drawer-content" id="product-drawer-content"></div>
                     </div>
                 </div>
-                <a href="#related-products" class="product-similar-link">
-                    <svg class="product-similar-link__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="14" height="18" rx="2"/><rect x="7" y="7" width="14" height="18" rx="2"/></svg>
-                    <span>Похожие модели</span>
-                </a>
             </div>
         </div>
         <div class="product-zoom-overlay" id="product-zoom-overlay">
@@ -132,12 +136,6 @@
     </section>
 
     <!-- Похожие товары -->
-    <section class="related-products" id="related-products">
-        <div class="container">
-            <h2>Похожие товары</h2>
-            <div class="products-grid" id="related-products-grid"></div>
-        </div>
-    </section>
 
     <!-- Футер -->
     <footer class="footer">

@@ -3,76 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <title>Аксессуары - RADO BAGS</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  .acc-panel { display: none; }
+  .acc-panel.active { display: block; }
+</style>
 </head>
 <body>
 <header class="header">
-        <div class="container">
-            <div class="logo" onclick="location.href='index.html'">
-                <h1>RADO BAGS</h1>
-            </div>
-            <nav class="nav">
-                <a href="women.html">ЖЕНСКИЕ СУМКИ</a>
-                <a href="men.html">МУЖСКИЕ СУМКИ</a>
-                <a href="accessories.html">АКСЕССУАРЫ</a>
-                <a href="about.html">О НАС</a>
-                <a href="contacts.html">КОНТАКТЫ</a>
-            </nav>
-            <div class="header-actions header-actions--icons">
-                <button type="button" class="header-icon header-search-btn" id="header-search-btn" aria-label="Поиск">
-                    <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-                </button>
-                <a href="favorites.html" class="header-icon header-favorites-link" aria-label="Избранное">
-                    <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    <span id="header-favorites-count" class="header-favorites-count">0</span>
-                </a>
-                <div class="cart-icon" onclick="showCart()">
-                    <svg class="header-icon-svg header-cart-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                    <span id="cart-count" class="cart-count">0</span>
+    <div class="container">
+        <div class="logo" onclick="location.href='index.html'">
+            <h1>RADO BAGS</h1>
+        </div>
+        <nav class="nav">
+            <a href="women.html">ЖЕНСКИЕ СУМКИ</a>
+            <a href="men.html">МУЖСКИЕ СУМКИ</a>
+            <div class="nav-dropdown">
+                <a href="accessories.html" class="nav-dropdown__trigger">АКСЕССУАРЫ</a>
+                <div class="nav-dropdown__menu">
+                    <div class="nav-dropdown__menu-inner">
+                        <a href="accessories.html#women">Для неё</a>
+                        <a href="accessories.html#men">Для него</a>
+                    </div>
                 </div>
             </div>
+            <a href="about.html">О НАС</a>
+            <a href="contacts.html">КОНТАКТЫ</a>
+        </nav>
+        <div class="header-actions header-actions--icons">
+            <button type="button" class="header-icon header-search-btn" id="header-search-btn" aria-label="Поиск">
+                <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </button>
+            <a href="favorites.html" class="header-icon header-favorites-link" aria-label="Избранное">
+                <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <span id="header-favorites-count" class="header-favorites-count">0</span>
+            </a>
+            <div class="cart-icon" onclick="showCart()">
+                <svg class="header-icon-svg header-cart-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span id="cart-count" class="cart-count">0</span>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
+
 <main>
 <section class="category-section">
 <div class="container">
     <div class="section-header-row">
         <h2>Аксессуары</h2>
     </div>
-    
-    <div class="category-layout">
-        <div class="products-content products-content--full">
-            <div class="products-grid" id="category-grid"></div>
-            <div class="pagination" id="category-pagination"></div>
-        </div>
+
+    <div class="acc-panel" id="panel-women">
+        <div class="products-grid" id="acc-women"></div>
+    </div>
+    <div class="acc-panel" id="panel-men">
+        <div class="products-grid" id="acc-men"></div>
     </div>
 </div>
 </section>
 </main>
 
-    <!-- Корзина -->
-    <div class="cart-overlay" id="cart-overlay">
-        <div class="cart-sidebar">
-            <div class="cart-header">
-                <h3>Корзина</h3>
-                <button class="close-cart" onclick="closeCart()">✕</button>
+<div class="cart-overlay" id="cart-overlay">
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Корзина</h3>
+            <button class="close-cart" onclick="closeCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span class="total-label">Итого:</span>
+                <span class="total-price" id="cart-total-price">0</span>
+                <span class="total-currency">MDL</span>
             </div>
-            <div class="cart-items" id="cart-items">
-                <!-- Товары в корзине -->
-            </div>
-            <div class="cart-footer">
-                <div class="cart-total">
-                    <span class="total-label">Итого:</span>
-                    <span class="total-price" id="cart-total-price">0</span>
-                    <span class="total-currency">MDL</span>
-                </div>
-                <button class="checkout-btn" onclick="openCheckoutModal()">ОФОРМИТЬ ЗАКАЗ</button>
-            </div>
+            <button class="checkout-btn" onclick="openCheckoutModal()">ОФОРМИТЬ ЗАКАЗ</button>
         </div>
     </div>
+</div>
 
 <script src="script.js"></script>
-<script src="category.js"></script>
+<script>
+var ACC_WOMEN = [
+  { id: 500, name: 'RADO Кошелёк кожаный', price: 358, images: ['Images/products/women/wallet200-1.png','Images/products/women/wallet200-2.png','Images/products/women/wallet200-3.png'], emoji: '👛' },
+  { id: 501, name: 'RADO Визитница', price: 450, images: ['Images/products/women/vizit201-1.png','Images/products/women/vizit201-2.png','Images/products/women/vizit201-3.png'], emoji: '💼' },
+  { id: 230, name: 'RADO Шёлковый платок', price: 550, images: ['Images/products/women/scarf230-1.png','Images/products/women/scarf230-2.png','Images/products/women/scarf230-3.png','Images/products/women/scarf230-4.png'], emoji: '🧣' },
+  { id: 231, name: 'RADO Браслет кожаный', price: 220, images: ['Images/products/women/bracelet231-1.png','Images/products/women/bracelet231-2.png'], emoji: '📿' }
+];
+var ACC_MEN = [
+  { id: 502, name: 'RADO Ремень кожаный', price: 267, images: ['Images/products/women/belt202-1.png','Images/products/women/belt202-2.png'], emoji: '🪢' },
+  { id: 503, name: 'RADO Чехол для очков', price: 179, images: ['Images/products/women/glasses203-1.png','Images/products/women/glasses203-2.png','Images/products/women/glasses203-3.png'], emoji: '🕶' },
+  { id: 220, name: 'RADO Портмоне мужское', price: 160, images: ['Images/products/women/portmone220-1.png','Images/products/women/portmone220-2.png','Images/products/women/portmone220-3.png'], emoji: '💳' },
+  { id: 221, name: 'RADO Обложка для паспорта', price: 320, images: ['Images/products/women/passport221-1.png','Images/products/women/passport221-2.png'], emoji: '📕' }
+];
+
+function renderAccCard(p) {
+    var allImages = p.images && p.images.length ? p.images : (p.image ? [p.image] : []);
+    var emoji = p.emoji || '🎁';
+    var firstImg = allImages.length > 0 ? allImages[0] : '';
+    var imagesList = allImages.length > 1 ? allImages.join('|') : '';
+    var priceHtml = p.price > 0
+        ? '<span class="product-price-minimal">' + p.price + ' MDL</span>'
+        : '<span class="product-price-minimal">Скоро</span>';
+    var imageBlock = firstImg
+        ? '<img src="' + firstImg + '" alt="" class="product-img product-img-cycle"'
+          + (imagesList ? ' data-product-images="' + imagesList + '"' : '')
+          + ' onerror="this.style.display=\'none\'">'
+          + (allImages.length > 1 ? '<button type="button" class="product-image-prev" aria-label="Назад">&#8249;</button><button type="button" class="product-image-next" aria-label="Вперёд">&#8250;</button>' : '')
+        : '<div class="product-emoji">' + emoji + '</div>';
+    return '<div class="product-card product-card--catalog product-card--minimal" data-product-id="' + p.id + '" onclick="location.href=\'product.html?id=' + p.id + '\'" style="cursor:pointer">'
+        + '<div class="product-image product-image--cycle">' + imageBlock
+        + '<div class="product-image__overlay"><div class="product-swatches"></div>'
+        + '<div class="product-price-minimal-wrap">' + priceHtml + '</div>'
+        + '</div></div></div>';
+}
+
+function switchAccTab(tab) {
+    var panelW = document.getElementById('panel-women');
+    var panelM = document.getElementById('panel-men');
+    if (tab === 'men') {
+        panelW.style.display = 'none'; panelW.classList.remove('active');
+        panelM.style.display = 'block'; panelM.classList.add('active');
+    } else {
+        panelM.style.display = 'none'; panelM.classList.remove('active');
+        panelW.style.display = 'block'; panelW.classList.add('active');
+    }
+    window.history.replaceState(null, '', '#' + tab);
+}
+
+function setupImageCycle(card) {
+    var img = card.querySelector('.product-img-cycle[data-product-images]');
+    if (!img) return;
+    var images = img.dataset.productImages.split('|').filter(Boolean);
+    if (images.length < 2) return;
+    var idx = 0, timer = null;
+    function showNext() { idx = (idx + 1) % images.length; img.src = images[idx]; }
+    function showPrev() { idx = (idx - 1 + images.length) % images.length; img.src = images[idx]; }
+    var btnNext = card.querySelector('.product-image-next');
+    var btnPrev = card.querySelector('.product-image-prev');
+    if (btnNext) btnNext.addEventListener('click', function(e){ e.stopPropagation(); showNext(); });
+    if (btnPrev) btnPrev.addEventListener('click', function(e){ e.stopPropagation(); showPrev(); });
+    var wrap = card.querySelector('.product-image--cycle');
+    if (wrap) {
+        wrap.addEventListener('mouseenter', function(){ timer = setInterval(showNext, 800); });
+        wrap.addEventListener('mouseleave', function(){ clearInterval(timer); idx = 0; img.src = images[0]; });
+    }
+}
+
+function initAccPage() {
+    document.getElementById('acc-women').innerHTML = ACC_WOMEN.map(renderAccCard).join('');
+    document.getElementById('acc-men').innerHTML = ACC_MEN.map(renderAccCard).join('');
+    var startTab = window.location.hash === '#men' ? 'men' : 'women';
+    switchAccTab(startTab);
+    document.querySelectorAll('.product-card--catalog').forEach(setupImageCycle);
+}
+
+initAccPage();
+
+window.addEventListener('hashchange', function() {
+    switchAccTab(window.location.hash === '#men' ? 'men' : 'women');
+});
+</script>
 </body>
 </html>

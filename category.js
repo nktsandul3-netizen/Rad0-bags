@@ -3,7 +3,7 @@ const products = [
   {
     id: 1,
     name: "RADO Женская модель 001",
-    price: 510,
+    price: 1495,
     category: "women",
     image: "Images/products/women/w1.jpg",
     isNew: false,
@@ -34,7 +34,7 @@ const products = [
   {
     id: 2,
     name: "RADO Женская модель 002",
-    price: 525,
+    price: 1236,
     category: "women",
     image: "Images/products/women/w2.jpg",
     isNew: false,
@@ -58,7 +58,7 @@ const products = [
   {
     id: 3,
     name: "RADO Женская модель 003",
-    price: 540,
+    price: 1579,
     category: "women",
     image: "Images/products/women/w3.jpg",
     isNew: false,
@@ -82,7 +82,7 @@ const products = [
   {
     id: 4,
     name: "RADO Женская модель 004",
-    price: 555,
+    price: 969,
     category: "women",
     image: "Images/products/women/w4.jpg",
     isNew: false,
@@ -106,7 +106,7 @@ const products = [
   {
     id: 5,
     name: "RADO Женская модель 005",
-    price: 570,
+    price: 1384,
     category: "women",
     image: "Images/products/women/w5.jpg",
     isNew: false,
@@ -130,7 +130,7 @@ const products = [
   {
     id: 6,
     name: "RADO Женская модель 006",
-    price: 585,
+    price: 923,
     category: "women",
     image: "Images/products/women/w6.jpg",
     isNew: false,
@@ -154,7 +154,7 @@ const products = [
   {
     id: 7,
     name: "RADO Женская модель 007",
-    price: 495,
+    price: 1072,
     category: "women",
     image: "Images/products/women/w7.jpg",
     isNew: false,
@@ -178,7 +178,7 @@ const products = [
   {
     id: 8,
     name: "RADO Женская модель 008",
-    price: 510,
+    price: 1098,
     category: "women",
     image: "Images/products/women/w8.jpg",
     isNew: false,
@@ -202,7 +202,7 @@ const products = [
   {
     id: 9,
     name: "RADO Женская модель 009",
-    price: 525,
+    price: 1491,
     category: "women",
     image: "Images/products/women/w9.jpg",
     isNew: false,
@@ -226,7 +226,7 @@ const products = [
   {
     id: 10,
     name: "RADO Женская модель 010",
-    price: 540,
+    price: 1293,
     category: "women",
     image: "Images/products/women/w10.jpg",
     isNew: false,
@@ -250,7 +250,7 @@ const products = [
   {
     id: 11,
     name: "RADO Женская модель 011",
-    price: 555,
+    price: 1091,
     category: "women",
     image: "Images/products/women/w11.jpg",
     isNew: false,
@@ -274,7 +274,7 @@ const products = [
   {
     id: 12,
     name: "RADO Женская модель 012",
-    price: 570,
+    price: 1101,
     category: "women",
     image: "Images/products/women/w12.jpg",
     isNew: false,
@@ -298,7 +298,7 @@ const products = [
   {
     id: 13,
     name: "RADO Женская модель 013",
-    price: 585,
+    price: 1324,
     category: "women",
     image: "Images/products/women/w13.jpg",
     isNew: false,
@@ -322,7 +322,7 @@ const products = [
   {
     id: 14,
     name: "RADO Женская модель 014",
-    price: 495,
+    price: 1106,
     category: "women",
     image: "Images/products/women/w14.jpg",
     isNew: false,
@@ -346,7 +346,7 @@ const products = [
   {
     id: 15,
     name: "RADO Женская модель 015",
-    price: 510,
+    price: 1169,
     category: "women",
     image: "Images/products/women/w15.jpg",
     isNew: false,
@@ -370,7 +370,7 @@ const products = [
   {
     id: 16,
     name: "RADO Женская модель 016",
-    price: 525,
+    price: 989,
     category: "women",
     image: "Images/products/women/w16.jpg",
     isNew: false,
@@ -394,7 +394,7 @@ const products = [
   {
     id: 17,
     name: "RADO Женская модель 017",
-    price: 540,
+    price: 1106,
     category: "women",
     image: "Images/products/women/w17.jpg",
     isNew: false,
@@ -418,7 +418,7 @@ const products = [
   {
     id: 18,
     name: "RADO Женская модель 018",
-    price: 555,
+    price: 930,
     category: "women",
     image: "Images/products/women/w18.jpg",
     isNew: false,
@@ -442,7 +442,7 @@ const products = [
   {
     id: 19,
     name: "RADO Женская модель 019",
-    price: 570,
+    price: 1125,
     category: "women",
     image: "Images/products/women/w19.jpg",
     isNew: false,
@@ -466,7 +466,7 @@ const products = [
   {
     id: 20,
     name: "RADO Женская модель 020",
-    price: 585,
+    price: 1002,
     category: "women",
     image: "Images/products/women/w20.jpg",
     isNew: false,
@@ -490,7 +490,7 @@ const products = [
   {
     id: 21,
     name: "RADO Женская модель 021",
-    price: 495,
+    price: 969,
     category: "women",
     image: "Images/products/women/w21.jpg",
     isNew: false,
@@ -514,7 +514,7 @@ const products = [
   {
     id: 22,
     name: "RADO Женская модель 022",
-    price: 510,
+    price: 959,
     category: "women",
     image: "Images/products/women/w22.jpg",
     isNew: false,
@@ -538,7 +538,7 @@ const products = [
   {
     id: 23,
     name: "RADO Женская модель 023",
-    price: 525,
+    price: 1072,
     category: "women",
     image: "Images/products/women/w23.jpg",
     isNew: false,
@@ -562,7 +562,7 @@ const products = [
   {
     id: 24,
     name: "RADO Женская модель 024",
-    price: 540,
+    price: 999,
     category: "women",
     image: "Images/products/women/w24.jpg",
     isNew: false,
@@ -586,7 +586,7 @@ const products = [
   {
     id: 25,
     name: "RADO Женская модель 025",
-    price: 555,
+    price: 1169,
     category: "women",
     image: "Images/products/women/w25.jpg",
     isNew: false,
@@ -610,7 +610,7 @@ const products = [
   {
     id: 26,
     name: "RADO Женская модель 026",
-    price: 570,
+    price: 1681,
     category: "women",
     image: "Images/products/women/w26.jpg",
     isNew: false,
@@ -634,7 +634,7 @@ const products = [
   {
     id: 27,
     name: "RADO Женская модель 027",
-    price: 585,
+    price: 1038,
     category: "women",
     image: "Images/products/women/w27.jpg",
     isNew: false,
@@ -658,7 +658,7 @@ const products = [
   {
     id: 28,
     name: "RADO Женская модель 028",
-    price: 495,
+    price: 1225,
     category: "women",
     image: "Images/products/women/w28.jpg",
     isNew: false,
@@ -682,7 +682,7 @@ const products = [
   {
     id: 29,
     name: "RADO Женская модель 029",
-    price: 510,
+    price: 1598,
     category: "women",
     image: "Images/products/women/w29.jpg",
     isNew: false,
@@ -706,7 +706,7 @@ const products = [
   {
     id: 30,
     name: "RADO Женская модель 030",
-    price: 525,
+    price: 1665,
     category: "women",
     image: "Images/products/women/w30.jpg",
     isNew: false,
@@ -730,7 +730,7 @@ const products = [
   {
     id: 31,
     name: "RADO Женская модель 031",
-    price: 540,
+    price: 1539,
     category: "women",
     image: "Images/products/women/w31.jpg",
     isNew: false,
@@ -754,7 +754,7 @@ const products = [
   {
     id: 32,
     name: "RADO Женская модель 032",
-    price: 555,
+    price: 1032,
     category: "women",
     image: "Images/products/women/w32.jpg",
     isNew: false,
@@ -778,7 +778,7 @@ const products = [
   {
     id: 33,
     name: "RADO Женская модель 033",
-    price: 570,
+    price: 1457,
     category: "women",
     image: "Images/products/women/w33.jpg",
     isNew: false,
@@ -802,7 +802,7 @@ const products = [
   {
     id: 34,
     name: "RADO Женская модель 034",
-    price: 585,
+    price: 1363,
     category: "women",
     image: "Images/products/women/w34.jpg",
     isNew: false,
@@ -826,7 +826,7 @@ const products = [
   {
     id: 35,
     name: "RADO Женская модель 035",
-    price: 495,
+    price: 1570,
     category: "women",
     image: "Images/products/women/w35.jpg",
     isNew: false,
@@ -850,7 +850,7 @@ const products = [
   {
     id: 36,
     name: "RADO Женская модель 036",
-    price: 510,
+    price: 982,
     category: "women",
     image: "Images/products/women/w36.jpg",
     isNew: false,
@@ -874,7 +874,7 @@ const products = [
   {
     id: 37,
     name: "RADO Женская модель 037",
-    price: 525,
+    price: 1094,
     category: "women",
     image: "Images/products/women/w37.jpg",
     isNew: false,
@@ -898,7 +898,7 @@ const products = [
   {
     id: 38,
     name: "RADO Женская модель 038",
-    price: 540,
+    price: 1518,
     category: "women",
     image: "Images/products/women/w38.jpg",
     isNew: false,
@@ -922,7 +922,7 @@ const products = [
   {
     id: 39,
     name: "RADO Женская модель 039",
-    price: 555,
+    price: 917,
     category: "women",
     image: "Images/products/women/w39.jpg",
     isNew: false,
@@ -946,7 +946,7 @@ const products = [
   {
     id: 40,
     name: "RADO Женская модель 040",
-    price: 570,
+    price: 1091,
     category: "women",
     image: "Images/products/women/w40.jpg",
     isNew: false,
@@ -970,7 +970,7 @@ const products = [
   {
     id: 41,
     name: "RADO Женская модель 041",
-    price: 585,
+    price: 1462,
     category: "women",
     image: "Images/products/women/w41.jpg",
     isNew: false,
@@ -994,7 +994,7 @@ const products = [
   {
     id: 42,
     name: "RADO Женская модель 042",
-    price: 495,
+    price: 1272,
     category: "women",
     image: "Images/products/women/w42.jpg",
     isNew: false,
@@ -1018,7 +1018,7 @@ const products = [
   {
     id: 43,
     name: "RADO Женская модель 043",
-    price: 510,
+    price: 1099,
     category: "women",
     image: "Images/products/women/w43.jpg",
     isNew: false,
@@ -1042,7 +1042,7 @@ const products = [
   {
     id: 44,
     name: "RADO Женская модель 044",
-    price: 525,
+    price: 1533,
     category: "women",
     image: "Images/products/women/w44.jpg",
     isNew: false,
@@ -1066,7 +1066,7 @@ const products = [
   {
     id: 45,
     name: "RADO Женская модель 045",
-    price: 540,
+    price: 1460,
     category: "women",
     image: "Images/products/women/w45.jpg",
     isNew: false,
@@ -1090,7 +1090,7 @@ const products = [
   {
     id: 131,
     name: "Suede Tassel Bucket Bag",
-    price: 0,
+    price: 987,
     category: "women",
     image: "Images/products/women/suede_tassel_bucket/1.jpg",
     isNew: false,
@@ -1121,7 +1121,7 @@ const products = [
   {
     id: 76,
     name: "Luna Suede Crossbody Bag",
-    price: 635,
+    price: 1549,
     category: "women",
     image: "Images/products/women/luna_suede/1.jpg",
     isNew: false,
@@ -1152,7 +1152,7 @@ const products = [
   {
     id: 77,
     name: "Mini Belle Top Handle Bag",
-    price: 545,
+    price: 1413,
     category: "women",
     image: "Images/products/women/mini_belle/1.jpg",
     isNew: true,
@@ -1184,7 +1184,7 @@ const products = [
   {
     id: 78,
     name: "Heritage Leather Backpack",
-    price: 560,
+    price: 1244,
     category: "women",
     image: "Images/products/women/heritage_leather/1.jpg",
     isNew: true,
@@ -1215,7 +1215,7 @@ const products = [
   {
     id: 79,
     name: "Elegance Leather Tote Bag",
-    price: 575,
+    price: 1049,
     category: "women",
     image: "Images/products/women/elegance_tote/1.jpg",
     isNew: false,
@@ -1247,7 +1247,7 @@ const products = [
   {
     id: 80,
     name: "RADO Новинка 080",
-    price: 590,
+    price: 1116,
     category: "women",
     image: "Images/products/women/w80.jpg",
     isNew: true,
@@ -1271,7 +1271,7 @@ const products = [
   {
     id: 81,
     name: "RADO Новинка 081",
-    price: 605,
+    price: 1431,
     category: "women",
     image: "Images/products/women/w81.jpg",
     isNew: true,
@@ -1295,7 +1295,7 @@ const products = [
   {
     id: 82,
     name: "RADO Новинка 082",
-    price: 620,
+    price: 1448,
     category: "women",
     image: "Images/products/women/w82.jpg",
     isNew: true,
@@ -1319,7 +1319,7 @@ const products = [
   {
     id: 83,
     name: "RADO Новинка 083",
-    price: 635,
+    price: 1359,
     category: "women",
     image: "Images/products/women/w83.jpg",
     isNew: true,
@@ -1343,7 +1343,7 @@ const products = [
   {
     id: 84,
     name: "RADO Новинка 084",
-    price: 545,
+    price: 1296,
     category: "women",
     image: "Images/products/women/w84.jpg",
     isNew: true,
@@ -1367,7 +1367,7 @@ const products = [
   {
     id: 85,
     name: "RADO Новинка 085",
-    price: 560,
+    price: 1476,
     category: "women",
     image: "Images/products/women/w85.jpg",
     isNew: true,
@@ -1391,7 +1391,7 @@ const products = [
   {
     id: 86,
     name: "RADO Новинка 086",
-    price: 575,
+    price: 1095,
     category: "women",
     image: "Images/products/women/w86.jpg",
     isNew: true,
@@ -1415,7 +1415,7 @@ const products = [
   {
     id: 87,
     name: "RADO Новинка 087",
-    price: 590,
+    price: 1495,
     category: "women",
     image: "Images/products/women/w87.jpg",
     isNew: true,
@@ -1439,7 +1439,7 @@ const products = [
   {
     id: 88,
     name: "RADO Новинка 088",
-    price: 605,
+    price: 971,
     category: "women",
     image: "Images/products/women/w88.jpg",
     isNew: true,
@@ -1463,7 +1463,7 @@ const products = [
   {
     id: 89,
     name: "RADO Новинка 089",
-    price: 620,
+    price: 1051,
     category: "women",
     image: "Images/products/women/w89.jpg",
     isNew: true,
@@ -1487,7 +1487,7 @@ const products = [
   {
     id: 90,
     name: "RADO Новинка 090",
-    price: 635,
+    price: 1334,
     category: "women",
     image: "Images/products/women/w90.jpg",
     isNew: true,
@@ -1511,7 +1511,7 @@ const products = [
   {
     id: 91,
     name: "RADO Новинка 091",
-    price: 545,
+    price: 1669,
     category: "women",
     image: "Images/products/women/w91.jpg",
     isNew: true,
@@ -1535,7 +1535,7 @@ const products = [
   {
     id: 92,
     name: "RADO Новинка 092",
-    price: 560,
+    price: 1559,
     category: "women",
     image: "Images/products/women/w92.jpg",
     isNew: true,
@@ -1559,7 +1559,7 @@ const products = [
   {
     id: 93,
     name: "RADO Новинка 093",
-    price: 575,
+    price: 1052,
     category: "women",
     image: "Images/products/women/w93.jpg",
     isNew: true,
@@ -1583,7 +1583,7 @@ const products = [
   {
     id: 94,
     name: "RADO Новинка 094",
-    price: 590,
+    price: 1491,
     category: "women",
     image: "Images/products/women/w94.jpg",
     isNew: true,
@@ -1607,7 +1607,7 @@ const products = [
   {
     id: 95,
     name: "RADO Новинка 095",
-    price: 605,
+    price: 1359,
     category: "women",
     image: "Images/products/women/w95.jpg",
     isNew: true,
@@ -1631,7 +1631,7 @@ const products = [
   {
     id: 96,
     name: "RADO Новинка 096",
-    price: 620,
+    price: 1219,
     category: "women",
     image: "Images/products/women/w96.jpg",
     isNew: true,
@@ -1655,7 +1655,7 @@ const products = [
   {
     id: 97,
     name: "RADO Новинка 097",
-    price: 635,
+    price: 1297,
     category: "women",
     image: "Images/products/women/w97.jpg",
     isNew: true,
@@ -1679,7 +1679,7 @@ const products = [
   {
     id: 98,
     name: "RADO Новинка 098",
-    price: 545,
+    price: 1315,
     category: "women",
     image: "Images/products/women/w98.jpg",
     isNew: true,
@@ -1703,7 +1703,7 @@ const products = [
   {
     id: 99,
     name: "RADO Новинка 099",
-    price: 560,
+    price: 1697,
     category: "women",
     image: "Images/products/women/w99.jpg",
     isNew: true,
@@ -1727,7 +1727,7 @@ const products = [
   {
     id: 100,
     name: "RADO Новинка 100",
-    price: 575,
+    price: 1019,
     category: "women",
     image: "Images/products/women/w100.jpg",
     isNew: true,
@@ -1751,7 +1751,7 @@ const products = [
   {
     id: 101,
     name: "RADO Sale 101",
-    price: 500,
+    price: 1078,
     oldPrice: 620,
     category: "women",
     image: "Images/products/women/w101.jpg",
@@ -1776,7 +1776,7 @@ const products = [
   {
     id: 102,
     name: "RADO Sale 102 — Портфель деловой из натуральной кожи",
-    price: 515,
+    price: 1227,
     oldPrice: 635,
     category: "women",
     image: "Images/products/women/sale102-2.png",
@@ -1809,7 +1809,7 @@ const products = [
   {
     id: 103,
     name: "RADO Sale 103 — Сумка через плечо из натуральной кожи",
-    price: 530,
+    price: 1657,
     oldPrice: 650,
     category: "women",
     image: "Images/products/women/sale103-3.png",
@@ -1842,7 +1842,7 @@ const products = [
   {
     id: 104,
     name: "RADO Sale 104 — Рюкзак из натуральной кожи",
-    price: 545,
+    price: 1413,
     oldPrice: 665,
     category: "women",
     image: "Images/products/women/sale104-1.png",
@@ -1875,7 +1875,7 @@ const products = [
   {
     id: 105,
     name: "RADO Sale 105 — Борсетка из натуральной кожи",
-    price: 455,
+    price: 1043,
     oldPrice: 575,
     category: "women",
     image: "Images/products/women/sale105-1.png",
@@ -1908,7 +1908,7 @@ const products = [
   {
     id: 106,
     name: "RADO Sale 106 — Сумка через плечо из натуральной кожи",
-    price: 470,
+    price: 1039,
     oldPrice: 590,
     category: "women",
     image: "Images/products/women/sale106-1.png",
@@ -1941,7 +1941,7 @@ const products = [
   {
     id: 107,
     name: "RADO Sale 107",
-    price: 485,
+    price: 985,
     oldPrice: 605,
     category: "women",
     image: "Images/products/women/w107.jpg",
@@ -1966,7 +1966,7 @@ const products = [
   {
     id: 108,
     name: "RADO Sale 108",
-    price: 500,
+    price: 931,
     oldPrice: 620,
     category: "women",
     image: "Images/products/women/w108.jpg",
@@ -1991,7 +1991,7 @@ const products = [
   {
     id: 109,
     name: "RADO Sale 109",
-    price: 515,
+    price: 967,
     oldPrice: 635,
     category: "women",
     image: "Images/products/women/w109.jpg",
@@ -2016,7 +2016,7 @@ const products = [
   {
     id: 110,
     name: "RADO Sale 110",
-    price: 530,
+    price: 951,
     oldPrice: 650,
     category: "women",
     image: "Images/products/women/w110.jpg",
@@ -2041,7 +2041,7 @@ const products = [
   {
     id: 111,
     name: "RADO Sale 111",
-    price: 545,
+    price: 1469,
     oldPrice: 665,
     category: "women",
     image: "Images/products/women/w111.jpg",
@@ -2066,7 +2066,7 @@ const products = [
   {
     id: 112,
     name: "RADO Sale 112",
-    price: 455,
+    price: 954,
     oldPrice: 575,
     category: "women",
     image: "Images/products/women/w112.jpg",
@@ -2091,7 +2091,7 @@ const products = [
   {
     id: 113,
     name: "RADO Sale 113",
-    price: 470,
+    price: 1326,
     oldPrice: 590,
     category: "women",
     image: "Images/products/women/w113.jpg",
@@ -2116,7 +2116,7 @@ const products = [
   {
     id: 114,
     name: "RADO Sale 114",
-    price: 485,
+    price: 940,
     oldPrice: 605,
     category: "women",
     image: "Images/products/women/w114.jpg",
@@ -2141,7 +2141,7 @@ const products = [
   {
     id: 115,
     name: "RADO Sale 115",
-    price: 500,
+    price: 1077,
     oldPrice: 620,
     category: "women",
     image: "Images/products/women/w115.jpg",
@@ -2164,10 +2164,11 @@ const products = [
     ]
   },
   {
-    id: 200,
+    id: 500,
     name: "RADO Кошелёк кожаный",
-    price: 290,
+    price: 358,
     category: "accessories",
+    subcategory: "women_acc",
     image: "Images/products/women/wallet200-1.png",
     images: [
       "Images/products/women/wallet200-1.png",
@@ -2190,10 +2191,11 @@ const products = [
     ]
   },
   {
-    id: 201,
+    id: 501,
     name: "RADO Визитница",
-    price: 195,
+    price: 450,
     category: "accessories",
+    subcategory: "women_acc",
     image: "Images/products/women/vizit201-1.png",
     images: [
       "Images/products/women/vizit201-1.png",
@@ -2216,10 +2218,81 @@ const products = [
     ]
   },
   {
-    id: 202,
-    name: "RADO Ремень кожаный",
-    price: 350,
+    id: 230,
+    name: "RADO Шёлковый платок",
+    price: 550,
     category: "accessories",
+    subcategory: "women_acc",
+    image: "Images/products/women/scarf230-1.png",
+    images: [
+      "Images/products/women/scarf230-1.png",
+      "Images/products/women/scarf230-2.png",
+      "Images/products/women/scarf230-3.png",
+      "Images/products/women/scarf230-4.png"
+    ],
+    isNew: false,
+    onSale: false,
+    color: "",
+    size: "",
+    material: "",
+    description: "",
+    emoji: "💄",
+    specifications: [
+        { name: 'Категория', value: 'Аксессуары' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 231,
+    name: "RADO Браслет кожаный",
+    price: 220,
+    category: "accessories",
+    subcategory: "women_acc",
+    image: "Images/products/women/bracelet231-1.png",
+    images: [
+      "Images/products/women/bracelet231-1.png",
+      "Images/products/women/bracelet231-2.png"
+    ],
+    isNew: false,
+    onSale: false,
+    color: "",
+    size: "",
+    material: "",
+    description: "",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Аксессуары' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 232,
+    name: "RADO Ключница женская",
+    price: 0,
+    category: "accessories",
+    subcategory: "women_acc",
+    image: "",
+    isNew: false,
+    onSale: false,
+    color: "",
+    size: "",
+    material: "",
+    description: "",
+    emoji: "🪞",
+    specifications: [
+        { name: 'Категория', value: 'Аксессуары' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 502,
+    name: "RADO Ремень кожаный",
+    price: 267,
+    category: "accessories",
+    subcategory: "men_acc",
     image: "Images/products/women/belt202-1.png",
     images: [
       "Images/products/women/belt202-1.png",
@@ -2242,10 +2315,11 @@ const products = [
     ]
   },
   {
-    id: 203,
+    id: 503,
     name: "RADO Чехол для очков",
-    price: 145,
+    price: 179,
     category: "accessories",
+    subcategory: "men_acc",
     image: "Images/products/women/glasses203-1.png",
     images: [
       "Images/products/women/glasses203-1.png",
@@ -2267,6 +2341,75 @@ const products = [
         { name: 'Страна', value: 'Молдова' }
     ]
   },
+  {
+    id: 220,
+    name: "RADO Портмоне мужское",
+    price: 160,
+    category: "accessories",
+    subcategory: "men_acc",
+    image: "Images/products/women/portmone220-1.png",
+    images: [
+      "Images/products/women/portmone220-1.png",
+      "Images/products/women/portmone220-2.png",
+      "Images/products/women/portmone220-3.png"
+    ],
+    isNew: false,
+    onSale: false,
+    color: "",
+    size: "",
+    material: "",
+    description: "",
+    emoji: "🎁",
+    specifications: [
+        { name: 'Категория', value: 'Аксессуары' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 221,
+    name: "RADO Обложка для паспорта",
+    price: 320,
+    category: "accessories",
+    subcategory: "men_acc",
+    image: "Images/products/women/passport221-1.png",
+    images: [
+      "Images/products/women/passport221-1.png",
+      "Images/products/women/passport221-2.png"
+    ],
+    isNew: false,
+    onSale: false,
+    color: "",
+    size: "",
+    material: "",
+    description: "",
+    emoji: "🎁",
+    specifications: [
+        { name: 'Категория', value: 'Аксессуары' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 222,
+    name: "RADO Брелок кожаный",
+    price: 0,
+    category: "accessories",
+    subcategory: "men_acc",
+    image: "",
+    isNew: false,
+    onSale: false,
+    color: "",
+    size: "",
+    material: "",
+    description: "",
+    emoji: "🎁",
+    specifications: [
+        { name: 'Категория', value: 'Аксессуары' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
 
 
 
@@ -2274,18 +2417,18 @@ const products = [
 
 
   // === Мужские сумки (201-208, 210-216) ===
-  { id: 201, name: "RADO Мужские сумки — артикул 201", price: 850, category: "men", image: "Images/products/men/art201.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-  { id: 202, name: "RADO Мужские сумки — артикул 202", price: 920, category: "men", image: "Images/products/men/art202.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-  { id: 203, name: "RADO Мужские сумки — артикул 203", price: 990, category: "men", image: "Images/products/men/art203.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-  { id: 204, name: "RADO Мужские сумки — артикул 204", price: 1050, category: "men", image: "Images/products/men/art204.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-  { id: 205, name: "RADO Мужские сумки — артикул 205", price: 1120, category: "men", image: "Images/products/men/art205.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-  { id: 206, name: "RADO Мужские сумки — артикул 206", price: 1190, category: "men", image: "Images/products/men/art206.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-  { id: 207, name: "RADO Мужские сумки — артикул 207", price: 1260, category: "men", image: "Images/products/men/art207.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-  { id: 208, name: "RADO Мужские сумки — артикул 208", price: 1330, category: "men", image: "Images/products/men/art208.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+  { id: 201, name: "RADO Мужские сумки — артикул 201", price: 1509, category: "men", image: "Images/products/men/art201.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+  { id: 202, name: "RADO Мужские сумки — артикул 202", price: 1119, category: "men", image: "Images/products/men/art202.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+  { id: 203, name: "RADO Мужские сумки — артикул 203", price: 1628, category: "men", image: "Images/products/men/art203.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+  { id: 204, name: "RADO Мужские сумки — артикул 204", price: 1252, category: "men", image: "Images/products/men/art204.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+  { id: 205, name: "RADO Мужские сумки — артикул 205", price: 1400, category: "men", image: "Images/products/men/art205.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+  { id: 206, name: "RADO Мужские сумки — артикул 206", price: 1685, category: "men", image: "Images/products/men/art206.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+  { id: 207, name: "RADO Мужские сумки — артикул 207", price: 1400, category: "men", image: "Images/products/men/art207.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+  { id: 208, name: "RADO Мужские сумки — артикул 208", price: 986, category: "men", image: "Images/products/men/art208.jpg", isNew: false, onSale: false, color: "черный", size: "M", material: "кожа", description: "Мужская сумка/рюкзак RADO BAGS.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Мужские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
   {
     id: 210,
     name: "RADO Мужские сумки — артикул 210. Дорожная сумка из натуральной кожи",
-    price: 1400,
+    price: 1223,
     category: "men",
     image: "Images/products/men/men210-1.png",
     isNew: false,
@@ -2315,7 +2458,7 @@ const products = [
   {
     id: 211,
     name: "RADO Мужские сумки — артикул 211. Сумка через плечо из текстиля",
-    price: 1470,
+    price: 1395,
     category: "men",
     image: "Images/products/men/men211-1.png",
     isNew: false,
@@ -2345,7 +2488,7 @@ const products = [
   {
     id: 212,
     name: "RADO Мужские сумки — артикул 212. Сумка для ноутбука из натуральной кожи",
-    price: 1540,
+    price: 1026,
     category: "men",
     image: "Images/products/men/men212-1.png",
     isNew: false,
@@ -2375,7 +2518,7 @@ const products = [
   {
     id: 213,
     name: "RADO Мужские сумки — артикул 213. Сумка для ноутбука из плетёной кожи",
-    price: 1610,
+    price: 1284,
     category: "men",
     image: "Images/products/men/men213-1.png",
     isNew: false,
@@ -2404,7 +2547,7 @@ const products = [
   {
     id: 214,
     name: "RADO Мужские сумки — артикул 214. Сумка через плечо из текстиля",
-    price: 1680,
+    price: 1138,
     category: "men",
     image: "Images/products/men/men214-1.png",
     isNew: false,
@@ -2434,7 +2577,7 @@ const products = [
   {
     id: 215,
     name: "RADO Мужские сумки — артикул 215. Рюкзак из натуральной кожи",
-    price: 1750,
+    price: 1683,
     category: "men",
     image: "Images/products/men/men215-1.png",
     isNew: false,
@@ -2464,7 +2607,7 @@ const products = [
   {
     id: 216,
     name: "RADO Мужские сумки — артикул 216. Сумка через плечо из текстиля",
-    price: 1820,
+    price: 1270,
     category: "men",
     image: "Images/products/men/men216-1.png",
     isNew: false,
@@ -2495,7 +2638,7 @@ const products = [
   {
     id: 116,
     name: "Elegance Lock Tote",
-    price: 0,
+    price: 1257,
     category: "women",
     image: "Images/products/women/elegance_lock/1.jpg",
     isNew: false,
@@ -2524,7 +2667,7 @@ const products = [
   {
     id: 117,
     name: "Milano Classic Top Handle Bag",
-    price: 0,
+    price: 973,
     category: "women",
     image: "Images/products/women/milano_classic/1.jpg",
     isNew: false,
@@ -2555,7 +2698,7 @@ const products = [
   {
     id: 118,
     name: "Candy Pink Mini Shoulder Bag",
-    price: 0,
+    price: 1560,
     category: "women",
     image: "Images/products/women/art118/1.jpg",
     isNew: false,
@@ -2586,7 +2729,7 @@ const products = [
   {
     id: 119,
     name: "Woven Mini Crossbody Bag",
-    price: 0,
+    price: 1099,
     category: "women",
     image: "Images/products/women/woven_mini/1.jpg",
     isNew: false,
@@ -2617,7 +2760,7 @@ const products = [
   {
     id: 130,
     name: "Soft Elegance Shoulder Bag",
-    price: 0,
+    price: 932,
     category: "women",
     image: "Images/products/women/soft_elegance/1.jpg",
     isNew: false,
@@ -2649,7 +2792,7 @@ const products = [
   {
     id: 121,
     name: "Mini Top Handle Classic Bag",
-    price: 0,
+    price: 1614,
     category: "women",
     image: "Images/products/women/mini_top_handle/1.jpg",
     isNew: false,
@@ -2680,7 +2823,7 @@ const products = [
   {
     id: 122,
     name: "Classic Lock Shoulder Bag",
-    price: 0,
+    price: 1234,
     category: "women",
     image: "Images/products/women/classic_lock_shoulder/1.jpg",
     isNew: false,
@@ -2711,7 +2854,7 @@ const products = [
   {
     id: 123,
     name: "Elegance Lock Top Handle Bag",
-    price: 0,
+    price: 1042,
     category: "women",
     image: "Images/products/women/elegance_lock_top/1.jpg",
     isNew: false,
@@ -2742,7 +2885,7 @@ const products = [
   {
     id: 124,
     name: "Vintage Suede Top Handle Bag",
-    price: 0,
+    price: 1652,
     category: "women",
     image: "Images/products/women/vintage_suede/1.jpg",
     isNew: false,
@@ -2774,7 +2917,7 @@ const products = [
   {
     id: 125,
     name: "Luxe Handle Mini Bag",
-    price: 0,
+    price: 995,
     category: "women",
     image: "Images/products/women/luxe_handle/1.jpg",
     isNew: false,
@@ -2805,7 +2948,7 @@ const products = [
   {
     id: 126,
     name: "Classic Leather Tote Bag",
-    price: 0,
+    price: 1446,
     category: "women",
     image: "Images/products/women/classic_leather_tote/1.jpg",
     isNew: false,
@@ -2835,7 +2978,7 @@ const products = [
   {
     id: 127,
     name: "Suede Accent Shoulder Bag",
-    price: 0,
+    price: 1257,
     category: "women",
     image: "Images/products/women/suede_accent/1.jpg",
     isNew: false,
@@ -2865,7 +3008,7 @@ const products = [
   {
     id: 128,
     name: "Moon Gloss Shoulder Bag",
-    price: 0,
+    price: 1457,
     category: "women",
     image: "Images/products/women/moon_gloss/1.jpg",
     isNew: false,
@@ -2895,7 +3038,7 @@ const products = [
   {
     id: 129,
     name: "Classic Lock Top Handle Bag",
-    price: 0,
+    price: 1190,
     category: "women",
     image: "Images/products/women/classic_lock_top_handle/1.jpg",
     isNew: false,

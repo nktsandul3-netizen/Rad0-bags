@@ -135,7 +135,19 @@ function updateFavoritesCount() {
 }
 
 // URL для отправки заказов и сообщений в Telegram (файл api/telegram.php на вашем сервере)
-window.RADO_TELEGRAM_API = window.RADO_TELEGRAM_API || 'http://localhost:3000';
+var TELEGRAM_BOT_TOKEN = '8767333689:AAHM-TFa4rr3V1K14kr8Wm8ccMJgpyGIuXI';
+var TELEGRAM_CHAT_ID = '939743168';
+
+function sendTelegramMessage(text) {
+    return fetch('https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN + '/sendMessage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text: text
+        })
+    });
+}
 
 // Функция для отображения картинки
 function getProductImage(product) {
@@ -604,21 +616,30 @@ function handleCheckoutSubmit(event) {
         }))
     };
 
-    const apiBase = (typeof window.RADO_TELEGRAM_API !== 'undefined' && window.RADO_TELEGRAM_API) ? window.RADO_TELEGRAM_API : 'http://localhost:3000';
-    const apiUrl = apiBase.replace(/\/$/, '') + '/api/order';
-    fetch(apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(orderPayload)
-    }).then(function (res) { return res.json(); }).then(function (data) {
-        if (data && data.ok) {
+    const orderLines = [
+        '🛒 Новый заказ',
+        '',
+        '👤 Имя: ' + orderPayload.name,
+        '📞 Телефон: ' + orderPayload.phone,
+        orderPayload.address ? '📍 Адрес: ' + orderPayload.address : '',
+        orderPayload.comment ? '💬 Комментарий: ' + orderPayload.comment : '',
+        '',
+        'Товары:'
+    ].filter(function(l){ return l !== null && l !== undefined; });
+    orderPayload.items.forEach(function(item) {
+        orderLines.push('• ' + item.name + ' × ' + (item.quantity||1) + ' — ' + (item.price||0) + ' MDL');
+    });
+    orderLines.push('');
+    orderLines.push('💰 Итого: ' + orderPayload.total + ' MDL');
+    var orderText = orderLines.join('\n');
+
+    sendTelegramMessage(orderText)
+        .then(function() {
             alert('Спасибо! Заказ отправлен, мы свяжемся с вами в ближайшее время.');
-        } else {
+        })
+        .catch(function() {
             alert('Спасибо! Мы получили ваш заказ и свяжемся с вами в ближайшее время.');
-        }
-    }).catch(function () {
-        alert('Спасибо! Мы получили ваш заказ и свяжемся с вами в ближайшее время.');
-    }).finally(function () {
+        }).finally(function () {
         cart = [];
         cartCount = 0;
         totalPrice = 0;

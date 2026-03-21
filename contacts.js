@@ -39,14 +39,31 @@ function handleFormSubmit(event) {
     
     // Валидация формы
     if (validateForm(formData)) {
-        // Имитация отправки формы
-        showFormSuccess();
-        form.reset();
-        
-        // Сброс стилей полей
-        const formGroups = form.querySelectorAll('.form-group');
-        formGroups.forEach(group => {
-            group.classList.remove('focused');
+        const name = formData.get('name') || '';
+        const email = formData.get('email') || '';
+        const subject = formData.get('subject') || '';
+        const message = formData.get('message') || '';
+
+        const text = '📩 Вопрос с сайта\n\n'
+            + '👤 Имя: ' + name + '\n'
+            + '✉️ Email: ' + email + '\n'
+            + '📋 Тема: ' + subject + '\n\n'
+            + 'Сообщение:\n' + message;
+
+        var BOT_TOKEN = '8767333689:AAHM-TFa4rr3V1K14kr8Wm8ccMJgpyGIuXI';
+        var CHAT_ID = '939743168';
+
+        fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ chat_id: CHAT_ID, text: text })
+        }).finally(function() {
+            showFormSuccess();
+            form.reset();
+            const formGroups = form.querySelectorAll('.form-group');
+            formGroups.forEach(function(group) {
+                group.classList.remove('focused');
+            });
         });
     }
 }

@@ -58,8 +58,21 @@ document.addEventListener('DOMContentLoaded', function() {
     loadProduct();
     updateCartCount();
     initProductDrawer();
-    loadRelatedProducts();
     initFavoriteButton();
+
+    var buyOneClick = document.getElementById('product-buy-one-click');
+    if (buyOneClick) {
+        buyOneClick.addEventListener('click', function() {
+            if (!currentProduct) return;
+            for (var i = 0; i < currentQuantity; i++) {
+                addToCartWithNotification(currentProduct.id);
+            }
+            currentQuantity = 1;
+            var qEl = document.getElementById('product-quantity');
+            if (qEl) qEl.textContent = 1;
+            if (typeof openCheckoutModal === 'function') openCheckoutModal();
+        });
+    }
 });
 
 var productDrawerTitles = {
@@ -643,65 +656,6 @@ function displayProductDescription() {
     console.log('Характеристики отображены, количество:', specs.length);
 }
 
-// Загрузить похожие товары
-function loadRelatedProducts() {
-    const relatedGrid = document.getElementById('related-products-grid');
-    if (!relatedGrid) {
-        console.warn('Элемент related-products-grid не найден');
-        return;
-    }
-
-    // Берем товары из той же категории
-    const relatedProducts = topProducts.women.filter(p => p.id !== currentProduct.id).slice(0, 4);
-
-    function getSecondImage(p) {
-        if (p.image2) return p.image2;
-        if (p.media && Array.isArray(p.media)) {
-            const img = p.media.find(m => m.type === 'image' && m.src && m.src !== p.image);
-            if (img) return img.src;
-            if (p.media[1] && p.media[1].src) return p.media[1].src;
-        }
-        return null;
-    }
-    function getBadge(p) {
-        if (p.badge) {
-            const b = String(p.badge).toUpperCase();
-            const cls = b === 'SALE' ? 'product-badge--sale' : b === 'BESTSELLER' ? 'product-badge--bestseller' : '';
-            return { text: b, class: cls };
-        }
-        if (p.isNew) return { text: 'NEW', class: '' };
-        if (p.onSale) return { text: 'SALE', class: 'product-badge--sale' };
-        return null;
-    }
-    function getRatingCount(p) {
-        return p.ratingCount != null ? p.ratingCount : 24;
-    }
-
-    relatedGrid.innerHTML = '';
-    relatedProducts.forEach(product => {
-        const productImage = getProductImage(product);
-        const secondImg = getSecondImage(product);
-        const badge = getBadge(product);
-        const ratingCount = getRatingCount(product);
-        const productCard = `
-            <div class="product-card" onclick="goToProductPage(${product.id})">
-                <div class="product-image">
-                    ${badge ? `<span class="product-badge ${badge.class}">${badge.text}</span>` : ''}
-                    ${productImage}
-                    ${secondImg ? `<img src="${secondImg}" alt="" class="product-img product-img-hover" loading="lazy">` : ''}
-                    <div class="product-emoji" style="display: ${product.image ? 'none' : 'flex'}">${(product.emoji || currentProduct.emoji || '👜')}</div>
-                </div>
-                <h3 class="product-name">${product.name}</h3>
-                <div class="product-rating"><span class="product-rating-stars">★★★★★</span> (${ratingCount})</div>
-                ${product.originalPrice ? `
-                    <div class="original-price">${product.originalPrice} MDL</div>
-                    <div class="product-price">${product.price} MDL</div>
-                ` : `<div class="product-price">${product.price} MDL</div>`}
-            </div>
-        `;
-        relatedGrid.innerHTML += productCard;
-    });
-}
 
 // Вспомогательные функции
 function getColorHex(color) {
