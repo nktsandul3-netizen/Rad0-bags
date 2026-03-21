@@ -966,7 +966,15 @@ function initMobileMenu() {
     var hamburger = document.querySelector('.header-hamburger');
     var nav = document.querySelector('.header-categories') || document.querySelector('.header .nav');
     if (document.getElementById('sidebar')) return;
-    if (!header || !hamburger || !nav) return;
+    if (!header || !hamburger) return;
+
+    // Create overlay element
+    var overlay = document.querySelector('.mobile-nav-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'mobile-nav-overlay';
+        document.body.appendChild(overlay);
+    }
 
     function isOpen() {
         return header.classList.contains('menu-open');
@@ -976,12 +984,18 @@ function initMobileMenu() {
         header.classList.add('menu-open');
         hamburger.setAttribute('aria-expanded', 'true');
         document.body.style.overflow = 'hidden';
+        overlay.style.display = 'block';
     }
 
     function closeMenu() {
         header.classList.remove('menu-open');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
+        overlay.style.display = 'none';
+        // Close all accordions
+        document.querySelectorAll('.mobile-accordion.is-open').forEach(function(acc) {
+            acc.classList.remove('is-open');
+        });
     }
 
     function toggleMenu() {
@@ -995,14 +1009,36 @@ function initMobileMenu() {
         toggleMenu();
     });
 
-    document.addEventListener('click', function(e) {
-        if (isOpen() && !nav.contains(e.target) && !hamburger.contains(e.target)) {
-            closeMenu();
-        }
+    // Close on overlay click
+    overlay.addEventListener('click', closeMenu);
+
+    // Accordion toggles
+    document.querySelectorAll('.mobile-acc-toggle').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var acc = btn.closest('.mobile-accordion');
+            if (!acc) return;
+            var isOpenAcc = acc.classList.contains('is-open');
+            // Close all
+            document.querySelectorAll('.mobile-accordion.is-open').forEach(function(a) {
+                a.classList.remove('is-open');
+            });
+            // Toggle this one
+            if (!isOpenAcc) acc.classList.add('is-open');
+        });
     });
 
-    nav.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', closeMenu);
+    // Close menu on nav link click (not accordion toggle)
+    if (nav) {
+        nav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', closeMenu);
+        });
+    }
+
+    // Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && isOpen()) closeMenu();
     });
 
     window.addEventListener('resize', function() {
