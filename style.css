@@ -6620,3 +6620,39 @@ a.header-icon {
     padding-right: 28px;
     border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+/* === MOBILE RESPONSIVE FIXES === */
+@media (max-width: 640px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    .product-card .product-image {
+        height: 180px;
+    }
+    .product-card h3,
+    .product-card .product-name {
+        font-size: 12px;
+    }
+    .product-card .product-price {
+        font-size: 13px;
+    }
+    .product-card .product-actions {
+        gap: 6px;
+    }
+    .product-card .btn-cart,
+    .product-card .btn-wishlist {
+        font-size: 11px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+    .product-card .product-image {
+        height: 160px;
+    }
+}
