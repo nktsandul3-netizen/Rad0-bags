@@ -6577,11 +6577,12 @@ a.header-icon {
 
 
 
+
 /* ============================================================
    MOBILE FULL RESPONSIVE
    ============================================================ */
 
-/* ── Burger button (hidden on desktop) ── */
+/* Burger: hidden on desktop */
 .header-hamburger {
     display: none;
     flex-direction: column;
@@ -6610,19 +6611,29 @@ a.header-icon {
 .header.menu-open .header-hamburger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .header.menu-open .header-hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ── Accordion toggle (desktop: hidden) ── */
-.mobile-acc-toggle { display: none; }
+/* Desktop: show nav-desktop-only, hide mobile-only */
+.mobile-only { display: none !important; }
 .nav-desktop-only { display: inline-block; }
-.mobile-only { display: none; }
 
-/* ── Desktop nav-dropdown stays as-is ── */
+/* Mobile overlay */
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1100;
+}
 
 @media (max-width: 768px) {
 
-    /* ── Show burger ── */
+    /* Show burger */
     .header-hamburger { display: flex !important; }
 
-    /* ── Header always visible on mobile ── */
+    /* Mobile: swap visibility */
+    .mobile-only { display: flex !important; }
+    .nav-desktop-only { display: none !important; }
+
+    /* Header always visible */
     .header-over-banner {
         background: rgba(0,0,0,0.7) !important;
         backdrop-filter: blur(12px) !important;
@@ -6630,7 +6641,7 @@ a.header-icon {
     }
     .header-premium { padding: 0 !important; }
 
-    /* ── index.html header (header-container grid) ── */
+    /* index.html header layout */
     .header-container {
         display: grid !important;
         grid-template-columns: 44px 1fr 44px !important;
@@ -6641,10 +6652,8 @@ a.header-icon {
     .header-left  { order: 1 !important; }
     .header-center { order: 2 !important; text-align: center !important; }
     .header-right { order: 3 !important; display: flex !important; align-items: center !important; justify-content: flex-end !important; gap: 6px !important; }
-    .header-over-banner .header-categories { display: none !important; }
-    .header-over-banner.menu-open .header-categories { display: flex !important; }
 
-    /* ── other pages header (container flex) ── */
+    /* other pages header layout */
     .header .container {
         display: grid !important;
         grid-template-columns: 44px 1fr auto !important;
@@ -6658,12 +6667,10 @@ a.header-icon {
     .header .header-actions { order: 3 !important; display: flex !important; align-items: center !important; gap: 6px !important; }
     .header .header-hamburger { order: 1 !important; }
 
-    /* ── Hide desktop elements ── */
+    /* Hide desktop nav */
     .header .nav { display: none !important; }
-    .nav-desktop-only { display: none !important; }
-    .mobile-only { display: flex !important; }
 
-    /* ── SLIDE-IN PANEL: shared base ── */
+    /* SLIDE-IN PANEL */
     .header-categories,
     .header .nav {
         position: fixed !important;
@@ -6679,7 +6686,7 @@ a.header-icon {
         transition: transform 0.28s cubic-bezier(0.4,0,0.2,1) !important;
         overflow-y: auto !important;
         overflow-x: hidden !important;
-        padding-top: 72px !important;
+        padding-top: 68px !important;
         padding-bottom: 40px !important;
         border: none !important;
         box-shadow: none !important;
@@ -6691,7 +6698,7 @@ a.header-icon {
         box-shadow: 4px 0 20px rgba(0,0,0,0.12) !important;
     }
 
-    /* ── .header-categories inner container ── */
+    /* Container inside .header-categories */
     .header-categories .container {
         display: flex !important;
         flex-direction: column !important;
@@ -6704,7 +6711,7 @@ a.header-icon {
         width: 100% !important;
     }
 
-    /* ── Nav links: base style ── */
+    /* Direct links */
     .header-categories .container > a,
     .header .nav > a {
         display: flex !important;
@@ -6719,12 +6726,9 @@ a.header-icon {
         text-transform: none !important;
         border-bottom: 1px solid #efefef !important;
         background: #fff !important;
-        transition: background 0.15s !important;
     }
-    .header-categories .container > a:hover,
-    .header .nav > a:hover { background: #fafafa !important; }
 
-    /* ── Accordion wrapper ── */
+    /* Accordion wrapper */
     .header-categories .nav-dropdown,
     .header .nav .nav-dropdown {
         display: block !important;
@@ -6733,11 +6737,13 @@ a.header-icon {
         border-bottom: 1px solid #efefef !important;
     }
 
-    /* ── Hide original desktop trigger ── */
+    /* Hide desktop trigger inside menu */
     .header-categories .nav-dropdown__trigger,
-    .header .nav .nav-dropdown__trigger { display: none !important; }
+    .header .nav .nav-dropdown__trigger,
+    .header-categories .nav-desktop-only,
+    .header .nav .nav-desktop-only { display: none !important; }
 
-    /* ── Mobile accordion toggle button ── */
+    /* Mobile accordion button */
     .mobile-acc-toggle {
         display: flex !important;
         align-items: center !important;
@@ -6754,12 +6760,11 @@ a.header-icon {
         border: none !important;
         cursor: pointer !important;
         text-align: left !important;
-        transition: background 0.15s !important;
         font-family: inherit !important;
+        box-sizing: border-box !important;
     }
-    .mobile-acc-toggle:hover { background: #fafafa !important; }
 
-    /* ── Arrow icon ── */
+    /* Arrow */
     .mobile-acc-arrow {
         flex-shrink: 0 !important;
         transition: transform 0.25s ease !important;
@@ -6769,12 +6774,12 @@ a.header-icon {
         transform: rotate(180deg) !important;
     }
 
-    /* ── Accordion panel ── */
+    /* Accordion panel */
     .mobile-acc-panel {
         max-height: 0 !important;
         overflow: hidden !important;
         transition: max-height 0.3s ease !important;
-        background: #fafafa !important;
+        background: #f8f8f6 !important;
         display: block !important;
         position: static !important;
         opacity: 1 !important;
@@ -6782,14 +6787,13 @@ a.header-icon {
         transform: none !important;
         box-shadow: none !important;
         border: none !important;
-        min-width: 0 !important;
         pointer-events: all !important;
     }
     .mobile-accordion.is-open .mobile-acc-panel {
         max-height: 200px !important;
     }
 
-    /* ── Panel links ── */
+    /* Panel links */
     .mobile-acc-panel a {
         display: flex !important;
         align-items: center !important;
@@ -6799,26 +6803,13 @@ a.header-icon {
         color: #555 !important;
         text-decoration: none !important;
         border-bottom: 1px solid #efefef !important;
-        letter-spacing: 0.03em !important;
         background: transparent !important;
-        transition: color 0.15s !important;
         text-transform: none !important;
+        letter-spacing: 0 !important;
     }
     .mobile-acc-panel a:last-child { border-bottom: none !important; }
-    .mobile-acc-panel a:hover { color: #111 !important; }
 
-    /* ── Overlay behind menu ── */
-    .mobile-nav-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.4);
-        z-index: 1100;
-    }
-    .header.menu-open ~ .mobile-nav-overlay,
-    body.menu-open .mobile-nav-overlay { display: block; }
-
-    /* ── Product grid ── */
+    /* Product grid */
     .products-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 8px !important;
@@ -6831,7 +6822,7 @@ a.header-icon {
     .product-card .btn-cart,
     .product-card .product-actions .btn { font-size: 11px !important; padding: 7px 10px !important; width: 100% !important; }
 
-    /* ── Product detail ── */
+    /* Product detail */
     .product-page-layout, .product-page-ekonika { flex-direction: column !important; }
     .product-hero-media { width: 100% !important; }
     .product-info { padding: 20px 16px !important; }
@@ -6840,11 +6831,11 @@ a.header-icon {
     .hero-media-thumbs { flex-direction: row !important; overflow-x: auto !important; max-height: none !important; width: 100% !important; }
     .hero-media-thumbs .thumbnail { min-width: 58px !important; height: 58px !important; }
 
-    /* ── Accessories ── */
+    /* Accessories */
     #panel-women .products-grid,
     #panel-men .products-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
 
-    /* ── General ── */
+    /* General */
     .video-hero { height: 100svh; min-height: 500px; }
     .hero-banner h1 { font-size: 26px !important; }
     .container { padding-left: 12px !important; padding-right: 12px !important; }
