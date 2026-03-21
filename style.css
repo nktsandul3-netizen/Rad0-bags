@@ -6612,7 +6612,8 @@ a.header-icon {
 
 /* ── Accordion toggle (desktop: hidden) ── */
 .mobile-acc-toggle { display: none; }
-.nav-desktop-link { display: inline-block; }
+.nav-desktop-only { display: inline-block; }
+.mobile-only { display: none; }
 
 /* ── Desktop nav-dropdown stays as-is ── */
 
@@ -6659,7 +6660,8 @@ a.header-icon {
 
     /* ── Hide desktop elements ── */
     .header .nav { display: none !important; }
-    .nav-desktop-link { display: none !important; }
+    .nav-desktop-only { display: none !important; }
+    .mobile-only { display: flex !important; }
 
     /* ── SLIDE-IN PANEL: shared base ── */
     .header-categories,
