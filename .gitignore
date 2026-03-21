@@ -1,0 +1,13 @@
+node_modules/
+ios/
+www/
+*.log
+.DS_Store
+**/.DS_Store
+*.md
+BUILD_FAILED_FIX.md
+IPHONE_APP.md
+PAYMENTS.md
+TELEGRAM_SETUP.md
+XCODE_STEPS.md
+api/

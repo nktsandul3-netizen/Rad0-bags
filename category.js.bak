@@ -1,0 +1,3137 @@
+// Единая база товаров для всех категорий RADO BAGS
+const products = [
+  {
+    id: 1,
+    name: "RADO Женская модель 001",
+    price: 510,
+    category: "women",
+    image: "Images/products/women/w1.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "M",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    media: [
+      { type: "video", src: "Images/products/women/nm301.mp4", poster: "Images/products/women/top1.jpg" },
+      { type: "image", src: "Images/products/women/top1.jpg" },
+      { type: "image", src: "Images/products/women/top1-1.jpg" },
+      { type: "image", src: "Images/products/women/top1-2.jpg" },
+      { type: "image", src: "Images/products/women/top1-3.jpg" }
+    ],
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 2,
+    name: "RADO Женская модель 002",
+    price: 525,
+    category: "women",
+    image: "Images/products/women/w2.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "L",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 3,
+    name: "RADO Женская модель 003",
+    price: 540,
+    category: "women",
+    image: "Images/products/women/w3.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "S",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 4,
+    name: "RADO Женская модель 004",
+    price: 555,
+    category: "women",
+    image: "Images/products/women/w4.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "M",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 5,
+    name: "RADO Женская модель 005",
+    price: 570,
+    category: "women",
+    image: "Images/products/women/w5.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "L",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 6,
+    name: "RADO Женская модель 006",
+    price: 585,
+    category: "women",
+    image: "Images/products/women/w6.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "S",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 7,
+    name: "RADO Женская модель 007",
+    price: 495,
+    category: "women",
+    image: "Images/products/women/w7.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "M",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 8,
+    name: "RADO Женская модель 008",
+    price: 510,
+    category: "women",
+    image: "Images/products/women/w8.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "L",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 9,
+    name: "RADO Женская модель 009",
+    price: 525,
+    category: "women",
+    image: "Images/products/women/w9.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "S",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 10,
+    name: "RADO Женская модель 010",
+    price: 540,
+    category: "women",
+    image: "Images/products/women/w10.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "M",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 11,
+    name: "RADO Женская модель 011",
+    price: 555,
+    category: "women",
+    image: "Images/products/women/w11.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "L",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 12,
+    name: "RADO Женская модель 012",
+    price: 570,
+    category: "women",
+    image: "Images/products/women/w12.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "S",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 13,
+    name: "RADO Женская модель 013",
+    price: 585,
+    category: "women",
+    image: "Images/products/women/w13.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "M",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 14,
+    name: "RADO Женская модель 014",
+    price: 495,
+    category: "women",
+    image: "Images/products/women/w14.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "L",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 15,
+    name: "RADO Женская модель 015",
+    price: 510,
+    category: "women",
+    image: "Images/products/women/w15.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "S",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 16,
+    name: "RADO Женская модель 016",
+    price: 525,
+    category: "women",
+    image: "Images/products/women/w16.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "M",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 17,
+    name: "RADO Женская модель 017",
+    price: 540,
+    category: "women",
+    image: "Images/products/women/w17.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "L",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 18,
+    name: "RADO Женская модель 018",
+    price: 555,
+    category: "women",
+    image: "Images/products/women/w18.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "S",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 19,
+    name: "RADO Женская модель 019",
+    price: 570,
+    category: "women",
+    image: "Images/products/women/w19.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "M",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 20,
+    name: "RADO Женская модель 020",
+    price: 585,
+    category: "women",
+    image: "Images/products/women/w20.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "L",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 21,
+    name: "RADO Женская модель 021",
+    price: 495,
+    category: "women",
+    image: "Images/products/women/w21.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "S",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 22,
+    name: "RADO Женская модель 022",
+    price: 510,
+    category: "women",
+    image: "Images/products/women/w22.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "M",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 23,
+    name: "RADO Женская модель 023",
+    price: 525,
+    category: "women",
+    image: "Images/products/women/w23.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "L",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 24,
+    name: "RADO Женская модель 024",
+    price: 540,
+    category: "women",
+    image: "Images/products/women/w24.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "S",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 25,
+    name: "RADO Женская модель 025",
+    price: 555,
+    category: "women",
+    image: "Images/products/women/w25.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "M",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 26,
+    name: "RADO Женская модель 026",
+    price: 570,
+    category: "women",
+    image: "Images/products/women/w26.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "L",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 27,
+    name: "RADO Женская модель 027",
+    price: 585,
+    category: "women",
+    image: "Images/products/women/w27.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "S",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 28,
+    name: "RADO Женская модель 028",
+    price: 495,
+    category: "women",
+    image: "Images/products/women/w28.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "M",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 29,
+    name: "RADO Женская модель 029",
+    price: 510,
+    category: "women",
+    image: "Images/products/women/w29.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "L",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 30,
+    name: "RADO Женская модель 030",
+    price: 525,
+    category: "women",
+    image: "Images/products/women/w30.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "S",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 31,
+    name: "RADO Женская модель 031",
+    price: 540,
+    category: "women",
+    image: "Images/products/women/w31.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "M",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 32,
+    name: "RADO Женская модель 032",
+    price: 555,
+    category: "women",
+    image: "Images/products/women/w32.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "L",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 33,
+    name: "RADO Женская модель 033",
+    price: 570,
+    category: "women",
+    image: "Images/products/women/w33.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "S",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 34,
+    name: "RADO Женская модель 034",
+    price: 585,
+    category: "women",
+    image: "Images/products/women/w34.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "M",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 35,
+    name: "RADO Женская модель 035",
+    price: 495,
+    category: "women",
+    image: "Images/products/women/w35.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "L",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 36,
+    name: "RADO Женская модель 036",
+    price: 510,
+    category: "women",
+    image: "Images/products/women/w36.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "S",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 37,
+    name: "RADO Женская модель 037",
+    price: 525,
+    category: "women",
+    image: "Images/products/women/w37.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "M",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 38,
+    name: "RADO Женская модель 038",
+    price: 540,
+    category: "women",
+    image: "Images/products/women/w38.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "L",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 39,
+    name: "RADO Женская модель 039",
+    price: 555,
+    category: "women",
+    image: "Images/products/women/w39.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "S",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 40,
+    name: "RADO Женская модель 040",
+    price: 570,
+    category: "women",
+    image: "Images/products/women/w40.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "M",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 41,
+    name: "RADO Женская модель 041",
+    price: 585,
+    category: "women",
+    image: "Images/products/women/w41.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "L",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 42,
+    name: "RADO Женская модель 042",
+    price: 495,
+    category: "women",
+    image: "Images/products/women/w42.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "S",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 43,
+    name: "RADO Женская модель 043",
+    price: 510,
+    category: "women",
+    image: "Images/products/women/w43.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "M",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 44,
+    name: "RADO Женская модель 044",
+    price: 525,
+    category: "women",
+    image: "Images/products/women/w44.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "L",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 45,
+    name: "RADO Женская модель 045",
+    price: 540,
+    category: "women",
+    image: "Images/products/women/w45.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "S",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 46,
+    name: "RADO Мужская модель 046",
+    price: 580,
+    category: "men",
+    image: "Images/products/men/m46.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "M",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 47,
+    name: "RADO Мужская модель 047",
+    price: 595,
+    category: "men",
+    image: "Images/products/men/m47.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "L",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 48,
+    name: "RADO Мужская модель 048",
+    price: 610,
+    category: "men",
+    image: "Images/products/men/m48.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "S",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 49,
+    name: "RADO Мужская модель 049",
+    price: 520,
+    category: "men",
+    image: "Images/products/men/m49.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "M",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 50,
+    name: "RADO Мужская модель 050",
+    price: 535,
+    category: "men",
+    image: "Images/products/men/m50.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "L",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 51,
+    name: "RADO Мужская модель 051",
+    price: 550,
+    category: "men",
+    image: "Images/products/men/m51.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "S",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 52,
+    name: "RADO Мужская модель 052",
+    price: 565,
+    category: "men",
+    image: "Images/products/men/m52.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "M",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 53,
+    name: "RADO Мужская модель 053",
+    price: 580,
+    category: "men",
+    image: "Images/products/men/m53.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "L",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 54,
+    name: "RADO Мужская модель 054",
+    price: 595,
+    category: "men",
+    image: "Images/products/men/m54.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "S",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 55,
+    name: "RADO Мужская модель 055",
+    price: 610,
+    category: "men",
+    image: "Images/products/men/m55.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "M",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 56,
+    name: "RADO Мужская модель 056",
+    price: 520,
+    category: "men",
+    image: "Images/products/men/m56.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "L",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 57,
+    name: "RADO Мужская модель 057",
+    price: 535,
+    category: "men",
+    image: "Images/products/men/m57.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "S",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 58,
+    name: "RADO Мужская модель 058",
+    price: 550,
+    category: "men",
+    image: "Images/products/men/m58.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "M",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 59,
+    name: "RADO Мужская модель 059",
+    price: 565,
+    category: "men",
+    image: "Images/products/men/m59.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "L",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 60,
+    name: "RADO Мужская модель 060",
+    price: 580,
+    category: "men",
+    image: "Images/products/men/m60.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "S",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 61,
+    name: "RADO Мужская модель 061",
+    price: 595,
+    category: "men",
+    image: "Images/products/men/m61.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "M",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 62,
+    name: "RADO Мужская модель 062",
+    price: 610,
+    category: "men",
+    image: "Images/products/men/m62.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "L",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 63,
+    name: "RADO Мужская модель 063",
+    price: 520,
+    category: "men",
+    image: "Images/products/men/m63.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "S",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 64,
+    name: "RADO Мужская модель 064",
+    price: 535,
+    category: "men",
+    image: "Images/products/men/m64.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "M",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 65,
+    name: "RADO Мужская модель 065",
+    price: 550,
+    category: "men",
+    image: "Images/products/men/m65.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "L",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 66,
+    name: "RADO Мужская модель 066",
+    price: 565,
+    category: "men",
+    image: "Images/products/men/m66.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "S",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 67,
+    name: "RADO Мужская модель 067",
+    price: 580,
+    category: "men",
+    image: "Images/products/men/m67.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "M",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 68,
+    name: "RADO Мужская модель 068",
+    price: 595,
+    category: "men",
+    image: "Images/products/men/m68.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "L",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 69,
+    name: "RADO Мужская модель 069",
+    price: 610,
+    category: "men",
+    image: "Images/products/men/m69.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "S",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 70,
+    name: "RADO Мужская модель 070",
+    price: 520,
+    category: "men",
+    image: "Images/products/men/m70.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "M",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 71,
+    name: "RADO Мужская модель 071",
+    price: 535,
+    category: "men",
+    image: "Images/products/men/m71.jpg",
+    isNew: false,
+    onSale: false,
+    color: "бежевый",
+    size: "L",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 72,
+    name: "RADO Мужская модель 072",
+    price: 550,
+    category: "men",
+    image: "Images/products/men/m72.jpg",
+    isNew: false,
+    onSale: false,
+    color: "коричневый",
+    size: "S",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 73,
+    name: "RADO Мужская модель 073",
+    price: 565,
+    category: "men",
+    image: "Images/products/men/m73.jpg",
+    isNew: false,
+    onSale: false,
+    color: "серый",
+    size: "M",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 74,
+    name: "RADO Мужская модель 074",
+    price: 580,
+    category: "men",
+    image: "Images/products/men/m74.jpg",
+    isNew: false,
+    onSale: false,
+    color: "оливковый",
+    size: "L",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 75,
+    name: "RADO Мужская модель 075",
+    price: 595,
+    category: "men",
+    image: "Images/products/men/m75.jpg",
+    isNew: false,
+    onSale: false,
+    color: "черный",
+    size: "S",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "🎒",
+    specifications: [
+        { name: 'Категория', value: 'Мужские рюкзаки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 76,
+    name: "RADO Новинка 076",
+    price: 635,
+    category: "women",
+    image: "Images/products/women/w76.jpg",
+    isNew: true,
+    onSale: false,
+    color: "бежевый",
+    size: "M",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 77,
+    name: "RADO Новинка 077",
+    price: 545,
+    category: "women",
+    image: "Images/products/women/w77.jpg",
+    isNew: true,
+    onSale: false,
+    color: "коричневый",
+    size: "L",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 78,
+    name: "RADO Новинка 078",
+    price: 560,
+    category: "women",
+    image: "Images/products/women/w78.jpg",
+    isNew: true,
+    onSale: false,
+    color: "серый",
+    size: "S",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 79,
+    name: "RADO Новинка 079",
+    price: 575,
+    category: "women",
+    image: "Images/products/women/w79.jpg",
+    isNew: true,
+    onSale: false,
+    color: "оливковый",
+    size: "M",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 80,
+    name: "RADO Новинка 080",
+    price: 590,
+    category: "women",
+    image: "Images/products/women/w80.jpg",
+    isNew: true,
+    onSale: false,
+    color: "черный",
+    size: "L",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 81,
+    name: "RADO Новинка 081",
+    price: 605,
+    category: "women",
+    image: "Images/products/women/w81.jpg",
+    isNew: true,
+    onSale: false,
+    color: "бежевый",
+    size: "S",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 82,
+    name: "RADO Новинка 082",
+    price: 620,
+    category: "women",
+    image: "Images/products/women/w82.jpg",
+    isNew: true,
+    onSale: false,
+    color: "коричневый",
+    size: "M",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 83,
+    name: "RADO Новинка 083",
+    price: 635,
+    category: "women",
+    image: "Images/products/women/w83.jpg",
+    isNew: true,
+    onSale: false,
+    color: "серый",
+    size: "L",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 84,
+    name: "RADO Новинка 084",
+    price: 545,
+    category: "women",
+    image: "Images/products/women/w84.jpg",
+    isNew: true,
+    onSale: false,
+    color: "оливковый",
+    size: "S",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 85,
+    name: "RADO Новинка 085",
+    price: 560,
+    category: "women",
+    image: "Images/products/women/w85.jpg",
+    isNew: true,
+    onSale: false,
+    color: "черный",
+    size: "M",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 86,
+    name: "RADO Новинка 086",
+    price: 575,
+    category: "women",
+    image: "Images/products/women/w86.jpg",
+    isNew: true,
+    onSale: false,
+    color: "бежевый",
+    size: "L",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 87,
+    name: "RADO Новинка 087",
+    price: 590,
+    category: "women",
+    image: "Images/products/women/w87.jpg",
+    isNew: true,
+    onSale: false,
+    color: "коричневый",
+    size: "S",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 88,
+    name: "RADO Новинка 088",
+    price: 605,
+    category: "women",
+    image: "Images/products/women/w88.jpg",
+    isNew: true,
+    onSale: false,
+    color: "серый",
+    size: "M",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 89,
+    name: "RADO Новинка 089",
+    price: 620,
+    category: "women",
+    image: "Images/products/women/w89.jpg",
+    isNew: true,
+    onSale: false,
+    color: "оливковый",
+    size: "L",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 90,
+    name: "RADO Новинка 090",
+    price: 635,
+    category: "women",
+    image: "Images/products/women/w90.jpg",
+    isNew: true,
+    onSale: false,
+    color: "черный",
+    size: "S",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 91,
+    name: "RADO Новинка 091",
+    price: 545,
+    category: "women",
+    image: "Images/products/women/w91.jpg",
+    isNew: true,
+    onSale: false,
+    color: "бежевый",
+    size: "M",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 92,
+    name: "RADO Новинка 092",
+    price: 560,
+    category: "women",
+    image: "Images/products/women/w92.jpg",
+    isNew: true,
+    onSale: false,
+    color: "коричневый",
+    size: "L",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 93,
+    name: "RADO Новинка 093",
+    price: 575,
+    category: "women",
+    image: "Images/products/women/w93.jpg",
+    isNew: true,
+    onSale: false,
+    color: "серый",
+    size: "S",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 94,
+    name: "RADO Новинка 094",
+    price: 590,
+    category: "women",
+    image: "Images/products/women/w94.jpg",
+    isNew: true,
+    onSale: false,
+    color: "оливковый",
+    size: "M",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 95,
+    name: "RADO Новинка 095",
+    price: 605,
+    category: "women",
+    image: "Images/products/women/w95.jpg",
+    isNew: true,
+    onSale: false,
+    color: "черный",
+    size: "L",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 96,
+    name: "RADO Новинка 096",
+    price: 620,
+    category: "women",
+    image: "Images/products/women/w96.jpg",
+    isNew: true,
+    onSale: false,
+    color: "бежевый",
+    size: "S",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 97,
+    name: "RADO Новинка 097",
+    price: 635,
+    category: "women",
+    image: "Images/products/women/w97.jpg",
+    isNew: true,
+    onSale: false,
+    color: "коричневый",
+    size: "M",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 98,
+    name: "RADO Новинка 098",
+    price: 545,
+    category: "women",
+    image: "Images/products/women/w98.jpg",
+    isNew: true,
+    onSale: false,
+    color: "серый",
+    size: "L",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 99,
+    name: "RADO Новинка 099",
+    price: 560,
+    category: "women",
+    image: "Images/products/women/w99.jpg",
+    isNew: true,
+    onSale: false,
+    color: "оливковый",
+    size: "S",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 100,
+    name: "RADO Новинка 100",
+    price: 575,
+    category: "women",
+    image: "Images/products/women/w100.jpg",
+    isNew: true,
+    onSale: false,
+    color: "черный",
+    size: "M",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 101,
+    name: "RADO Sale 101",
+    price: 500,
+    oldPrice: 620,
+    category: "women",
+    image: "Images/products/women/w101.jpg",
+    isNew: false,
+    onSale: true,
+    color: "бежевый",
+    size: "L",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 102,
+    name: "RADO Sale 102",
+    price: 515,
+    oldPrice: 635,
+    category: "women",
+    image: "Images/products/women/w102.jpg",
+    isNew: false,
+    onSale: true,
+    color: "коричневый",
+    size: "S",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 103,
+    name: "RADO Sale 103",
+    price: 530,
+    oldPrice: 650,
+    category: "women",
+    image: "Images/products/women/w103.jpg",
+    isNew: false,
+    onSale: true,
+    color: "серый",
+    size: "M",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 104,
+    name: "RADO Sale 104",
+    price: 545,
+    oldPrice: 665,
+    category: "women",
+    image: "Images/products/women/w104.jpg",
+    isNew: false,
+    onSale: true,
+    color: "оливковый",
+    size: "L",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 105,
+    name: "RADO Sale 105",
+    price: 455,
+    oldPrice: 575,
+    category: "women",
+    image: "Images/products/women/w105.jpg",
+    isNew: false,
+    onSale: true,
+    color: "черный",
+    size: "S",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 106,
+    name: "RADO Sale 106",
+    price: 470,
+    oldPrice: 590,
+    category: "women",
+    image: "Images/products/women/w106.jpg",
+    isNew: false,
+    onSale: true,
+    color: "бежевый",
+    size: "M",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 107,
+    name: "RADO Sale 107",
+    price: 485,
+    oldPrice: 605,
+    category: "women",
+    image: "Images/products/women/w107.jpg",
+    isNew: false,
+    onSale: true,
+    color: "коричневый",
+    size: "L",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 108,
+    name: "RADO Sale 108",
+    price: 500,
+    oldPrice: 620,
+    category: "women",
+    image: "Images/products/women/w108.jpg",
+    isNew: false,
+    onSale: true,
+    color: "серый",
+    size: "S",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 109,
+    name: "RADO Sale 109",
+    price: 515,
+    oldPrice: 635,
+    category: "women",
+    image: "Images/products/women/w109.jpg",
+    isNew: false,
+    onSale: true,
+    color: "оливковый",
+    size: "M",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 110,
+    name: "RADO Sale 110",
+    price: 530,
+    oldPrice: 650,
+    category: "women",
+    image: "Images/products/women/w110.jpg",
+    isNew: false,
+    onSale: true,
+    color: "черный",
+    size: "L",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 111,
+    name: "RADO Sale 111",
+    price: 545,
+    oldPrice: 665,
+    category: "women",
+    image: "Images/products/women/w111.jpg",
+    isNew: false,
+    onSale: true,
+    color: "бежевый",
+    size: "S",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Бежевый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 112,
+    name: "RADO Sale 112",
+    price: 455,
+    oldPrice: 575,
+    category: "women",
+    image: "Images/products/women/w112.jpg",
+    isNew: false,
+    onSale: true,
+    color: "коричневый",
+    size: "M",
+    material: "кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Кожа' },
+        { name: 'Цвет', value: 'Коричневый' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 113,
+    name: "RADO Sale 113",
+    price: 470,
+    oldPrice: 590,
+    category: "women",
+    image: "Images/products/women/w113.jpg",
+    isNew: false,
+    onSale: true,
+    color: "серый",
+    size: "L",
+    material: "эко-кожа",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Эко-кожа' },
+        { name: 'Цвет', value: 'Серый' },
+        { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+        { name: 'Вес', value: '0.9 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 114,
+    name: "RADO Sale 114",
+    price: 485,
+    oldPrice: 605,
+    category: "women",
+    image: "Images/products/women/w114.jpg",
+    isNew: false,
+    onSale: true,
+    color: "оливковый",
+    size: "S",
+    material: "нейлон",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Нейлон' },
+        { name: 'Цвет', value: 'Оливковый' },
+        { name: 'Размер', value: 'S (30 x 20 x 8 см)' },
+        { name: 'Вес', value: '0.6 кг' },
+        { name: 'Внутренние карманы', value: '2' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+  {
+    id: 115,
+    name: "RADO Sale 115",
+    price: 500,
+    oldPrice: 620,
+    category: "women",
+    image: "Images/products/women/w115.jpg",
+    isNew: false,
+    onSale: true,
+    color: "черный",
+    size: "M",
+    material: "текстиль",
+    description: "Минималистичная модель RADO BAGS: чистые линии, продуманная форма и качественные материалы.",
+    emoji: "👜",
+    specifications: [
+        { name: 'Категория', value: 'Женские сумки' },
+        { name: 'Материал', value: 'Текстиль' },
+        { name: 'Цвет', value: 'Черный' },
+        { name: 'Размер', value: 'M (32 x 25 x 10 см)' },
+        { name: 'Вес', value: '0.7 кг' },
+        { name: 'Внутренние карманы', value: '1' },
+        { name: 'Бренд', value: 'RADO BAGS' },
+        { name: 'Страна', value: 'Молдова' }
+    ]
+  },
+];
+
+// Настройки пагинации для страниц категорий
+const CATEGORY_ITEMS_PER_PAGE = 12;
+let categoryCurrentPage = 1;
+let categoryList = [];
+let filteredList = [];
+let activeFilters = {
+  colors: [],
+  sizes: [],
+  priceMin: 0,
+  priceMax: 1000
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCategoryPage();
+  initFilters();
+  // Инициализируем корзину, если функция существует
+  if (typeof initCart === 'function') {
+    initCart();
+  } else {
+    // Иначе просто обновляем счетчик и отображение
+    if (typeof updateCartCount === 'function') updateCartCount();
+    if (typeof updateCartDisplay === 'function') updateCartDisplay();
+  }
+});
+
+function initCategoryPage() {
+  const path = window.location.pathname.split('/').pop();
+  if (!path) return;
+
+  if (path.includes('women')) {
+    categoryList = products.filter(p => p.id >= 1 && p.id <= 45);
+  } else if (path.includes('men')) {
+    categoryList = products.filter(p => p.id >= 46 && p.id <= 75);
+  } else if (path.includes('new')) {
+    categoryList = products.filter(p => p.id >= 76 && p.id <= 100 && p.isNew);
+  } else if (path.includes('sale')) {
+    categoryList = products.filter(p => p.id >= 101 && p.id <= 115 && p.onSale);
+  } else {
+    return;
+  }
+
+  // Инициализируем фильтрованный список
+  filteredList = [...categoryList];
+  
+  // Находим максимальную цену для слайдера
+  const maxPrice = Math.max(...categoryList.map(p => p.price || p.oldPrice || 0));
+  if (maxPrice > 0) {
+    activeFilters.priceMax = Math.ceil(maxPrice / 50) * 50; // Округляем до 50
+    const priceMaxRange = document.getElementById('price-max');
+    const priceMaxInput = document.getElementById('price-max-input');
+    if (priceMaxRange) {
+      priceMaxRange.max = activeFilters.priceMax;
+      priceMaxRange.value = activeFilters.priceMax;
+    }
+    if (priceMaxInput) {
+      priceMaxInput.max = activeFilters.priceMax;
+      priceMaxInput.value = activeFilters.priceMax;
+    }
+    updatePriceDisplay();
+  }
+
+  renderCategoryPage(categoryCurrentPage);
+}
+
+// Инициализация фильтров
+function initFilters() {
+  // Ждем, пока categoryList будет заполнен
+  setTimeout(() => {
+    if (categoryList.length > 0) {
+      setupColorFilters();
+      setupSizeFilters();
+      setupPriceFilters();
+    }
+  }, 100);
+}
+
+// Настройка фильтров по цвету
+function setupColorFilters() {
+  const colorFiltersContainer = document.getElementById('color-filters');
+  if (!colorFiltersContainer) return;
+
+  // Получаем уникальные цвета из текущей категории
+  const colors = [...new Set(categoryList.map(p => p.color).filter(Boolean))];
+  
+  colorFiltersContainer.innerHTML = '';
+  colors.forEach(color => {
+    const option = document.createElement('div');
+    option.className = 'filter-option';
+    option.textContent = color;
+    option.dataset.color = color;
+    option.onclick = () => toggleColorFilter(color, option);
+    colorFiltersContainer.appendChild(option);
+  });
+}
+
+// Настройка фильтров по размеру
+function setupSizeFilters() {
+  const sizeFiltersContainer = document.getElementById('size-filters');
+  if (!sizeFiltersContainer) return;
+
+  // Получаем уникальные размеры из текущей категории
+  const sizes = [...new Set(categoryList.map(p => p.size).filter(Boolean))].sort();
+  
+  sizeFiltersContainer.innerHTML = '';
+  sizes.forEach(size => {
+    const option = document.createElement('div');
+    option.className = 'filter-option';
+    option.textContent = size;
+    option.dataset.size = size;
+    option.onclick = () => toggleSizeFilter(size, option);
+    sizeFiltersContainer.appendChild(option);
+  });
+}
+
+// Настройка фильтров по цене
+function setupPriceFilters() {
+  const priceMinRange = document.getElementById('price-min');
+  const priceMaxRange = document.getElementById('price-max');
+  const priceMinInput = document.getElementById('price-min-input');
+  const priceMaxInput = document.getElementById('price-max-input');
+  
+  // Слайдеры
+  if (priceMinRange && priceMaxRange) {
+    priceMinRange.addEventListener('input', () => {
+      const min = parseInt(priceMinRange.value);
+      const max = parseInt(priceMaxRange.value);
+      if (min > max) {
+        priceMinRange.value = max;
+      }
+      activeFilters.priceMin = parseInt(priceMinRange.value);
+      if (priceMinInput) priceMinInput.value = activeFilters.priceMin;
+      applyFilters();
+    });
+    
+    priceMaxRange.addEventListener('input', () => {
+      const min = parseInt(priceMinRange.value);
+      const max = parseInt(priceMaxRange.value);
+      if (max < min) {
+        priceMaxRange.value = min;
+      }
+      activeFilters.priceMax = parseInt(priceMaxRange.value);
+      if (priceMaxInput) priceMaxInput.value = activeFilters.priceMax;
+      applyFilters();
+    });
+  }
+  
+  // Поля ввода
+  if (priceMinInput && priceMaxInput) {
+    priceMinInput.addEventListener('change', () => {
+      const min = parseInt(priceMinInput.value) || 0;
+      const max = parseInt(priceMaxInput.value) || activeFilters.priceMax;
+      if (min > max) {
+        priceMinInput.value = max;
+      }
+      activeFilters.priceMin = parseInt(priceMinInput.value) || 0;
+      if (priceMinRange) priceMinRange.value = activeFilters.priceMin;
+      applyFilters();
+    });
+    
+    priceMaxInput.addEventListener('change', () => {
+      const min = parseInt(priceMinInput.value) || 0;
+      const max = parseInt(priceMaxInput.value) || activeFilters.priceMax;
+      if (max < min) {
+        priceMaxInput.value = min;
+      }
+      activeFilters.priceMax = parseInt(priceMaxInput.value) || activeFilters.priceMax;
+      if (priceMaxRange) priceMaxRange.value = activeFilters.priceMax;
+      applyFilters();
+    });
+  }
+}
+
+// Обновление отображения диапазона цен
+function updatePriceDisplay() {
+  const priceMinInput = document.getElementById('price-min-input');
+  const priceMaxInput = document.getElementById('price-max-input');
+  const priceMinRange = document.getElementById('price-min');
+  const priceMaxRange = document.getElementById('price-max');
+  
+  if (priceMinInput) priceMinInput.value = activeFilters.priceMin;
+  if (priceMaxInput) priceMaxInput.value = activeFilters.priceMax;
+  if (priceMinRange) priceMinRange.value = activeFilters.priceMin;
+  if (priceMaxRange) priceMaxRange.value = activeFilters.priceMax;
+}
+
+// Переключение фильтра по цвету
+function toggleColorFilter(color, element) {
+  const index = activeFilters.colors.indexOf(color);
+  if (index > -1) {
+    activeFilters.colors.splice(index, 1);
+    element.classList.remove('active');
+  } else {
+    activeFilters.colors.push(color);
+    element.classList.add('active');
+  }
+  applyFilters();
+}
+
+// Переключение фильтра по размеру
+function toggleSizeFilter(size, element) {
+  const index = activeFilters.sizes.indexOf(size);
+  if (index > -1) {
+    activeFilters.sizes.splice(index, 1);
+    element.classList.remove('active');
+  } else {
+    activeFilters.sizes.push(size);
+    element.classList.add('active');
+  }
+  applyFilters();
+}
+
+// Применение фильтров
+function applyFilters() {
+  filteredList = categoryList.filter(product => {
+    // Фильтр по цвету
+    if (activeFilters.colors.length > 0) {
+      if (!activeFilters.colors.includes(product.color)) {
+        return false;
+      }
+    }
+    
+    // Фильтр по размеру
+    if (activeFilters.sizes.length > 0) {
+      if (!activeFilters.sizes.includes(product.size)) {
+        return false;
+      }
+    }
+    
+    // Фильтр по цене
+    const productPrice = product.price || product.oldPrice || 0;
+    if (productPrice < activeFilters.priceMin || productPrice > activeFilters.priceMax) {
+      return false;
+    }
+    
+    return true;
+  });
+  
+  categoryCurrentPage = 1;
+  renderCategoryPage(categoryCurrentPage);
+}
+
+// Сброс фильтров
+function clearFilters() {
+  activeFilters = {
+    colors: [],
+    sizes: [],
+    priceMin: 0,
+    priceMax: Math.max(...categoryList.map(p => p.price || p.oldPrice || 1000))
+  };
+  
+  // Сбрасываем UI
+  document.querySelectorAll('.filter-option.active').forEach(el => {
+    el.classList.remove('active');
+  });
+  
+  const priceMinRange = document.getElementById('price-min');
+  const priceMaxRange = document.getElementById('price-max');
+  const priceMinInput = document.getElementById('price-min-input');
+  const priceMaxInput = document.getElementById('price-max-input');
+  
+  if (priceMinRange) priceMinRange.value = 0;
+  if (priceMaxRange) {
+    priceMaxRange.value = activeFilters.priceMax;
+    priceMaxRange.max = activeFilters.priceMax;
+  }
+  if (priceMinInput) priceMinInput.value = 0;
+  if (priceMaxInput) {
+    priceMaxInput.value = activeFilters.priceMax;
+    priceMaxInput.max = activeFilters.priceMax;
+  }
+  
+  updatePriceDisplay();
+  applyFilters();
+}
+
+function renderCategoryPage(page) {
+  const grid = document.getElementById('category-grid');
+  const pagination = document.getElementById('category-pagination');
+  if (!grid || !Array.isArray(filteredList) || filteredList.length === 0) {
+    if (grid) {
+      grid.innerHTML = '<p style="text-align: center; padding: 40px; color: #666;">Товары не найдены</p>';
+    }
+    if (pagination) pagination.innerHTML = '';
+    return;
+  }
+
+  const totalItems = filteredList.length;
+  const totalPages = Math.ceil(totalItems / CATEGORY_ITEMS_PER_PAGE) || 1;
+  if (page < 1) page = 1;
+  if (page > totalPages) page = totalPages;
+  categoryCurrentPage = page;
+
+  const start = (page - 1) * CATEGORY_ITEMS_PER_PAGE;
+  const end = start + CATEGORY_ITEMS_PER_PAGE;
+  const pageItems = filteredList.slice(start, end);
+
+  grid.innerHTML = '';
+  pageItems.forEach(product => {
+    const hasImage = !!product.image;
+    const emoji = product.emoji || (product.category === 'men' ? '🎒' : '👜');
+    grid.innerHTML += `
+      <div class="product-card" data-product-id="${product.id}">
+        <div class="product-image">
+          ${hasImage ? `<img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.style.display='none'">` : `<div class='product-emoji'>${emoji}</div>`}
+        </div>
+        <h3 class="product-name">${product.name}</h3>
+        <div class="product-meta">
+          <span class="product-price">${product.price} MDL</span>
+          ${product.oldPrice ? `<span class='product-old-price'>${product.oldPrice} MDL</span>` : ''}
+        </div>
+        ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+        <button class="add-to-cart" onclick="addToCart(${product.id}); event.stopPropagation();">В КОРЗИНУ</button>
+      </div>`;
+  });
+
+  renderCategoryPagination(totalPages);
+
+  // Делаем карточки кликабельными (переход на страницу товара)
+  if (typeof makeProductCardsClickable === 'function') {
+    makeProductCardsClickable();
+  } else {
+    document.querySelectorAll('.product-card').forEach(card => {
+      const id = card.dataset.productId;
+      if (!id) return;
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', (e) => {
+        if (!e.target.closest('.add-to-cart')) {
+          window.location.href = `product.html?id=${id}`;
+        }
+      });
+    });
+  }
+}
+
+function renderCategoryPagination(totalPages) {
+  const pagination = document.getElementById('category-pagination');
+  if (!pagination) return;
+  pagination.innerHTML = '';
+
+  if (totalPages <= 1) return;
+
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement('button');
+    btn.className = 'page-btn' + (i === categoryCurrentPage ? ' active' : '');
+    btn.textContent = i;
+    btn.onclick = () => {
+      renderCategoryPage(i);
+    };
+    pagination.appendChild(btn);
+  }
+}

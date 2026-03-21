@@ -1,0 +1,17 @@
+{
+  "name": "rado-bags",
+  "version": "1.0.0",
+  "scripts": {
+    "copy-to-www": "cp index.html about.html accessories.html contacts.html new.html product.html sale.html women.html style.css script.js category.js product.js contacts.js manifest.json sw.js www/ && cp -r Images api www/",
+    "sync:ios": "npm run copy-to-www && npx cap sync ios",
+    "open:ios": "npx cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/cli": "^8.2.0",
+    "@capacitor/core": "^8.2.0",
+    "@capacitor/ios": "^8.2.0"
+  },
+  "capacitor": {
+    "platforms": ["ios"]
+  }
+}

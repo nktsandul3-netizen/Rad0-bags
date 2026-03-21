@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Женская Линия - RADO BAGS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+        <div class="container">
+            <div class="logo" onclick="location.href='index.html'">
+                <h1>RADO BAGS</h1>
+            </div>
+            <nav class="nav">
+                <a href="women.html">ЖЕНСКИЕ СУМКИ</a>
+                <a href="men.html">МУЖСКИЕ СУМКИ</a>
+                <a href="accessories.html">АКСЕССУАРЫ</a>
+                <a href="about.html">О НАС</a>
+                <a href="contacts.html">КОНТАКТЫ</a>
+            </nav>
+            <div class="header-actions header-actions--icons">
+                <button type="button" class="header-icon header-search-btn" id="header-search-btn" aria-label="Поиск">
+                    <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </button>
+                <a href="favorites.html" class="header-icon header-favorites-link" aria-label="Избранное">
+                    <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span id="header-favorites-count" class="header-favorites-count">0</span>
+                </a>
+                <div class="cart-icon" onclick="showCart()">
+                    <svg class="header-icon-svg header-cart-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+<main>
+<section class="category-section">
+<div class="container">
+    <div class="section-header-row">
+        <h2>Женская Линия</h2>
+    </div>
+    
+    <div class="category-layout">
+        <div class="products-content products-content--full">
+            <div class="products-grid" id="category-grid"></div>
+            <div class="pagination" id="category-pagination"></div>
+        </div>
+    </div>
+</div>
+</section>
+</main>
+
+    <!-- Поиск -->
+    <div class="search-overlay" id="search-overlay" aria-hidden="true">
+        <div class="search-overlay__backdrop" id="search-overlay-backdrop"></div>
+        <div class="search-overlay__panel">
+            <div class="search-overlay__bar">
+                <div class="search-overlay__input-wrap">
+                    <svg class="search-overlay__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <input type="search" class="search-overlay__input" id="search-overlay-input" placeholder="Поиск товаров..." autocomplete="off">
+                </div>
+                <button type="button" class="search-overlay__btn-find" id="search-overlay-find">Найти</button>
+                <a href="#" class="search-overlay__link-close" id="search-overlay-close">Закрыть</a>
+            </div>
+            <div class="search-overlay__body">
+                <div class="search-overlay__col search-overlay__col--suggestions">
+                    <h3 class="search-overlay__col-title">Часто ищут</h3>
+                    <ul class="search-overlay__suggestions" id="search-overlay-suggestions"></ul>
+                </div>
+                <div class="search-overlay__col search-overlay__col--products">
+                    <h3 class="search-overlay__col-title" id="search-overlay-col-title">Популярные товары</h3>
+                    <div class="search-overlay__results" id="search-overlay-results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Корзина -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Корзина</h3>
+                <button class="close-cart" onclick="closeCart()">✕</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Товары в корзине -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span class="total-label">Итого:</span>
+                    <span class="total-price" id="cart-total-price">0</span>
+                    <span class="total-currency">MDL</span>
+                </div>
+                <button class="checkout-btn" onclick="openCheckoutModal()">ОФОРМИТЬ ЗАКАЗ</button>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+<script src="category.js"></script>
+</body>
+</html>

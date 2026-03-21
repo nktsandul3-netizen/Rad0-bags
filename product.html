@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RADO BAGS - Детали товара</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="logo" onclick="location.href='index.html'">
+                <h1>RADO BAGS</h1>
+            </div>
+            <nav class="nav">
+                <a href="women.html">ЖЕНСКИЕ СУМКИ</a>
+                <a href="men.html">МУЖСКИЕ СУМКИ</a>
+                <a href="accessories.html">АКСЕССУАРЫ</a>
+                <a href="about.html">О НАС</a>
+                <a href="contacts.html">КОНТАКТЫ</a>
+            </nav>
+            <div class="header-actions header-actions--icons">
+                <button type="button" class="header-icon header-search-btn" id="header-search-btn" aria-label="Поиск">
+                    <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </button>
+                <a href="favorites.html" class="header-icon header-favorites-link" aria-label="Избранное">
+                    <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span id="header-favorites-count" class="header-favorites-count">0</span>
+                </a>
+                <div class="cart-icon" onclick="showCart()">
+                    <svg class="header-icon-svg header-cart-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Товар: Ekonika-style — слева галерея, справа инфо -->
+    <section class="product-hero product-page-ekonika">
+        <div class="product-ekonika-inner">
+            <div class="product-gallery-column">
+                <div class="product-gallery-grid" id="product-gallery-grid">
+                    <!-- Заполняется из product.js -->
+                </div>
+            </div>
+            <div class="product-info-column product-info-sticky">
+                <div class="breadcrumbs">
+                    <a href="index.html">Главная</a> &gt;
+                    <a href="women.html" id="breadcrumb-category">Каталог</a> &gt;
+                    <span id="breadcrumb-product">Товар</span>
+                </div>
+                <div class="product-info-header">
+                    <p class="product-label" id="product-label">Новинка</p>
+                    <div class="product-title-row">
+                        <h1 class="product-title" id="product-title"></h1>
+                        <button type="button" class="product-favorite-btn" aria-label="В избранное">
+                            <svg class="product-favorite-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-price-block">
+                    <span class="product-price" id="current-price"></span>
+                    <span class="product-price-original" id="original-price"></span>
+                    <span class="product-discount-badge" id="discount-badge"></span>
+                </div>
+                <div class="product-actions-row">
+                    <button type="button" class="product-btn product-btn-primary" onclick="addCurrentProductToCart()">Добавить в корзину</button>
+                    <button type="button" class="product-btn product-btn-secondary" id="product-buy-one-click">Купить в 1 клик</button>
+                </div>
+                <div class="product-option product-option--colors">
+                    <h3 class="product-option__title">Цвет</h3>
+                    <div class="color-options" id="color-options"></div>
+                </div>
+                <div class="product-accordion">
+                    <div class="product-accordion-item">
+                        <button type="button" class="product-accordion-trigger" data-drawer="description" aria-expanded="false">
+                            <span>Описание</span>
+                            <span class="product-accordion-icon">+</span>
+                        </button>
+                        <div class="product-accordion-body product-accordion-body--source" id="product-description" aria-hidden="true"></div>
+                    </div>
+                    <div class="product-accordion-item">
+                        <button type="button" class="product-accordion-trigger" data-drawer="characteristics" aria-expanded="false">
+                            <span>Характеристики</span>
+                            <span class="product-accordion-icon">+</span>
+                        </button>
+                        <div class="product-accordion-body product-accordion-body--source" id="product-specs" aria-hidden="true"></div>
+                    </div>
+                    <div class="product-accordion-item">
+                        <button type="button" class="product-accordion-trigger" data-drawer="certificate" aria-expanded="false">
+                            <span>Сертификат соответствия</span>
+                            <span class="product-accordion-icon">+</span>
+                        </button>
+                        <div class="product-accordion-body product-accordion-body--source" id="product-certificate-source" aria-hidden="true">
+                            <p>Изделие соответствует требованиям качества. Сертификаты предоставляются по запросу.</p>
+                        </div>
+                    </div>
+                    <div class="product-accordion-item">
+                        <button type="button" class="product-accordion-trigger" data-drawer="care" aria-expanded="false">
+                            <span>Уход за изделием</span>
+                            <span class="product-accordion-icon">+</span>
+                        </button>
+                        <div class="product-accordion-body product-accordion-body--source" id="product-care-source" aria-hidden="true">
+                            <p>Натуральная кожа. Рекомендуем аккуратную чистку и хранение в фирменном мешочке. Избегайте прямых солнечных лучей и влаги.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Drawer: slide-in panel -->
+                <div class="product-drawer" id="product-drawer" aria-hidden="true">
+                    <div class="product-drawer-overlay" id="product-drawer-overlay"></div>
+                    <div class="product-drawer-panel" id="product-drawer-panel">
+                        <div class="product-drawer-header">
+                            <h2 class="product-drawer-title" id="product-drawer-title"></h2>
+                            <button type="button" class="product-drawer-close" id="product-drawer-close" aria-label="Закрыть">✕</button>
+                        </div>
+                        <div class="product-drawer-content" id="product-drawer-content"></div>
+                    </div>
+                </div>
+                <a href="#related-products" class="product-similar-link">
+                    <svg class="product-similar-link__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="14" height="18" rx="2"/><rect x="7" y="7" width="14" height="18" rx="2"/></svg>
+                    <span>Похожие модели</span>
+                </a>
+            </div>
+        </div>
+        <div class="product-zoom-overlay" id="product-zoom-overlay">
+            <button type="button" class="product-zoom-close" id="product-zoom-close" aria-label="Закрыть">✕</button>
+            <div class="product-zoom-content">
+                <img id="product-zoom-image" src="" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Похожие товары -->
+    <section class="related-products" id="related-products">
+        <div class="container">
+            <h2>Похожие товары</h2>
+            <div class="products-grid" id="related-products-grid"></div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 RADO BAGS. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Поиск -->
+    <div class="search-overlay" id="search-overlay" aria-hidden="true">
+        <div class="search-overlay__backdrop" id="search-overlay-backdrop"></div>
+        <div class="search-overlay__panel">
+            <div class="search-overlay__bar">
+                <div class="search-overlay__input-wrap">
+                    <svg class="search-overlay__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <input type="search" class="search-overlay__input" id="search-overlay-input" placeholder="Поиск товаров..." autocomplete="off">
+                </div>
+                <button type="button" class="search-overlay__btn-find" id="search-overlay-find">Найти</button>
+                <a href="#" class="search-overlay__link-close" id="search-overlay-close">Закрыть</a>
+            </div>
+            <div class="search-overlay__body">
+                <div class="search-overlay__col search-overlay__col--suggestions">
+                    <h3 class="search-overlay__col-title">Часто ищут</h3>
+                    <ul class="search-overlay__suggestions" id="search-overlay-suggestions"></ul>
+                </div>
+                <div class="search-overlay__col search-overlay__col--products">
+                    <h3 class="search-overlay__col-title" id="search-overlay-col-title">Популярные товары</h3>
+                    <div class="search-overlay__results" id="search-overlay-results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Корзина -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Корзина</h3>
+                <button class="close-cart" onclick="closeCart()">✕</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Товары в корзине -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span class="total-label">Итого:</span>
+                    <span class="total-price" id="cart-total-price">0</span>
+                    <span class="total-currency">MDL</span>
+                </div>
+                <button class="checkout-btn" onclick="openCheckoutModal()">ОФОРМИТЬ ЗАКАЗ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="checkout-modal" id="checkout-modal" aria-hidden="true">
+        <div class="checkout-modal__backdrop" onclick="closeCheckoutModal()"></div>
+        <div class="checkout-modal__content" role="dialog" aria-modal="true">
+            <button class="checkout-modal__close" onclick="closeCheckoutModal()">✕</button>
+            <h3>Оформление заказа</h3>
+            <p class="checkout-modal__hint">Введите контакты, и мы свяжемся для подтверждения заказа.</p>
+            <form id="checkout-form">
+                <label>
+                    Имя и фамилия
+                    <input type="text" name="name" placeholder="Мария Иванова" required>
+                </label>
+                <label>
+                    Номер телефона
+                    <input type="tel" name="phone" placeholder="+373 69 000 000" required>
+                </label>
+                <label>
+                    Город / Адрес доставки
+                    <input type="text" name="address" placeholder="Кишинёв, ул. ...">
+                </label>
+                <label>
+                    Комментарий к заказу
+                    <textarea name="comment" rows="3" placeholder="Удобное время для звонка и т.д."></textarea>
+                </label>
+                <div class="checkout-summary" id="checkout-summary"></div>
+                <button type="submit" class="primary-action">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="category.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>

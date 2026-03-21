@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - RADO BAGS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo" onclick="location.href='index.html'">
+                <h1>RADO BAGS</h1>
+            </div>
+            <nav class="nav">
+                <a href="women.html">ЖЕНСКИЕ СУМКИ</a>
+                <a href="men.html">МУЖСКИЕ СУМКИ</a>
+                <a href="accessories.html">АКСЕССУАРЫ</a>
+                <a href="about.html">О НАС</a>
+                <a href="contacts.html">КОНТАКТЫ</a>
+            </nav>
+            <div class="header-actions header-actions--icons">
+                <button type="button" class="header-icon header-search-btn" id="header-search-btn" aria-label="Поиск">
+                    <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </button>
+                <a href="favorites.html" class="header-icon header-favorites-link" aria-label="Избранное">
+                    <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span id="header-favorites-count" class="header-favorites-count">0</span>
+                </a>
+                <div class="cart-icon" onclick="showCart()">
+                    <svg class="header-icon-svg header-cart-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section class="about-hero">
+            <video class="about-hero__video" autoplay muted loop playsinline>
+                <source src="Images/about-hero.mp4" type="video/mp4">
+            </video>
+            <div class="about-hero__overlay"></div>
+        </section>
+
+        <!-- 2. PHILOSOPHY SECTION -->
+        <section class="about-philosophy-section">
+            <div class="container container--about">
+                <div class="about-philosophy-grid">
+                    <div class="about-philosophy__text">
+                        <h2 class="about-philosophy__heading">ФИЛОСОФИЯ RADO BAGS</h2>
+                        <p>Мы создаем сумки в духе современного минимализма.<br>Без лишнего декора — только форма, материал и функциональность.</p>
+                        <p>Каждая модель продумана для реальной жизни:<br>ноутбук, документы и ежедневные вещи.</p>
+                    </div>
+                    <div class="about-philosophy__stats">
+                        <div class="about-stat">
+                            <span class="about-stat__number">110+</span>
+                            <span class="about-stat__label">Моделей в коллекции</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat__number">3</span>
+                            <span class="about-stat__label">Линии: Women / Men / Аксессуары</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat__number">24/7</span>
+                            <span class="about-stat__label">Поддержка клиентов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. IMAGE + TEXT SECTION -->
+        <section class="about-quality-section">
+            <div class="about-quality-grid">
+                <div class="about-quality__image">
+                    <img src="Images/about-quality.png" alt="Сумка RADO BAGS" loading="lazy">
+                </div>
+                <div class="about-quality__content">
+                    <h2 class="about-quality__title">КАЧЕСТВО</h2>
+                    <p>Мы используем качественную экокожу и надежную фурнитуру. Каждая модель проходит аккуратную сборку и проверку перед отправкой.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PRINCIPLES SECTION -->
+        <section class="about-principles-section">
+            <div class="container container--about">
+                <h2 class="about-principles__heading">НАШИ ПРИНЦИПЫ</h2>
+                <div class="about-principles-grid">
+                    <div class="about-principles-card">
+                        <h3 class="about-principles-card__title">КАЧЕСТВО</h3>
+                        <p class="about-principles-card__text">Прочные материалы и аккуратная сборка.</p>
+                    </div>
+                    <div class="about-principles-card">
+                        <h3 class="about-principles-card__title">МИНИМАЛИЗМ</h3>
+                        <p class="about-principles-card__text">Чистые линии и спокойная цветовая палитра.</p>
+                    </div>
+                    <div class="about-principles-card">
+                        <h3 class="about-principles-card__title">ПРАКТИЧНОСТЬ</h3>
+                        <p class="about-principles-card__text">Функциональные отделения и удобная форма.</p>
+                    </div>
+                    <div class="about-principles-card">
+                        <h3 class="about-principles-card__title">ЧЕСТНОСТЬ</h3>
+                        <p class="about-principles-card__text">Мы открыто говорим о материалах и не завышаем цены.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner container">
+            <div class="site-footer__brand">
+                <a href="index.html" class="site-footer__logo">RADO BAGS</a>
+                <p class="site-footer__tagline">премиальные сумки</p>
+                <p class="site-footer__hours">Пн–Пт с 09:00 до 18:00</p>
+                <a href="tel:+37368935619" class="site-footer__link">+373 68 935 619</a>
+                <a href="mailto:rdn.o0790@gmail.com" class="site-footer__link">rdn.o0790@gmail.com</a>
+                <div class="site-footer__socials">
+                    <a href="https://www.instagram.com/radobags?igsh=MTducnJndjIyNTdrdw==" target="_blank" rel="noopener" class="site-footer__social" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" class="site-footer__social" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                </div>
+            </div>
+            <div class="site-footer__nav">
+                <div class="site-footer__col">
+                    <h4 class="site-footer__col-title">КАТАЛОГ</h4>
+                    <a href="women.html">Женские сумки</a>
+                    <a href="men.html">Мужские сумки</a>
+                    <a href="accessories.html">Аксессуары</a>
+                </div>
+                <div class="site-footer__col">
+                    <h4 class="site-footer__col-title">КОМПАНИЯ</h4>
+                    <a href="about.html">О нас</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+            </div>
+            <div class="site-footer__newsletter">
+                <p class="site-footer__newsletter-title">Узнавайте первыми о наших новинках</p>
+                <form class="site-footer__form" id="footer-newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Email адрес *" class="site-footer__input" required>
+                    <button type="submit" class="site-footer__btn">Подписаться</button>
+                </form>
+                <label class="site-footer__checkbox"><input type="checkbox" required> Даю согласие на обработку персональных данных</label>
+                <label class="site-footer__checkbox"><input type="checkbox"> Согласен на получение рассылки</label>
+            </div>
+        </div>
+        <div class="site-footer__extra container">
+            <div class="site-footer__payments">
+                <span class="site-footer__payment">Visa</span>
+                <span class="site-footer__payment">Mastercard</span>
+                <span class="site-footer__payment">Apple Pay</span>
+                <span class="site-footer__payment">Google Pay</span>
+            </div>
+            <p class="site-footer__trust">Over 500 happy customers</p>
+        </div>
+        <div class="site-footer__copy container">
+            <p>&copy; 2025 RADO BAGS. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Корзина</h3>
+                <button class="close-cart" onclick="closeCart()">✕</button>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span class="total-label">Итого:</span>
+                    <span class="total-price" id="cart-total-price">0</span>
+                    <span class="total-currency">MDL</span>
+                </div>
+                <button class="checkout-btn" onclick="openCheckoutModal()">ОФОРМИТЬ ЗАКАЗ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,907 @@
+// База товаров для главной страницы с картинками
+// База товаров для главной страницы с картинками
+const topProducts = {
+    women: [
+        { id: 116, name: "RADO Женская линия — артикул 116", price: 0, category: "women", image: "Images/products/women/art116.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art116.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+        { id: 117, name: "RADO Женская линия — артикул 117", price: 0, category: "women", image: "Images/products/women/art117.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art117.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+        { id: 118, name: "RADO Женская линия — артикул 118", price: 0, category: "women", image: "Images/products/women/art118.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art118.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+        { id: 119, name: "RADO Женская линия — артикул 119", price: 0, category: "women", image: "Images/products/women/art119.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art119.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+        { id: 120, name: "RADO Женская линия — артикул 120", price: 0, category: "women", image: "Images/products/women/art120.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art120.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+        { id: 121, name: "RADO Женская линия — артикул 121", price: 0, category: "women", image: "Images/products/women/art121.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art121.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+        { id: 122, name: "RADO Женская линия — артикул 122", price: 0, category: "women", image: "Images/products/women/art122.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art122.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+        { id: 123, name: "RADO Женская линия — артикул 123", price: 0, category: "women", image: "Images/products/women/art123.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art123.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+        { id: 124, name: "RADO Женская линия — артикул 124", price: 0, category: "women", image: "Images/products/women/art124.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art124.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+        { id: 125, name: "RADO Женская линия — артикул 125", price: 0, category: "women", image: "Images/products/women/art125.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art125.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+        { id: 126, name: "RADO Женская линия — артикул 126", price: 0, category: "women", image: "Images/products/women/art126.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art126.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
+        { id: 127, name: "RADO Женская линия — артикул 127", price: 0, category: "women", image: "Images/products/women/art127.jpg", color: "", size: "", material: "", description: "Добавьте описание и комментарий к модели. Фото: Images/products/women/art127.jpg", emoji: "👜", specifications: [{ name: 'Категория', value: 'Женские сумки' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] }
+    ]
+};
+
+const TOP_PRODUCTS_LIMIT = 12;
+let topProductsSynced = false;
+
+function syncTopProductsWithCatalog(limit = TOP_PRODUCTS_LIMIT) {
+    if (topProductsSynced) return;
+    if (typeof products === 'undefined' || !Array.isArray(products)) return;
+    
+    const normalizeCategory = value => (value || '').toLowerCase();
+    const womenFromCatalog = products.filter(p => normalizeCategory(p.category) === 'women' && p.id >= 116 && p.id <= 127);
+    
+    if (womenFromCatalog.length) {
+        topProducts.women = womenFromCatalog.slice(0, limit);
+    }
+    
+    topProductsSynced = true;
+}
+
+function findProductById(productId) {
+    if (typeof products !== 'undefined' && Array.isArray(products)) {
+        const catalogProduct = products.find(p => p.id === productId);
+        if (catalogProduct) return catalogProduct;
+    }
+    
+    syncTopProductsWithCatalog();
+    return topProducts.women.find(p => p.id === productId) || null;
+}
+
+
+// __DELETED_OLD_WOMEN_START__
+        { 
+            id: 1, 
+            name: "RADO Женская сумка шоппер NM301", 
+            price: 595, 
+            originalPrice: 675, 
+            image: "Images/products/women/top1.jpg", 
+            category: "women", 
+            badge: "🔥 ТОП", 
+            color: "черный", 
+            size: "L", 
+            material: "кожа",
+            description: "Элегантная сумка шоппер из натуральной кожи. Просторное основное отделение, внутренний карман на молнии. Идеальный выбор для повседневного использования и деловых встреч. Сумка выполнена в классическом черном цвете, который сочетается с любым стилем одежды.",
+            media: [
+                { type: "video", src: "Images/products/women/nm301.mp4", poster: "Images/products/women/top1.jpg" },
+                { type: "image", src: "Images/products/women/top1.jpg" },
+                { type: "image", src: "Images/products/women/top1-1.jpg" },
+                { type: "image", src: "Images/products/women/top1-2.jpg" },
+                { type: "image", src: "Images/products/women/top1-3.jpg" }
+            ],
+            specifications: [
+                { name: 'Категория', value: 'Женские сумки' },
+                { name: 'Материал', value: 'Натуральная кожа' },
+                { name: 'Состав', value: '100% натуральная кожа, полиэстер (подкладка)' },
+                { name: 'Цвет', value: 'Черный' },
+                { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+                { name: 'Вес', value: '0.9 кг' },
+                { name: 'Внутренние карманы', value: '2 (основной + на молнии)' },
+                { name: 'Ручки', value: 'Две ручки, длина 25 см' },
+                { name: 'Фурнитура', value: 'Металлическая' },
+                { name: 'Подкладка', value: 'Полиэстер' },
+                { name: 'Уход', value: 'Сухая чистка, защита от влаги' },
+                { name: 'Бренд', value: 'RADO BAGS' },
+                { name: 'Страна производства', value: 'Молдова' }
+            ]
+        },
+        { 
+            id: 2, 
+            name: "RADO Женская сумка на плечо NM291", 
+            price: 595, 
+            image: "Images/products/women/top2.jpg", 
+            category: "women", 
+            badge: "🔥 ТОП", 
+            color: "коричневый", 
+            size: "M", 
+            material: "кожа",
+            description: "Стильная сумка на плечо из качественной кожи. Удобный регулируемый ремень, несколько отделений для организации вещей. Подходит для работы и прогулок. Коричневый цвет добавляет элегантности и универсальности.",
+            specifications: [
+                { name: 'Категория', value: 'Женские сумки' },
+                { name: 'Материал', value: 'Натуральная кожа' },
+                { name: 'Цвет', value: 'Коричневый' },
+                { name: 'Размер', value: 'M (30 x 20 x 10 см)' },
+                { name: 'Вес', value: '0.5 кг' },
+                { name: 'Внутренние карманы', value: '1 (основной)' },
+                { name: 'Ручки', value: 'Одна ручка, длина 15 см' },
+                { name: 'Фурнитура', value: 'Металлическая' },
+                { name: 'Бренд', value: 'RADO BAGS' },
+                { name: 'Страна производства', value: 'Молдова' }
+            ]
+        },
+        { 
+            id: 3, 
+            name: "RADO Женская сумка шоппер NM300", 
+            price: 395, 
+            originalPrice: 645, 
+            image: "Images/products/women/top3.jpg", 
+            category: "women", 
+            badge: "🔥 ТОП", 
+            color: "бежевый", 
+            size: "L", 
+            material: "экокожа",
+            description: "Модная сумка шоппер из экологичной кожи. Легкая и вместительная, с прочными ручками и металлической фурнитурой. Отличное сочетание стиля и практичности. Бежевый цвет подходит для любого времени года.",
+            specifications: [
+                { name: 'Категория', value: 'Женские сумки' },
+                { name: 'Материал', value: 'Экологичная кожа' },
+                { name: 'Цвет', value: 'Бежевый' },
+                { name: 'Размер', value: 'L (35 x 28 x 12 см)' },
+                { name: 'Вес', value: '0.8 кг' },
+                { name: 'Внутренние карманы', value: '2 (основной + на молнии)' },
+                { name: 'Ручки', value: 'Две ручки, длина 25 см' },
+                { name: 'Фурнитура', value: 'Металлическая' },
+                { name: 'Бренд', value: 'RADO BAGS' },
+                { name: 'Страна производства', value: 'Молдова' }
+            ]
+        },
+        { 
+            id: 4, 
+            name: "RADO Женская сумка кросбоди NM060", 
+            price: 255, 
+            image: "Images/products/women/top4.jpg", 
+            category: "women", 
+            badge: "🔥 ТОП", 
+            color: "черный", 
+            size: "S", 
+            material: "текстиль",
+            description: "Компактная сумка кросбоди из прочного текстиля. Удобный регулируемый ремень, несколько карманов для мелочей. Идеальна для прогулок и путешествий. Легкая и практичная.",
+            specifications: [
+                { name: 'Категория', value: 'Женские сумки' },
+                { name: 'Материал', value: 'Прочный текстиль' },
+                { name: 'Цвет', value: 'Черный' },
+                { name: 'Размер', value: 'S (25 x 18 x 8 см)' },
+                { name: 'Вес', value: '0.3 кг' },
+                { name: 'Внутренние карманы', value: '1 (основной)' },
+                { name: 'Ручки', value: 'Одна ручка, длина 15 см' },
+                { name: 'Фурнитура', value: 'Металлическая' },
+                { name: 'Бренд', value: 'RADO BAGS' },
+                { name: 'Страна производства', value: 'Молдова' }
+            ]
+        },
+        { 
+            id: 5, 
+            name: "RADO Женский рюкзак NM714", 
+            price: 405, 
+            image: "Images/products/women/top5.jpg", 
+            category: "women", 
+            badge: "🔥 ТОП", 
+            color: "розовый", 
+            size: "M", 
+            material: "нейлон",
+            description: "Стильный женский рюкзак из водоотталкивающего нейлона. Отделение для ноутбука, несколько карманов. Эргономичные лямки для комфортной носки. Нежный розовый цвет добавляет женственности.",
+            specifications: [
+                { name: 'Категория', value: 'Женские рюкзаки' },
+                { name: 'Материал', value: 'Водоотталкивающий нейлон' },
+                { name: 'Цвет', value: 'Розовый' },
+                { name: 'Размер', value: 'M (40 x 25 x 15 см)' },
+                { name: 'Вес', value: '1.2 кг' },
+                { name: 'Внутренние карманы', value: '1 (основной)' },
+                { name: 'Ручки', value: 'Одна ручка, длина 20 см' },
+                { name: 'Фурнитура', value: 'Металлическая' },
+                { name: 'Бренд', value: 'RADO BAGS' },
+                { name: 'Страна производства', value: 'Молдова' }
+            ]
+        },
+        { 
+            id: 6, 
+            name: "RADO Женская сумка-тоут NM205", 
+            price: 435, 
+            image: "Images/products/women/top6.jpg", 
+            category: "women", 
+            badge: "�� ТОП", 
+            color: "белый", 
+            size: "L", 
+            material: "хлопок",
+            description: "Вместительная сумка-тоут из натурального хлопка. Просторное основное отделение, прочные ручки. Идеальна для шопинга и повседневного использования. Белый цвет создает свежий и стильный образ.",
+            specifications: [
+                { name: 'Категория', value: 'Женские сумки' },
+                { name: 'Материал', value: 'Натуральный хлопок' },
+                { name: 'Цвет', value: 'Белый' },
+                { name: 'Размер', value: 'L (40 x 30 x 15 см)' },
+                { name: 'Вес', value: '1.5 кг' },
+                { name: 'Внутренние карманы', value: '2 (основной + на молнии)' },
+                { name: 'Ручки', value: 'Две ручки, длина 25 см' },
+                { name: 'Фурнитура', value: 'Металлическая' },
+                { name: 'Бренд', value: 'RADO BAGS' },
+                { name: 'Страна производства', value: 'Молдова' }
+            ]
+        },
+        { 
+            id: 7, 
+            name: "RADO Женский клатч NM010", 
+            price: 295, 
+            image: "Images/products/women/top7.jpg", 
+            category: "women", 
+            badge: "�� ТОП", 
+            color: "красный", 
+            size: "S", 
+            material: "кожа",
+            description: "Элегантный клатч из натуральной кожи. Компактный размер, внутренний карман для карт. Идеален для вечерних мероприятий и особых случаев. Яркий красный цвет привлекает внимание.",
+            specifications: [
+                { name: 'Категория', value: 'Женские клатчи' },
+                { name: 'Материал', value: 'Натуральная кожа' },
+                { name: 'Цвет', value: 'Красный' },
+                { name: 'Размер', value: 'S (15 x 10 x 5 см)' },
+                { name: 'Вес', value: '0.2 кг' },
+                { name: 'Внутренние карманы', value: '1 (основной)' },
+                { name: 'Ручки', value: 'Одна ручка, длина 10 см' },
+                { name: 'Фурнитура', value: 'Металлическая' },
+                { name: 'Бренд', value: 'RADO BAGS' },
+                { name: 'Страна производства', value: 'Молдова' }
+            ]
+        },
+        { 
+            id: 8, 
+            name: "RADO Женская сумка через плечо NM150", 
+            price: 320, 
+            image: "Images/products/women/top8.jpg", 
+            category: "women", 
+            badge: "�� ТОП", 
+            color: "серый", 
+            size: "M", 
+            material: "экокожа",
+            description: "Универсальная сумка через плечо из экокожи. Удобный длинный ремень, несколько отделений. Подходит для работы и повседневной носки. Серый цвет легко комбинируется с любой одеждой.",
+            specifications: [
+                { name: 'Категория', value: 'Женские сумки' },
+                { name: 'Материал', value: 'Экокожа' },
+                { name: 'Цвет', value: 'Серый' },
+                { name: 'Размер', value: 'M (35 x 25 x 12 см)' },
+                { name: 'Вес', value: '0.7 кг' },
+                { name: 'Внутренние карманы', value: '2 (основной + на молнии)' },
+                { name: 'Ручки', value: 'Две ручки, длина 20 см' },
+                { name: 'Фурнитура', value: 'Металлическая' },
+                { name: 'Бренд', value: 'RADO BAGS' },
+                { name: 'Страна производства', value: 'Молдова' }
+            ]
+        }
+    ]
+};
+
+const TOP_PRODUCTS_LIMIT = 12;
+let topProductsSynced = false;
+
+function syncTopProductsWithCatalog(limit = TOP_PRODUCTS_LIMIT) {
+    if (topProductsSynced) return;
+    if (typeof products === 'undefined' || !Array.isArray(products)) return;
+    
+    const normalizeCategory = value => (value || '').toLowerCase();
+    const womenFromCatalog = products.filter(p => normalizeCategory(p.category) === 'women' && p.id >= 116 && p.id <= 127);
+    
+    if (womenFromCatalog.length) {
+        topProducts.women = womenFromCatalog.slice(0, limit);
+    }
+    
+    topProductsSynced = true;
+}
+
+function findProductById(productId) {
+    if (typeof products !== 'undefined' && Array.isArray(products)) {
+        const catalogProduct = products.find(p => p.id === productId);
+        if (catalogProduct) return catalogProduct;
+    }
+    
+    syncTopProductsWithCatalog();
+    return topProducts.women.find(p => p.id === productId) || null;
+}
+
+
+// Настройки пагинации
+const ITEMS_PER_PAGE = 8;
+let currentWomenPage = 1;
+
+// Корзина
+let cart = JSON.parse(localStorage.getItem('rado-cart')) || [];
+let cartCount = parseInt(localStorage.getItem('rado-cart-count')) || 0;
+let totalPrice = parseInt(localStorage.getItem('rado-cart-total')) || 0;
+let checkoutFormEl;
+
+// Функция для отображения картинки
+function getProductImage(product) {
+    if (product.image) {
+        return `<img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">`;
+    }
+    return `<div class="product-emoji">👜</div>`;
+}
+
+// Показать ТОП ПРОДАЖ Женские на главной
+function displayWomenTopSales(page = 1) {
+    const grid = document.getElementById('women-top-grid');
+    const pagination = document.getElementById('women-pagination');
+    if (!grid) return;
+
+    syncTopProductsWithCatalog();
+    currentWomenPage = page;
+    const womenProducts = topProducts.women;
+    const totalPages = Math.ceil(womenProducts.length / ITEMS_PER_PAGE);
+    
+    const startIndex = (page - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const pageProducts = womenProducts.slice(startIndex, endIndex);
+    
+    grid.innerHTML = '';
+    pageProducts.forEach(product => {
+        const productImage = getProductImage(product);
+        const productCard = `
+            <div class="product-card">
+                <div class="product-image">
+                    ${productImage}
+                    <div class="product-emoji" style="display: ${product.image ? 'none' : 'flex'}">👜</div>
+                </div>
+                <h3>${product.name}</h3>
+                ${product.originalPrice ? `
+                    <div class="original-price">${product.originalPrice} MDL</div>
+                    <div class="product-price">${product.price} MDL</div>
+                ` : `<div class="product-price">${product.price} MDL</div>`}
+                ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                <button class="add-to-cart" onclick="addToCart(${product.id})">
+                    В КОРЗИНУ
+                </button>
+            </div>
+        `;
+        grid.innerHTML += productCard;
+    });
+    
+    createPagination(pagination, page, totalPages, 'women');
+}
+
+// Создать пагинацию
+function createPagination(container, currentPage, totalPages, type) {
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    if (totalPages <= 1) return;
+    
+    // Кнопка "Назад"
+    const prevButton = document.createElement('button');
+    prevButton.className = 'page-btn';
+    prevButton.innerHTML = '‹';
+    prevButton.disabled = currentPage === 1;
+    prevButton.onclick = () => displayWomenTopSales(currentPage - 1);
+    container.appendChild(prevButton);
+    
+    // Номера страниц
+    for (let i = 1; i <= totalPages; i++) {
+        const pageButton = document.createElement('button');
+        pageButton.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+        pageButton.textContent = i;
+        pageButton.onclick = () => displayWomenTopSales(i);
+        container.appendChild(pageButton);
+    }
+    
+    // Кнопка "Вперед"
+    const nextButton = document.createElement('button');
+    nextButton.className = 'page-btn';
+    nextButton.innerHTML = '›';
+    nextButton.disabled = currentPage === totalPages;
+    nextButton.onclick = () => displayWomenTopSales(currentPage + 1);
+    container.appendChild(nextButton);
+}
+
+// Добавить в корзину
+function addToCart(productId) {
+    const product = findProductById(productId);
+    if (!product) {
+        console.warn('Товар с ID', productId, 'не найден');
+        return;
+    }
+
+    const existingItem = cart.find(item => item.id === productId);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            ...product,
+            quantity: 1
+        });
+    }
+
+    cartCount++;
+    totalPrice += product.price || 0;
+
+    updateCartCount();
+    showCart();
+    updateCartDisplay();
+}
+// Обновить счетчик корзины
+function updateCartCount() {
+    const cartCountElement = document.querySelector('.cart-count');
+    if (cartCountElement) {
+        cartCountElement.textContent = cartCount;
+    }
+}
+
+// Показать корзину
+function showCart() {
+    const cartOverlay = document.getElementById('cart-overlay');
+    if (cartOverlay) {
+        cartOverlay.style.display = 'block';
+        setTimeout(() => {
+            cartOverlay.classList.add('active');
+        }, 10);
+    }
+}
+
+// Закрыть корзину
+function closeCart() {
+    const cartOverlay = document.getElementById('cart-overlay');
+    if (cartOverlay) {
+        cartOverlay.classList.remove('active');
+        setTimeout(() => {
+            cartOverlay.style.display = 'none';
+        }, 300);
+    }
+}
+
+// Обновить отображение корзины
+function updateCartDisplay() {
+    const cartItems = document.getElementById('cart-items');
+    const totalElement = document.getElementById('cart-total-price');
+    
+    if (!cartItems) return;
+    
+    cartItems.innerHTML = '';
+    
+    if (cart.length === 0) {
+        cartItems.innerHTML = `
+            <div class="cart-empty">
+                <div class="cart-empty-icon">🛒</div>
+                <p>Ваша корзина пуста</p>
+                <button class="continue-shopping-btn" onclick="closeCart()">Продолжить покупки</button>
+            </div>
+        `;
+        if (totalElement) totalElement.textContent = '0';
+        return;
+    }
+    
+    cart.forEach(item => {
+        const itemImage = item.image ? `<img src="${item.image}" alt="${item.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />` : '';
+        const itemEmoji = item.emoji || '👜';
+        const itemTotal = (item.price || 0) * (item.quantity || 1);
+        
+        const cartItem = `
+            <div class="cart-item" data-product-id="${item.id}">
+                <div class="cart-item-image">
+                    ${itemImage}
+                    <div class="cart-item-emoji" style="display: ${item.image ? 'none' : 'flex'}">${itemEmoji}</div>
+                </div>
+                <div class="cart-item-info">
+                    <h4 class="cart-item-name">${item.name}</h4>
+                    <div class="cart-item-details">
+                        ${item.color ? `<span class="cart-item-detail">Цвет: ${item.color}</span>` : ''}
+                        ${item.size ? `<span class="cart-item-detail">Размер: ${item.size}</span>` : ''}
+                    </div>
+                    <div class="cart-item-price">
+                        <span class="item-unit-price">${item.price || 0} MDL</span>
+                        <span class="item-total-price">× ${item.quantity || 1} = ${itemTotal} MDL</span>
+                    </div>
+                </div>
+                <div class="cart-item-actions">
+                    <div class="quantity-controls">
+                        <button class="quantity-btn decrease" onclick="decreaseQuantity(${item.id})" aria-label="Уменьшить">−</button>
+                        <span class="quantity-value">${item.quantity || 1}</span>
+                        <button class="quantity-btn increase" onclick="increaseQuantity(${item.id})" aria-label="Увеличить">+</button>
+                    </div>
+                    <button class="remove-item-btn" onclick="removeFromCart(${item.id})" aria-label="Удалить">✕</button>
+                </div>
+            </div>
+        `;
+        cartItems.innerHTML += cartItem;
+    });
+    
+    if (totalElement) totalElement.textContent = totalPrice;
+    
+    updateCheckoutSummary();
+}
+
+// Обновление краткого резюме заказа в модальном окне
+function updateCheckoutSummary() {
+    const summaryContainer = document.getElementById('checkout-summary');
+    if (!summaryContainer) return;
+    
+    if (cart.length === 0) {
+        summaryContainer.innerHTML = `
+            <strong>Корзина пуста</strong>
+            <p style="margin: 0; color: #999; font-size: 12px;">Добавьте товары, чтобы оформить заказ.</p>
+        `;
+        return;
+    }
+    
+    let itemsHtml = '';
+    cart.forEach(item => {
+        const lineTotal = (item.price || 0) * (item.quantity || 1);
+        itemsHtml += `
+            <div class="checkout-summary__row">
+                <span>${item.name}${item.quantity > 1 ? ` × ${item.quantity}` : ''}</span>
+                <span>${lineTotal} MDL</span>
+            </div>
+        `;
+    });
+    
+    summaryContainer.innerHTML = `
+        <strong>Ваш заказ</strong>
+        ${itemsHtml}
+        <div class="checkout-summary__row checkout-summary__total">
+            <span>Итого</span>
+            <span>${totalPrice} MDL</span>
+        </div>
+    `;
+}
+
+function attachCheckoutFormHandler() {
+    checkoutFormEl = document.getElementById('checkout-form');
+    if (checkoutFormEl && !checkoutFormEl.dataset.bound) {
+        checkoutFormEl.addEventListener('submit', handleCheckoutSubmit);
+        checkoutFormEl.dataset.bound = 'true';
+    }
+}
+
+function ensureCheckoutModalExists() {
+    let modal = document.getElementById('checkout-modal');
+    if (modal) {
+        attachCheckoutFormHandler();
+        return modal;
+    }
+    
+    const modalTemplate = `
+        <div class="checkout-modal" id="checkout-modal" aria-hidden="true">
+            <div class="checkout-modal__backdrop" onclick="closeCheckoutModal()"></div>
+            <div class="checkout-modal__content" role="dialog" aria-modal="true">
+                <button class="checkout-modal__close" onclick="closeCheckoutModal()">✕</button>
+                <h3>Оформление заказа</h3>
+                <p class="checkout-modal__hint">Введите контакты, и мы свяжемся для подтверждения заказа.</p>
+                <form id="checkout-form">
+                    <label>
+                        Имя и фамилия
+                        <input type="text" name="name" placeholder="Мария Иванова" required>
+                    </label>
+                    <label>
+                        Номер телефона
+                        <input type="tel" name="phone" placeholder="+373 69 000 000" required>
+                    </label>
+                    <label>
+                        Город / Адрес доставки
+                        <input type="text" name="address" placeholder="Кишинёв, ул. ...">
+                    </label>
+                    <label>
+                        Комментарий к заказу
+                        <textarea name="comment" rows="3" placeholder="Удобное время для звонка и т.д."></textarea>
+                    </label>
+                    <div class="checkout-summary" id="checkout-summary"></div>
+                    <button type="submit" class="primary-action">Подтвердить заказ</button>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', modalTemplate);
+    attachCheckoutFormHandler();
+    return document.getElementById('checkout-modal');
+}
+
+function openCheckoutModal() {
+    if (cart.length === 0) {
+        alert('Корзина пуста!');
+        return;
+    }
+    
+    const modal = ensureCheckoutModalExists();
+    if (!modal) return;
+    
+    updateCheckoutSummary();
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCheckoutModal() {
+    const modal = document.getElementById('checkout-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+function handleCheckoutSubmit(event) {
+    event.preventDefault();
+    
+    if (cart.length === 0) {
+        alert('Корзина пуста!');
+        closeCheckoutModal();
+        return;
+    }
+    
+    const formData = new FormData(event.target);
+    const orderPayload = {
+        name: formData.get('name') || '',
+        phone: formData.get('phone') || '',
+        address: formData.get('address') || '',
+        comment: formData.get('comment') || '',
+        total: totalPrice,
+        items: cart.map(item => ({
+            id: item.id,
+            name: item.name,
+            quantity: item.quantity || 1,
+            price: item.price || 0,
+            color: item.color || null,
+            size: item.size || null
+        }))
+    };
+    
+    console.log('ORDER PAYLOAD', orderPayload);
+    alert('Спасибо! Мы получили ваш заказ и свяжемся с вами в ближайшее время.');
+    
+    // Очищаем корзину
+    cart = [];
+    cartCount = 0;
+    totalPrice = 0;
+    updateCartCount();
+    updateCartDisplay();
+    
+    // Закрываем окна, сбрасываем форму
+    if (event.target.reset) event.target.reset();
+    closeCheckoutModal();
+    closeCart();
+}
+
+// Увеличить количество
+function increaseQuantity(productId) {
+    const item = cart.find(item => item.id === productId);
+    if (!item) return;
+    
+    item.quantity += 1;
+    cartCount++;
+    totalPrice += item.price;
+    
+    updateCartCount();
+    updateCartDisplay();
+}
+
+// Уменьшить количество
+function decreaseQuantity(productId) {
+    const item = cart.find(item => item.id === productId);
+    if (!item) return;
+    
+    if (item.quantity > 1) {
+        item.quantity -= 1;
+        cartCount--;
+        totalPrice -= item.price;
+    } else {
+        removeFromCart(productId);
+        return;
+    }
+    
+    updateCartCount();
+    updateCartDisplay();
+}
+
+// Удалить из корзины
+function removeFromCart(productId) {
+    const itemIndex = cart.findIndex(item => item.id === productId);
+    if (itemIndex === -1) return;
+    
+    const item = cart[itemIndex];
+    
+    cartCount -= item.quantity;
+    totalPrice -= item.price * item.quantity;
+    
+    cart.splice(itemIndex, 1);
+    
+    updateCartCount();
+    updateCartDisplay();
+}
+
+// Инициализация корзины
+function initCart() {
+    updateCartCount();
+    updateCartDisplay();
+    
+    // Открыть корзину при клике на иконку
+    const cartIcon = document.querySelector('.cart-icon');
+    if (cartIcon) {
+        cartIcon.addEventListener('click', showCart);
+    }
+    
+    // Закрыть корзину при клике на оверлей
+    const cartOverlay = document.getElementById('cart-overlay');
+    if (cartOverlay) {
+        cartOverlay.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCart();
+            }
+        });
+    }
+}
+
+// Инициализация главной страницы
+document.addEventListener('DOMContentLoaded', function() {
+    displayWomenTopSales();
+    initCart();
+});
+
+// Функция для использования placeholder изображений если реальные картинки отсутствуют
+function initializePlaceholderImages() {
+    const images = document.querySelectorAll('.product-img');
+    images.forEach(img => {
+        img.onerror = function() {
+            const productName = this.alt || 'RADO BAGS';
+            const color = 'FFC0CB';
+            this.src = `https://via.placeholder.com/300x300/f8f8f8/${color}?text=${encodeURIComponent(productName)}`;
+        };
+    });
+}
+
+// Показать уведомление о добавлении в корзину
+function showAddToCartNotification(productName) {
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: #000;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 0;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        z-index: 3000;
+        transition: all 0.3s ease;
+    `;
+    notification.textContent = `✓ ${productName} добавлен в корзину`;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 3000);
+}
+
+// Обновленная функция добавления в корзину с уведомлением
+function addToCartWithNotification(productId) {
+    addToCart(productId);
+    const product = findProductById(productId);
+    if (product) showAddToCartNotification(product.name);
+}
+
+// Обновляем обработчики кнопок "В корзину"
+function updateAddToCartButtons() {
+    const buttons = document.querySelectorAll('.add-to-cart');
+    buttons.forEach(button => {
+        const productId = button.getAttribute('onclick').match(/\d+/)[0];
+        button.setAttribute('onclick', `addToCartWithNotification(${productId})`);
+    });
+}
+
+// Инициализация улучшенного функционала
+document.addEventListener('DOMContentLoaded', function() {
+    displayWomenTopSales();
+    updateCartCount();
+    
+    initializePlaceholderImages();
+    updateAddToCartButtons();
+    
+    const cartIcon = document.querySelector('.cart-icon');
+    if (cartIcon) {
+        cartIcon.addEventListener('click', showCart);
+    }
+    
+    const cartOverlay = document.getElementById('cart-overlay');
+    if (cartOverlay) {
+        cartOverlay.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCart();
+            }
+        });
+    }
+    
+    attachCheckoutFormHandler();
+    updateCheckoutSummary();
+});
+// Функция для перехода на страницу товара
+function goToProductPage(productId) {
+    window.location.href = `product.html?id=${productId}`;
+}
+
+// Сделать карточки товаров кликабельными
+function makeProductCardsClickable() {
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+        const productId = card.dataset.productId;
+        if (productId) {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', (e) => {
+                // Не переходим если кликнули на кнопку "В корзину"
+                if (!e.target.closest('.add-to-cart')) {
+                    goToProductPage(parseInt(productId));
+                }
+            });
+        }
+    });
+}
+
+// Обновляем функции отображения товаров чтобы добавлять data-product-id
+function displayWomenTopSales(page = 1) {
+    const grid = document.getElementById('women-top-grid');
+    const pagination = document.getElementById('women-pagination');
+    if (!grid) return;
+
+    syncTopProductsWithCatalog();
+    currentWomenPage = page;
+    const womenProducts = topProducts.women;
+    const totalPages = Math.ceil(womenProducts.length / ITEMS_PER_PAGE);
+    
+    const startIndex = (page - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const pageProducts = womenProducts.slice(startIndex, endIndex);
+    
+    grid.innerHTML = '';
+    pageProducts.forEach(product => {
+        const productImage = getProductImage(product);
+        const productCard = `
+            <div class="product-card" data-product-id="${product.id}">
+                <div class="product-image">
+                    ${productImage}
+                    <div class="product-emoji" style="display: ${product.image ? 'none' : 'flex'}">👜</div>
+                </div>
+                <h3>${product.name}</h3>
+                ${product.originalPrice ? `
+                    <div class="original-price">${product.originalPrice} MDL</div>
+                    <div class="product-price">${product.price} MDL</div>
+                ` : `<div class="product-price">${product.price} MDL</div>`}
+                ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                <button class="add-to-cart" onclick="addToCartWithNotification(${product.id})">
+                    В КОРЗИНУ
+                </button>
+            </div>
+        `;
+        grid.innerHTML += productCard;
+    });
+    
+    // Делаем карточки кликабельными
+    makeProductCardsClickable();
+    createPagination(pagination, page, totalPages, 'women');
+}
+
+// Обновляем инициализацию
+document.addEventListener('DOMContentLoaded', function() {
+    displayWomenTopSales();
+    updateCartCount();
+    
+    initializePlaceholderImages();
+    updateAddToCartButtons();
+    
+    const cartIcon = document.querySelector('.cart-icon');
+    if (cartIcon) {
+        cartIcon.addEventListener('click', showCart);
+    }
+    
+    const cartOverlay = document.getElementById('cart-overlay');
+    if (cartOverlay) {
+        cartOverlay.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCart();
+            }
+        });
+    }
+});
+// Функция для перехода на страницу товара
+function goToProductPage(productId) {
+    window.location.href = `product.html?id=${productId}`;
+}
+
+// Сделать карточки товаров кликабельными
+function makeProductCardsClickable() {
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+        const productId = card.dataset.productId;
+        if (productId) {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', (e) => {
+                // Не переходим если кликнули на кнопку "В корзину"
+                if (!e.target.closest('.add-to-cart')) {
+                    goToProductPage(parseInt(productId));
+                }
+            });
+        }
+    });
+}

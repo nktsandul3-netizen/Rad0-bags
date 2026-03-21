@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>RADO BAGS - Сумки и рюкзаки премиум-класса</title>
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="RADO BAGS">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="Images/icon-180.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header class="header header-premium header-over-banner">
+                <div class="container header-container">
+                    <div class="header-left">
+                        <button type="button" class="header-hamburger" aria-label="Меню" aria-expanded="false">
+                            <span class="header-hamburger__line"></span>
+                            <span class="header-hamburger__line"></span>
+                            <span class="header-hamburger__line"></span>
+                        </button>
+                    </div>
+                    <div class="header-center">
+                        <a href="index.html" class="logo">RADO BAGS</a>
+                    </div>
+                    <div class="header-right">
+                        <button type="button" class="header-icon header-search-btn" id="header-search-btn" aria-label="Поиск">
+                            <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                        </button>
+                        <a href="favorites.html" class="header-icon header-favorites-link" aria-label="Избранное">
+                            <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            <span id="header-favorites-count" class="header-favorites-count">0</span>
+                        </a>
+                        <div class="cart-icon" onclick="showCart()">
+                            <svg class="header-icon-svg header-cart-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <nav class="header-categories">
+                    <div class="container">
+                        <a href="women.html">Женские сумки</a>
+                        <a href="men.html">Мужские сумки</a>
+                        <a href="accessories.html">Аксессуары</a>
+                        <a href="about.html">О нас</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </nav>
+        </header>
+        <section class="video-hero">
+            <video class="hero-video hero-video--first" autoplay muted playsinline data-next="hero-video--second">
+                <source src="Images/hero-video.mp4" type="video/mp4">
+            </video>
+            <video class="hero-video hero-video--second" muted playsinline data-next="hero-video--first">
+                <source src="Images/hero-video-2.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+            <div id="hero-slide2-content" class="video-hero-content" style="display: none;">
+                <h1 class="hero-title">RADO BAGS</h1>
+                <p class="hero-subtitle">Минимализм и функциональность</p>
+                <button class="hero-btn" onclick="location.href='women.html'">СМОТРЕТЬ КОЛЛЕКЦИЮ</button>
+            </div>
+            <div class="hero-banner-switcher" aria-label="Переключение баннеров">
+                <button type="button" class="hero-banner-switcher__btn hero-banner-switcher__prev" aria-label="Предыдущий баннер">‹</button>
+                <button type="button" class="hero-banner-switcher__btn hero-banner-switcher__next" aria-label="Следующий баннер">›</button>
+            </div>
+        </section>
+
+        <!-- Женские сумки -->
+        <section class="top-sales-section top-sales-section--women-label">
+            <div class="container">
+                <a href="women.html" class="section-corner-label">Женские сумки</a>
+                <div class="products-grid" id="women-top-grid">
+                    <!-- Женские товары добавляются через JavaScript -->
+                </div>
+                <div class="pagination" id="women-pagination">
+                    <!-- Пагинация для женских товаров -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Баннер после топ продаж -->
+        <section class="hero-banner-second hero-banner-third">
+            <video class="hero-banner-third-video" autoplay muted loop playsinline>
+                <source src="Images/banner-men-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-banner-second-overlay"></div>
+            <div class="hero-banner-second-content">
+                <h2>RADO MEN</h2>
+                <p>Минимализм и функциональность</p>
+                <button class="hero-btn" onclick="location.href='men.html'">Смотреть коллекцию</button>
+            </div>
+        </section>
+
+        <!-- Мужские сумки -->
+        <section class="top-sales-section top-sales-section--men top-sales-section--women-label">
+            <div class="container">
+                <a href="men.html" class="section-corner-label">Мужские сумки</a>
+                <div class="products-grid" id="men-top-grid">
+                    <!-- Мужские товары добавляются через JavaScript -->
+                </div>
+                <div class="pagination" id="men-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Баннер Аксессуары (только видео) -->
+        <section class="hero-banner-second hero-banner-fourth" id="hero-banner-fourth">
+            <video class="hero-banner-fourth-video" autoplay muted loop playsinline>
+                <source src="Images/grok-banner.mp4" type="video/mp4">
+            </video>
+            <div class="hero-banner-second-overlay"></div>
+            <div class="hero-banner-second-content">
+                <h2>RADO Аксессуары</h2>
+                <p>Ремни, кошельки и аксессуары из натуральной кожи</p>
+                <button class="hero-btn" onclick="location.href='accessories.html'">Смотреть коллекцию</button>
+            </div>
+        </section>
+
+        <!-- Аксессуары -->
+        <section class="top-sales-section top-sales-section--accessories top-sales-section--women-label">
+            <div class="container">
+                <a href="accessories.html" class="section-corner-label">Аксессуары</a>
+                <div class="products-grid" id="accessories-top-grid">
+                    <!-- Аксессуары добавляются через JavaScript -->
+                </div>
+                <div class="pagination" id="accessories-pagination"></div>
+            </div>
+        </section>
+
+        <!-- RADO BAGS COMMUNITY -->
+        <section class="community-section">
+            <div class="container community-section__container">
+                <h2 class="community-section__title">RADO BAGS COMMUNITY</h2>
+                <p class="community-section__subtitle">Ваши образы — наш любимый источник вдохновения. Создавайте свои сочетания с RADO BAGS, публикуйте фото с хештегом <strong>#RADOBAGS</strong> в соцсетях и попадайте в нашу подборку.</p>
+                <div class="community-gallery" id="community-gallery">
+                    <button type="button" class="community-gallery__arrow community-gallery__arrow--prev" id="community-gallery-prev" aria-label="Назад">‹</button>
+                    <button type="button" class="community-gallery__arrow community-gallery__arrow--next" id="community-gallery-next" aria-label="Вперёд">›</button>
+                    <div class="community-gallery__viewport" id="community-gallery-viewport">
+                        <div class="community-gallery__track" id="community-gallery-track">
+                            <div class="community-gallery__item" data-src="Images/products/women/look1.png"><img src="Images/products/women/look1.png" alt="Образ с RADO BAGS" loading="lazy"></div>
+                            <div class="community-gallery__item" data-src="Images/products/women/look2.png"><img src="Images/products/women/look2.png" alt="Образ с RADO BAGS" loading="lazy"></div>
+                            <div class="community-gallery__item" data-src="Images/products/women/look3.png"><img src="Images/products/women/look3.png" alt="Образ с RADO BAGS" loading="lazy"></div>
+                            <div class="community-gallery__item" data-src="Images/products/women/look4.png"><img src="Images/products/women/look4.png" alt="Образ с RADO BAGS" loading="lazy"></div>
+                            <div class="community-gallery__item" data-src="Images/products/women/look5.png"><img src="Images/products/women/look5.png" alt="Образ с RADO BAGS" loading="lazy"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="community-section__actions">
+                    <a href="https://www.instagram.com/radobags" target="_blank" rel="noopener" class="community-section__btn">Смотреть все</a>
+                </div>
+            </div>
+        </section>
+        <div class="community-lightbox" id="community-lightbox" aria-hidden="true">
+            <div class="community-lightbox__backdrop" id="community-lightbox-backdrop"></div>
+            <button type="button" class="community-lightbox__close" id="community-lightbox-close" aria-label="Закрыть">✕</button>
+            <div class="community-lightbox__content"><img id="community-lightbox-img" src="" alt=""></div>
+        </div>
+
+    </main>
+    <footer class="site-footer">
+        <div class="site-footer__inner container">
+            <div class="site-footer__brand">
+                <a href="index.html" class="site-footer__logo">RADO BAGS</a>
+                <p class="site-footer__tagline">премиальные сумки</p>
+                <p class="site-footer__hours">Пн–Пт с 09:00 до 18:00</p>
+                <a href="tel:+37368935619" class="site-footer__link">+373 68 935 619</a>
+                <a href="mailto:rdn.o0790@gmail.com" class="site-footer__link">rdn.o0790@gmail.com</a>
+                <div class="site-footer__socials">
+                    <a href="https://www.instagram.com/radobags?igsh=MTducnJndjIyNTdrdw==" target="_blank" rel="noopener" class="site-footer__social" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" class="site-footer__social" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                </div>
+            </div>
+            <div class="site-footer__nav">
+                <div class="site-footer__col">
+                    <h4 class="site-footer__col-title">КАТАЛОГ</h4>
+                    <a href="women.html">Женские сумки</a>
+                    <a href="men.html">Мужские сумки</a>
+                    <a href="accessories.html">Аксессуары</a>
+                </div>
+                <div class="site-footer__col">
+                    <h4 class="site-footer__col-title">КОМПАНИЯ</h4>
+                    <a href="about.html">О нас</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+            </div>
+            <div class="site-footer__newsletter">
+                <p class="site-footer__newsletter-title">Узнавайте первыми о наших новинках</p>
+                <form class="site-footer__form" id="footer-newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Email адрес *" class="site-footer__input" required>
+                    <button type="submit" class="site-footer__btn">Подписаться</button>
+                </form>
+                <label class="site-footer__checkbox"><input type="checkbox" required> Даю согласие на обработку персональных данных</label>
+                <label class="site-footer__checkbox"><input type="checkbox"> Согласен на получение рассылки</label>
+            </div>
+        </div>
+        <div class="site-footer__extra container">
+            <div class="site-footer__payments">
+                <span class="site-footer__payment">Visa</span>
+                <span class="site-footer__payment">Mastercard</span>
+                <span class="site-footer__payment">Apple Pay</span>
+                <span class="site-footer__payment">Google Pay</span>
+            </div>
+            <p class="site-footer__trust">Over 500 happy customers</p>
+        </div>
+        <div class="site-footer__copy container">
+            <p>&copy; 2025 RADO BAGS. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Поиск -->
+    <div class="search-overlay" id="search-overlay" aria-hidden="true">
+        <div class="search-overlay__backdrop" id="search-overlay-backdrop"></div>
+        <div class="search-overlay__panel">
+            <div class="search-overlay__bar">
+                <div class="search-overlay__input-wrap">
+                    <svg class="search-overlay__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <input type="search" class="search-overlay__input" id="search-overlay-input" placeholder="Поиск товаров..." autocomplete="off">
+                </div>
+                <button type="button" class="search-overlay__btn-find" id="search-overlay-find">Найти</button>
+                <a href="#" class="search-overlay__link-close" id="search-overlay-close">Закрыть</a>
+            </div>
+            <div class="search-overlay__body">
+                <div class="search-overlay__col search-overlay__col--suggestions">
+                    <h3 class="search-overlay__col-title">Часто ищут</h3>
+                    <ul class="search-overlay__suggestions" id="search-overlay-suggestions"></ul>
+                </div>
+                <div class="search-overlay__col search-overlay__col--products">
+                    <h3 class="search-overlay__col-title" id="search-overlay-col-title">Популярные товары</h3>
+                    <div class="search-overlay__results" id="search-overlay-results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Корзина -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Корзина</h3>
+                <button class="close-cart" onclick="closeCart()">✕</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Товары в корзине -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span class="total-label">Итого:</span>
+                    <span class="total-price" id="cart-total-price">0</span>
+                    <span class="total-currency">MDL</span>
+                </div>
+                <button class="checkout-btn" onclick="openCheckoutModal()">ОФОРМИТЬ ЗАКАЗ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide-out sidebar menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+    <aside class="sidebar" id="sidebar" aria-hidden="true">
+        <div class="sidebar__header">
+            <span class="sidebar__city">Город — Кишинёв</span>
+            <button type="button" class="sidebar__close" id="sidebar-close" aria-label="Закрыть меню">✕</button>
+        </div>
+        <nav class="sidebar__nav">
+            <a href="contacts.html">Магазины</a>
+            <a href="#">Новости</a>
+            <a href="contacts.html">Клиентам</a>
+            <a href="about.html">О компании</a>
+            <a href="contacts.html">Доставка и оплата</a>
+            <a href="contacts.html">Качество и возврат</a>
+            <a href="contacts.html">Отследить заказ</a>
+        </nav>
+        <div class="sidebar__contact">
+            <p class="sidebar__contact-title">Служба поддержки</p>
+            <p class="sidebar__contact-hours">Пн–Вс 09:00 – 21:00</p>
+            <p><a href="tel:+37368935619" class="sidebar__contact-phone">+373 68 935 619</a></p>
+            <div class="sidebar__contact-btns">
+                <a href="https://wa.me/37368935619" target="_blank" rel="noopener" class="sidebar__btn-icon" aria-label="WhatsApp">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://t.me/+37368935619" target="_blank" rel="noopener" class="sidebar__btn-icon" aria-label="Telegram">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    <span>Telegram</span>
+                </a>
+            </div>
+        </div>
+        <div class="sidebar__app">
+            <p class="sidebar__app-title">Скачайте мобильное приложение</p>
+            <div class="sidebar__qr" aria-hidden="true"><span class="sidebar__qr-placeholder">QR</span></div>
+            <div class="sidebar__app-btns">
+                <a href="#" class="sidebar__app-btn">App Store</a>
+                <a href="#" class="sidebar__app-btn">Google Play</a>
+            </div>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+    <script src="category.js"></script>
+    <script>
+      (function () {
+        var gallery = document.getElementById('community-gallery');
+        var lightbox = document.getElementById('community-lightbox');
+        var lightboxImg = document.getElementById('community-lightbox-img');
+        var backdrop = document.getElementById('community-lightbox-backdrop');
+        var closeBtn = document.getElementById('community-lightbox-close');
+        var viewport = document.getElementById('community-gallery-viewport');
+        var prevBtn = document.getElementById('community-gallery-prev');
+        var nextBtn = document.getElementById('community-gallery-next');
+        if (!gallery || !lightbox || !lightboxImg) return;
+        function openLightbox(src) {
+          lightboxImg.src = src;
+          lightbox.classList.add('is-open');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+          lightbox.classList.remove('is-open');
+          lightbox.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+        gallery.addEventListener('click', function (e) {
+          if (e.target.closest('.community-gallery__arrow')) return;
+          var item = e.target.closest('.community-gallery__item');
+          if (!item) return;
+          var src = item.getAttribute('data-src') || (item.querySelector('img') && item.querySelector('img').src);
+          if (src) openLightbox(src);
+        });
+        if (backdrop) backdrop.addEventListener('click', closeLightbox);
+        if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+        });
+        if (viewport && prevBtn && nextBtn) {
+          prevBtn.addEventListener('click', function () {
+            viewport.scrollBy({ left: -viewport.offsetWidth, behavior: 'smooth' });
+          });
+          nextBtn.addEventListener('click', function () {
+            viewport.scrollBy({ left: viewport.offsetWidth, behavior: 'smooth' });
+          });
+        }
+      })();
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(function () {});
+      }
+    </script>
+</body>
+</html>

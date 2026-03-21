@@ -1,0 +1,8 @@
+{
+  "appId": "com.radobags.app",
+  "appName": "RADO BAGS",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
