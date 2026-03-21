@@ -960,11 +960,11 @@ function initSidebar() {
     });
 }
 
-// Инициализация главной страницы (мобильное меню категорий; если есть сайдбар — гамбургер открывает сайдбар)
+// Инициализация мобильного меню (работает на всех страницах)
 function initMobileMenu() {
     var header = document.querySelector('.header');
     var hamburger = document.querySelector('.header-hamburger');
-    var nav = document.querySelector('.header-categories');
+    var nav = document.querySelector('.header-categories') || document.querySelector('.header .nav');
     if (document.getElementById('sidebar')) return;
     if (!header || !hamburger || !nav) return;
 
@@ -995,8 +995,8 @@ function initMobileMenu() {
         toggleMenu();
     });
 
-    nav.addEventListener('click', function(e) {
-        if (!e.target.closest('.header-categories .container')) {
+    document.addEventListener('click', function(e) {
+        if (isOpen() && !nav.contains(e.target) && !hamburger.contains(e.target)) {
             closeMenu();
         }
     });
