@@ -166,5 +166,42 @@ window.addEventListener('hashchange', function() {
     switchAccTab(window.location.hash === '#men' ? 'men' : 'women');
 });
 </script>
+
+<script>
+(function(){
+  var burger = document.getElementById('header-hamburger');
+  var header = document.querySelector('.header');
+  if (!burger || !header) return;
+  var overlay = document.createElement('div');
+  overlay.style.cssText = 'display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:1100;';
+  document.body.appendChild(overlay);
+  function open() {
+    header.classList.add('menu-open');
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    header.classList.remove('menu-open');
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+    document.querySelectorAll('.mobile-accordion.is-open').forEach(function(a){a.classList.remove('is-open');});
+  }
+  burger.addEventListener('click', function(e){ e.stopPropagation(); header.classList.contains('menu-open') ? close() : open(); });
+  overlay.addEventListener('click', close);
+  document.querySelectorAll('.mobile-acc-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var acc = btn.closest('.mobile-accordion');
+      if (!acc) return;
+      var was = acc.classList.contains('is-open');
+      document.querySelectorAll('.mobile-accordion.is-open').forEach(function(a){a.classList.remove('is-open');});
+      if (!was) acc.classList.add('is-open');
+    });
+  });
+  document.querySelectorAll('.header-categories a, .header .nav a').forEach(function(a){
+    a.addEventListener('click', close);
+  });
+})();
+</script>
 </body>
 </html>
