@@ -1054,6 +1054,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeaderOverBannerScroll();
     initHeroVideoSequence();
     initSidebar();
+});
+
+// Mobile menu: separate listener so it always runs on every page
+document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
 });
 
