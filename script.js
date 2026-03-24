@@ -1061,13 +1061,13 @@ function initMobileMenu() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    displayWomenTopSales();
-    displayMenTopSales();
-    displayAccessoriesTopSales();
-    initCart();
-    initHeaderOverBannerScroll();
-    initHeroVideoSequence();
-    initSidebar();
+    try { displayWomenTopSales(); } catch(e) {}
+    try { displayMenTopSales(); } catch(e) {}
+    try { displayAccessoriesTopSales(); } catch(e) {}
+    try { initCart(); } catch(e) {}
+    try { initHeaderOverBannerScroll(); } catch(e) {}
+    try { initHeroVideoSequence(); } catch(e) {}
+    try { initSidebar(); } catch(e) {}
 });
 
 // Mobile menu: separate listener so it always runs on every page
