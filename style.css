@@ -4971,7 +4971,7 @@ a.header-icon {
     padding: 0 24px;
 }
 .video-hero-content.hero-slide-active {
-    display: flex;
+    display: flex !important;
 }
 .video-hero-content.hero-slide-hidden {
     display: none !important;
