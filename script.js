@@ -735,13 +735,13 @@ function initHeroVideoSequence() {
     if (!first || !second) return;
 
     function showSlide1() {
-        if (slide1Content) slide1Content.style.display = 'flex';
-        if (slide2Content) slide2Content.style.display = 'none';
+        if (slide1Content) { slide1Content.classList.add('hero-slide-active'); slide1Content.classList.remove('hero-slide-hidden'); }
+        if (slide2Content) { slide2Content.classList.add('hero-slide-hidden'); slide2Content.classList.remove('hero-slide-active'); }
     }
 
     function showSlide2() {
-        if (slide1Content) slide1Content.style.display = 'none';
-        if (slide2Content) slide2Content.style.display = 'flex';
+        if (slide1Content) { slide1Content.classList.add('hero-slide-hidden'); slide1Content.classList.remove('hero-slide-active'); }
+        if (slide2Content) { slide2Content.classList.add('hero-slide-active'); slide2Content.classList.remove('hero-slide-hidden'); }
     }
 
     function playSecond() {
