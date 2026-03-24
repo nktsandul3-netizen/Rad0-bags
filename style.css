@@ -6668,7 +6668,7 @@ a.header-icon {
     .header .header-hamburger { order: 1 !important; }
 
     /* Hide desktop nav */
-    .header .nav { display: none !important; }
+    /* Hide desktop nav — overridden by slide-in panel below */
 
     /* SLIDE-IN PANEL */
     .header-categories,
@@ -6691,11 +6691,15 @@ a.header-icon {
         border: none !important;
         box-shadow: none !important;
         display: block !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
     }
     .header.menu-open .header-categories,
     .header.menu-open .nav {
         transform: translateX(0) !important;
         box-shadow: 4px 0 20px rgba(0,0,0,0.12) !important;
+        visibility: visible !important;
+        pointer-events: all !important;
     }
 
     /* Container inside .header-categories */
