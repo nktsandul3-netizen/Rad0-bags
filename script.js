@@ -735,13 +735,13 @@ function initHeroVideoSequence() {
     if (!first || !second) return;
 
     function showSlide1() {
-        if (slide1Content) slide1Content.style.display = '';
+        if (slide1Content) slide1Content.style.display = 'flex';
         if (slide2Content) slide2Content.style.display = 'none';
     }
 
     function showSlide2() {
         if (slide1Content) slide1Content.style.display = 'none';
-        if (slide2Content) slide2Content.style.display = '';
+        if (slide2Content) slide2Content.style.display = 'flex';
     }
 
     function playSecond() {
