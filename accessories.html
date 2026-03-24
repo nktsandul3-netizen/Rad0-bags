@@ -167,39 +167,124 @@ window.addEventListener('hashchange', function() {
 });
 </script>
 
+
 <script>
-(function(){
-  var burger = document.getElementById('header-hamburger');
-  var header = document.querySelector('.header');
-  if (!burger || !header) return;
+(function () {
+  // Build mobile nav from existing header links
+  function buildMobNav() {
+    var links = [];
+    // index.html uses .header-categories, others use .header .nav
+    var src = document.querySelector('.header-categories .container') ||
+              document.querySelector('.header .nav');
+    if (!src) return;
+
+    var nav = document.createElement('div');
+    nav.id = 'mob-nav';
+
+    src.childNodes.forEach(function (node) {
+      if (node.nodeType !== 1) return;
+      // Simple link
+      if (node.tagName === 'A') {
+        var a = document.createElement('a');
+        a.href = node.href;
+        a.textContent = node.textContent.trim();
+        nav.appendChild(a);
+      }
+      // Dropdown wrapper
+      if (node.classList && node.classList.contains('nav-dropdown')) {
+        var item = document.createElement('div');
+        item.className = 'mob-acc-item';
+
+        // Trigger label from the desktop link or accordion button
+        var label = '';
+        var desktopLink = node.querySelector('.nav-desktop-only') || node.querySelector('.nav-dropdown__trigger');
+        var mobileBtn  = node.querySelector('.mobile-acc-toggle');
+        if (desktopLink) label = desktopLink.textContent.trim();
+        else if (mobileBtn) label = mobileBtn.childNodes[0].textContent.trim();
+
+        var btn = document.createElement('button');
+        btn.className = 'mob-acc-btn';
+        btn.type = 'button';
+        btn.innerHTML = label +
+          '<svg width="12" height="12" viewBox="0 0 12 12" fill="none">' +
+          '<path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+          '</svg>';
+
+        var panel = document.createElement('div');
+        panel.className = 'mob-acc-panel';
+
+        var subLinks = node.querySelectorAll('.nav-dropdown__menu a, .mobile-acc-panel a');
+        subLinks.forEach(function (sub) {
+          var a = document.createElement('a');
+          a.href = sub.href;
+          a.textContent = sub.textContent.trim();
+          panel.appendChild(a);
+        });
+
+        btn.addEventListener('click', function () {
+          var open = item.classList.contains('is-open');
+          document.querySelectorAll('#mob-nav .mob-acc-item.is-open').forEach(function(i){i.classList.remove('is-open');});
+          if (!open) item.classList.add('is-open');
+        });
+
+        item.appendChild(btn);
+        item.appendChild(panel);
+        nav.appendChild(item);
+      }
+    });
+
+    // Close on any link click
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', close);
+    });
+
+    document.body.appendChild(nav);
+    return nav;
+  }
+
   var overlay = document.createElement('div');
-  overlay.style.cssText = 'display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:1100;';
+  overlay.id = 'mob-overlay';
   document.body.appendChild(overlay);
+
+  var nav = buildMobNav();
+  var burger = document.getElementById('header-hamburger');
+  if (!burger) return;
+
   function open() {
-    header.classList.add('menu-open');
+    if (nav) nav.classList.add('is-open');
     overlay.style.display = 'block';
     document.body.style.overflow = 'hidden';
+    burger.setAttribute('aria-expanded', 'true');
+    // Animate burger
+    var header = burger.closest('.header');
+    if (header) header.classList.add('menu-open');
   }
+
   function close() {
-    header.classList.remove('menu-open');
+    if (nav) {
+      nav.classList.remove('is-open');
+      nav.querySelectorAll('.mob-acc-item.is-open').forEach(function(i){i.classList.remove('is-open');});
+    }
     overlay.style.display = 'none';
     document.body.style.overflow = '';
-    document.querySelectorAll('.mobile-accordion.is-open').forEach(function(a){a.classList.remove('is-open');});
+    burger.setAttribute('aria-expanded', 'false');
+    var header = burger.closest('.header');
+    if (header) header.classList.remove('menu-open');
   }
-  burger.addEventListener('click', function(e){ e.stopPropagation(); header.classList.contains('menu-open') ? close() : open(); });
-  overlay.addEventListener('click', close);
-  document.querySelectorAll('.mobile-acc-toggle').forEach(function(btn){
-    btn.addEventListener('click', function(e){
-      e.stopPropagation();
-      var acc = btn.closest('.mobile-accordion');
-      if (!acc) return;
-      var was = acc.classList.contains('is-open');
-      document.querySelectorAll('.mobile-accordion.is-open').forEach(function(a){a.classList.remove('is-open');});
-      if (!was) acc.classList.add('is-open');
-    });
+
+  burger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    nav && nav.classList.contains('is-open') ? close() : open();
   });
-  document.querySelectorAll('.header-categories a, .header .nav a').forEach(function(a){
-    a.addEventListener('click', close);
+
+  overlay.addEventListener('click', close);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) close();
   });
 })();
 </script>
