@@ -730,8 +730,19 @@ function initCart() {
 function initHeroVideoSequence() {
     var first = document.querySelector('.hero-video--first');
     var second = document.querySelector('.hero-video--second');
+    var slide1Content = document.getElementById('hero-slide1-content');
     var slide2Content = document.getElementById('hero-slide2-content');
     if (!first || !second) return;
+
+    function showSlide1() {
+        if (slide1Content) slide1Content.style.display = '';
+        if (slide2Content) slide2Content.style.display = 'none';
+    }
+
+    function showSlide2() {
+        if (slide1Content) slide1Content.style.display = 'none';
+        if (slide2Content) slide2Content.style.display = '';
+    }
 
     function playSecond() {
         first.classList.add('hero-video--inactive');
@@ -739,7 +750,7 @@ function initHeroVideoSequence() {
         second.classList.add('hero-video--active');
         second.currentTime = 0;
         second.play();
-        if (slide2Content) slide2Content.style.display = '';
+        showSlide2();
     }
 
     function playFirst() {
@@ -748,7 +759,7 @@ function initHeroVideoSequence() {
         first.classList.remove('hero-video--inactive');
         first.currentTime = 0;
         first.play();
-        if (slide2Content) slide2Content.style.display = 'none';
+        showSlide1();
     }
 
     first.addEventListener('ended', playSecond);
@@ -758,6 +769,9 @@ function initHeroVideoSequence() {
     var btnNext = document.querySelector('.hero-banner-switcher__next');
     if (btnPrev) btnPrev.addEventListener('click', playFirst);
     if (btnNext) btnNext.addEventListener('click', playSecond);
+
+    // Show slide 1 content on load
+    showSlide1();
 }
 
 /* Шапка исчезает при скролле вниз, появляется при скролле вверх; над первым баннером цвет не меняется на чёрный */
