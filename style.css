@@ -4706,9 +4706,83 @@ a.header-icon {
 .video-hero {
     position: relative;
     width: 100%;
+    /* 100svh = safe viewport height on iOS (excludes browser chrome) */
+    height: 100svh;
+    /* Fallback for browsers without svh support */
     height: 100vh;
-    min-height: 680px;
+    /* min-height prevents collapse on short screens */
+    min-height: 500px;
     overflow: hidden;
+    /* Prevent CLS: reserve space immediately */
+    contain: layout style;
+    background-color: #111;
+}
+
+/* Each slide fills the section */
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.6s ease;
+    will-change: opacity;
+}
+.hero-slide--active {
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+.hero-slide--hidden {
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Video fills slide without layout shift */
+.hero-slide__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* GPU-accelerate compositing */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    /* Disable default iOS tap highlight */
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Dot navigation */
+.hero-dots {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.hero-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.45);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.25s, transform 0.25s;
+    /* Larger tap target on mobile */
+    position: relative;
+}
+.hero-dot::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+}
+.hero-dot--active {
+    background: #fff;
+    transform: scale(1.3);
 }
 
 /* Header overlays content: полностью прозрачный, без фона и размытия */
@@ -4853,93 +4927,9 @@ a.header-icon {
 }
 
 /* видео на фоне */
+/* Legacy .hero-video kept for backwards compat (not used in new banner) */
 .hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    transition: opacity 0.8s ease;
-}
-
-.hero-video--first {
-    z-index: 1;
-}
-
-.hero-video--second {
-    z-index: 0;
-    opacity: 0;
-}
-
-.hero-video--second.hero-video--active {
-    z-index: 1;
-    opacity: 1;
-}
-
-.hero-video--first.hero-video--inactive {
-    z-index: 0;
-    opacity: 0;
-}
-
-/* Боковой переключатель баннеров (слева): прозрачный, виден при наведении на край */
-.hero-banner-switcher {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 56px;
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    background: rgba(30, 30, 30, 0.35);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    opacity: 0;
-    transition: opacity 0.35s ease, background 0.35s ease;
-}
-
-.hero-banner-switcher:hover {
-    opacity: 1;
-    background: rgba(40, 40, 40, 0.55);
-}
-
-.hero-banner-switcher__btn {
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background: transparent;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 24px;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-.hero-banner-switcher__btn:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.95);
-}
-
-@media (max-width: 768px) {
-    .hero-banner-switcher {
-        width: 48px;
-    }
-    .hero-banner-switcher__btn {
-        width: 36px;
-        height: 36px;
-        font-size: 20px;
-    }
+    display: none;
 }
 
 /* subtle dark gradient overlay for text readability */
@@ -4957,9 +4947,8 @@ a.header-icon {
 .video-hero-content {
     position: absolute;
     z-index: 3;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* Use safe inset instead of transform for no-CLS centering */
+    inset: 0;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -4967,8 +4956,9 @@ a.header-icon {
     text-align: center;
     color: white;
     width: 100%;
-    max-width: 640px;
     padding: 0 24px;
+    /* Add safe area for iPhone notch */
+    padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 .video-hero-content.hero-slide-active {
     display: flex !important;
@@ -5016,21 +5006,29 @@ a.header-icon {
 
 /* hero CTA button */
 .hero-btn {
+    display: inline-block;
     background: transparent;
-    border: 1px solid #fff;
+    border: 1px solid rgba(255,255,255,0.85);
     padding: 14px 32px;
-    font-size: 16px;
-    letter-spacing: 0.08em;
+    font-size: 14px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     cursor: pointer;
     color: #fff;
-    border-radius: 6px;
+    text-decoration: none;
+    border-radius: 4px;
     transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    /* Minimum tap target 44px for iOS HIG */
+    min-height: 44px;
+    line-height: 1.2;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.hero-btn:hover {
+.hero-btn:hover,
+.hero-btn:focus-visible {
     background: rgba(255, 255, 255, 0.95);
-    color: #000;
+    color: #111;
+    outline: none;
 }
 
 /* video-hero banner: premium minimal style */
@@ -6839,24 +6837,33 @@ a.header-icon {
     }
 
     /* Video hero */
-    .hero-video {
+    /* Banner: use full svh on mobile for proper iOS sizing */
+    .video-hero {
+        height: 100svh !important;
+        height: 100vh !important;
+        min-height: 500px !important;
+    }
+    .hero-slide__video {
         width: 100% !important;
         height: 100% !important;
-        min-width: 0 !important;
-        min-height: 0 !important;
         object-fit: cover !important;
-        transform: none !important;
-        top: 0 !important;
-        left: 0 !important;
+        transform: translateZ(0) !important;
     }
     .video-hero-content { display: none !important; }
     .video-hero-content.hero-slide-active { display: flex !important; }
     .video-hero-content.hero-slide-hidden { display: none !important; }
 
-    /* Hero title */
-    .hero-title { font-size: 36px !important; }
-    .hero-subtitle { font-size: 14px !important; }
-    .hero-btn { font-size: 12px !important; padding: 12px 28px !important; }
+    /* Dots always visible on mobile */
+    .hero-dots { bottom: 32px; }
+
+    /* Hero typography on mobile */
+    .hero-title { font-size: clamp(28px, 8vw, 42px) !important; }
+    .hero-subtitle { font-size: 13px !important; margin-bottom: 20px !important; }
+    .hero-btn {
+        font-size: 11px !important;
+        padding: 12px 24px !important;
+        min-height: 44px !important;
+    }
 }
 
 @media (max-width: 400px) {

@@ -716,50 +716,137 @@ function initCart() {
 
 /* Hero: play second video right after the first, then loop both */
 function initHeroVideoSequence() {
-    var first = document.querySelector('.hero-video--first');
-    var second = document.querySelector('.hero-video--second');
-    var slide1Content = document.getElementById('hero-slide1-content');
-    var slide2Content = document.getElementById('hero-slide2-content');
-    if (!first || !second) return;
+    // Legacy alias kept for any external callers
+    initHeroBanner();
+}
 
-    function showSlide1() {
-        if (slide1Content) { slide1Content.classList.add('hero-slide-active'); slide1Content.classList.remove('hero-slide-hidden'); }
-        if (slide2Content) { slide2Content.classList.add('hero-slide-hidden'); slide2Content.classList.remove('hero-slide-active'); }
+/**
+ * Production-ready hero banner controller.
+ * - Works on iOS Safari (requires user gesture for unmuted, muted autoplay is fine)
+ * - No layout shift: slides use CSS opacity transitions
+ * - Lazy-loads second video only when first finishes
+ * - Dot navigation synced with active slide
+ */
+function initHeroBanner() {
+    var slide1 = document.getElementById('hero-slide-1');
+    var slide2 = document.getElementById('hero-slide-2');
+    var vid1   = document.getElementById('hero-video-1');
+    var vid2   = document.getElementById('hero-video-2');
+    var content1 = document.getElementById('hero-slide1-content');
+    var content2 = document.getElementById('hero-slide2-content');
+    var dots   = document.querySelectorAll('.hero-dot');
+
+    if (!slide1 || !slide2) return;
+
+    var current = 1; // active slide index
+
+    /* ---- helpers ---- */
+    function setActive(n) {
+        var isOne = n === 1;
+        // Slide visibility
+        slide1.classList.toggle('hero-slide--active', isOne);
+        slide1.classList.toggle('hero-slide--hidden', !isOne);
+        slide1.setAttribute('aria-hidden', String(!isOne));
+        slide2.classList.toggle('hero-slide--active', !isOne);
+        slide2.classList.toggle('hero-slide--hidden', isOne);
+        slide2.setAttribute('aria-hidden', String(isOne));
+
+        // Content visibility
+        if (content1) {
+            content1.classList.toggle('hero-slide-active', isOne);
+            content1.classList.toggle('hero-slide-hidden', !isOne);
+        }
+        if (content2) {
+            content2.classList.toggle('hero-slide-active', !isOne);
+            content2.classList.toggle('hero-slide-hidden', isOne);
+        }
+
+        // Dots
+        dots.forEach(function(dot, i) {
+            var active = (i + 1) === n;
+            dot.classList.toggle('hero-dot--active', active);
+            dot.setAttribute('aria-current', String(active));
+        });
+
+        current = n;
     }
 
-    function showSlide2() {
-        if (slide1Content) { slide1Content.classList.add('hero-slide-hidden'); slide1Content.classList.remove('hero-slide-active'); }
-        if (slide2Content) { slide2Content.classList.add('hero-slide-active'); slide2Content.classList.remove('hero-slide-hidden'); }
+    function goTo(n) {
+        if (n === current) return;
+        var targetVid = n === 1 ? vid1 : vid2;
+
+        // Lazy-load second video: set src only when needed
+        if (n === 2 && vid2 && !vid2.src && vid2.querySelector('source')) {
+            vid2.load();
+        }
+
+        setActive(n);
+
+        if (targetVid) {
+            targetVid.currentTime = 0;
+            // iOS requires a try/catch around play()
+            var playPromise = targetVid.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function() {
+                    // Autoplay blocked — poster image is already shown as fallback
+                });
+            }
+        }
+
+        // Pause the other video to save battery
+        var otherVid = n === 1 ? vid2 : vid1;
+        if (otherVid) otherVid.pause();
     }
 
-    function playSecond() {
-        first.classList.add('hero-video--inactive');
-        first.pause();
-        second.classList.add('hero-video--active');
-        second.currentTime = 0;
-        second.play();
-        showSlide2();
+    /* ---- iOS autoplay fix for first video ---- */
+    if (vid1) {
+        vid1.setAttribute('playsinline', '');
+        vid1.setAttribute('muted', '');
+        // Ensure muted is set as property (iOS requirement)
+        vid1.muted = true;
+        var p = vid1.play();
+        if (p !== undefined) {
+            p.catch(function() {
+                // Autoplay blocked: poster is visible, that's fine
+            });
+        }
     }
 
-    function playFirst() {
-        second.classList.remove('hero-video--active');
-        second.pause();
-        first.classList.remove('hero-video--inactive');
-        first.currentTime = 0;
-        first.play();
-        showSlide1();
+    /* ---- Loop: when slide 1 ends → go to slide 2, and vice versa ---- */
+    if (vid1) {
+        vid1.addEventListener('ended', function() { goTo(2); });
+    }
+    if (vid2) {
+        vid2.addEventListener('ended', function() { goTo(1); });
     }
 
-    first.addEventListener('ended', playSecond);
-    second.addEventListener('ended', playFirst);
+    /* ---- Dot navigation ---- */
+    dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+            var n = parseInt(dot.getAttribute('data-slide'), 10);
+            if (!isNaN(n)) goTo(n);
+        });
+    });
 
-    var btnPrev = document.querySelector('.hero-banner-switcher__prev');
-    var btnNext = document.querySelector('.hero-banner-switcher__next');
-    if (btnPrev) btnPrev.addEventListener('click', playFirst);
-    if (btnNext) btnNext.addEventListener('click', playSecond);
+    /* ---- Keyboard navigation (accessibility) ---- */
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight') goTo(current === 1 ? 2 : 1);
+        if (e.key === 'ArrowLeft')  goTo(current === 1 ? 2 : 1);
+    });
 
-    // Show slide 1 content on load
-    showSlide1();
+    /* ---- Pause video when tab is hidden (save battery/CPU) ---- */
+    document.addEventListener('visibilitychange', function() {
+        var activeVid = current === 1 ? vid1 : vid2;
+        if (!activeVid) return;
+        if (document.hidden) {
+            activeVid.pause();
+        } else {
+            activeVid.play().catch(function(){});
+        }
+    });
+
+    // Initial state
+    setActive(1);
 }
 
 /* Шапка исчезает при скролле вниз, появляется при скролле вверх; над первым баннером цвет не меняется на чёрный */

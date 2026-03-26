@@ -10,6 +10,9 @@
     <meta name="apple-mobile-web-app-title" content="RADO BAGS">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="Images/icon-180.png">
+    <!-- Preload critical banner resources to eliminate render-blocking -->
+    <link rel="preload" href="Images/poster-women.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="Images/hero-video-2.mp4" as="video" type="video/mp4">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -58,28 +61,60 @@
                     </div>
                 </nav>
         </header>
-        <section class="video-hero">
-            <video class="hero-video hero-video--first" autoplay muted playsinline data-next="hero-video--second">
-                <source src="Images/hero-video-2.mp4" type="video/mp4">
-            </video>
-            <video class="hero-video hero-video--second" muted playsinline data-next="hero-video--first">
-                <source src="Images/hero-video.mp4" type="video/mp4">
-            </video>
-            <div class="video-overlay"></div>
-            <div id="hero-slide1-content" class="video-hero-content hero-slide-active">
-                <h1 class="hero-title">RADO WOMEN</h1>
-                <p class="hero-subtitle">Элегантность и стиль</p>
-                <button class="hero-btn" onclick="location.href='women.html'">СМОТРЕТЬ КОЛЛЕКЦИЮ</button>
+        <!-- Hero Banner: production-ready, no CLS, fast on mobile -->
+        <section class="video-hero" aria-label="Главный баннер">
+
+            <!-- Slide 1: RADO WOMEN (active by default) -->
+            <div class="hero-slide hero-slide--active" id="hero-slide-1" aria-hidden="false">
+                <video
+                    class="hero-slide__video"
+                    id="hero-video-1"
+                    autoplay
+                    muted
+                    playsinline
+                    loop
+                    preload="auto"
+                    poster="Images/poster-women.jpg"
+                    aria-hidden="true"
+                >
+                    <source src="Images/hero-video-2.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay" aria-hidden="true"></div>
+                <div class="video-hero-content hero-slide-active" id="hero-slide1-content">
+                    <h1 class="hero-title">RADO WOMEN</h1>
+                    <p class="hero-subtitle">Элегантность и стиль</p>
+                    <a class="hero-btn" href="women.html">СМОТРЕТЬ КОЛЛЕКЦИЮ</a>
+                </div>
             </div>
-            <div id="hero-slide2-content" class="video-hero-content hero-slide-hidden" style="display:none!important;">
-                <h1 class="hero-title">RADO MEN</h1>
-                <p class="hero-subtitle">Минимализм и функциональность</p>
-                <button class="hero-btn" onclick="location.href='men.html'">СМОТРЕТЬ КОЛЛЕКЦИЮ</button>
+
+            <!-- Slide 2: RADO MEN (hidden by default) -->
+            <div class="hero-slide hero-slide--hidden" id="hero-slide-2" aria-hidden="true">
+                <video
+                    class="hero-slide__video"
+                    id="hero-video-2"
+                    muted
+                    playsinline
+                    loop
+                    preload="none"
+                    poster="Images/poster-men.jpg"
+                    aria-hidden="true"
+                >
+                    <source src="Images/hero-video.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay" aria-hidden="true"></div>
+                <div class="video-hero-content hero-slide-active" id="hero-slide2-content">
+                    <h1 class="hero-title">RADO MEN</h1>
+                    <p class="hero-subtitle">Минимализм и функциональность</p>
+                    <a class="hero-btn" href="men.html">СМОТРЕТЬ КОЛЛЕКЦИЮ</a>
+                </div>
             </div>
-            <div class="hero-banner-switcher" aria-label="Переключение баннеров">
-                <button type="button" class="hero-banner-switcher__btn hero-banner-switcher__prev" aria-label="Предыдущий баннер">‹</button>
-                <button type="button" class="hero-banner-switcher__btn hero-banner-switcher__next" aria-label="Следующий баннер">›</button>
-            </div>
+
+            <!-- Dots navigation -->
+            <nav class="hero-dots" aria-label="Переключение слайдов">
+                <button class="hero-dot hero-dot--active" data-slide="1" aria-label="Слайд 1: RADO WOMEN" aria-current="true"></button>
+                <button class="hero-dot" data-slide="2" aria-label="Слайд 2: RADO MEN"></button>
+            </nav>
+
         </section>
 
         <!-- Женские сумки -->
