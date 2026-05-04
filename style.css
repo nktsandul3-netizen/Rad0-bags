@@ -4746,6 +4746,17 @@ a.header-icon {
     transform: translateZ(0);
 }
 
+/* Hide native iOS/Android video play button and controls overlay */
+.hero-slide__video::-webkit-media-controls,
+.hero-slide__video::-webkit-media-controls-enclosure,
+.hero-slide__video::-webkit-media-controls-panel,
+.hero-slide__video::-webkit-media-controls-play-button,
+.hero-slide__video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+    opacity: 0 !important;
+}
+
 /* Dot navigation */
 .hero-dots {
     position: absolute;
