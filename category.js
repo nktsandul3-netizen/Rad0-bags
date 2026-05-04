@@ -2341,27 +2341,7 @@ const products = [
         { name: 'Страна', value: 'Молдова' }
     ]
   },
-  {
-    id: 220,
-    name: "RADO Портмоне мужское",
-    price: 160,
-    category: "accessories",
-    subcategory: "men_acc",
-    image: "Images/products/women/portmone220-1.png",
-    images: [
-      "Images/products/women/portmone220-1.png",
-      "Images/products/women/portmone220-2.png",
-      "Images/products/women/portmone220-3.png"
-    ],
-    isNew: false,
-    onSale: false,
-    color: "",
-    size: "",
-    material: "",
-    description: "",
-    emoji: "🎁",
-    specifications: [
-        { name: 'Категория', value: 'Аксессуары' },
+  { id: 220, name: "RADO Галстуки", price: 420, category: "accessories", subcategory: "women", images: ["Images/products/women/ties220-1.png"], image: "Images/products/women/ties220-1.png", color: "разные", size: "", material: "шёлк", description: "Коллекция стильных узких галстуков с характером. Чёткие линии, выразительные принты и актуальные оттенки — идеальный выбор для тех, кто хочет выглядеть современно без лишнего пафоса. Подходят как под классический образ, так и под casual стиль.", emoji: "👔", specifications: [{ name: 'Категория', value: 'Аксессуары' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
         { name: 'Бренд', value: 'RADO BAGS' },
         { name: 'Страна', value: 'Молдова' }
     ]
