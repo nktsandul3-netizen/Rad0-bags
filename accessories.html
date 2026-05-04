@@ -3,19 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <title>Аксессуары - RADO BAGS</title>
 <link rel="stylesheet" href="style.css">
-<style>
-  .acc-panel { display: block; }
-</style>
 </head>
 <body>
 <header class="header">
     <div class="container">
-        <div class="logo" onclick="location.href='index.html'">
-            <h1>RADO BAGS</h1>
-        </div>
+        <div class="logo" onclick="location.href='index.html'"><h1>RADO BAGS</h1></div>
         <nav class="nav">
             <a href="women.html">ЖЕНСКИЕ СУМКИ</a>
             <div class="nav-dropdown">
@@ -23,14 +17,14 @@
                 <div class="nav-dropdown__menu">
                     <div class="nav-dropdown__menu-inner">
                         <a href="accessories.html#women">Для неё</a>
-                            </div>
+                    </div>
                 </div>
             </div>
             <a href="about.html">О НАС</a>
             <a href="contacts.html">КОНТАКТЫ</a>
         </nav>
         <button class="header-hamburger" id="header-hamburger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
-                <div class="header-actions header-actions--icons">
+        <div class="header-actions header-actions--icons">
             <button type="button" class="header-icon header-search-btn" id="header-search-btn" aria-label="Поиск">
                 <svg class="header-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
             </button>
@@ -49,13 +43,8 @@
 <main>
 <section class="category-section">
 <div class="container">
-    <div class="section-header-row">
-        <h2>Аксессуары</h2>
-    </div>
-
-    <div class="acc-panel" id="panel-women">
-        <div class="products-grid" id="acc-women"></div>
-    </div>
+    <div class="section-header-row"><h2>Аксессуары</h2></div>
+    <div class="products-grid" id="acc-grid"></div>
 </div>
 </section>
 </main>
@@ -80,63 +69,26 @@
 
 <script src="script.js"></script>
 <script>
-var ACC_WOMEN = [
-  { id: 500, name: 'RADO Кошелёк кожаный', price: 358, images: ['Images/products/women/wallet200-1.png','Images/products/women/wallet200-2.png','Images/products/women/wallet200-3.png'], emoji: '👛' },
-  { id: 501, name: 'RADO Визитница', price: 450, images: ['Images/products/women/vizit201-1.png','Images/products/women/vizit201-2.png','Images/products/women/vizit201-3.png'], emoji: '💼' },
-  { id: 230, name: 'RADO Шёлковый платок', price: 550, images: ['Images/products/women/scarf230-1.png','Images/products/women/scarf230-2.png','Images/products/women/scarf230-3.png','Images/products/women/scarf230-4.png'], emoji: '🧣' },
-  { id: 231, name: 'RADO Браслет кожаный', price: 220, images: ['Images/products/women/bracelet231-1.png','Images/products/women/bracelet231-2.png'], emoji: '📿' }
-];
+document.addEventListener('DOMContentLoaded', function() {
+    var items = [
+        { id: 500, name: 'RADO Кошелёк кожаный',  price: 358, img: 'Images/products/women/wallet200-1.png' },
+        { id: 501, name: 'RADO Визитница',          price: 450, img: 'Images/products/women/vizit201-1.png' },
+        { id: 230, name: 'RADO Шёлковый платок',    price: 550, img: 'Images/products/women/scarf230-1.png' },
+        { id: 231, name: 'RADO Браслет кожаный',    price: 220, img: 'Images/products/women/bracelet231-1.png' }
+    ];
 
+    var grid = document.getElementById('acc-grid');
+    if (!grid) return;
 
-function renderAccCard(p) {
-    var allImages = p.images && p.images.length ? p.images : (p.image ? [p.image] : []);
-    var emoji = p.emoji || '🎁';
-    var firstImg = allImages.length > 0 ? allImages[0] : '';
-    var imagesList = allImages.length > 1 ? allImages.join('|') : '';
-    var priceHtml = p.price > 0
-        ? '<span class="product-price-minimal">' + p.price + ' MDL</span>'
-        : '<span class="product-price-minimal">Скоро</span>';
-    var imageBlock = firstImg
-        ? '<img src="' + firstImg + '" alt="" class="product-img product-img-cycle"'
-          + (imagesList ? ' data-product-images="' + imagesList + '"' : '')
-          + ' onerror="this.style.display='none'">'
-          + (allImages.length > 1 ? '<button type="button" class="product-image-prev" aria-label="Назад">&#8249;</button><button type="button" class="product-image-next" aria-label="Вперёд">&#8250;</button>' : '')
-        : '<div class="product-emoji">' + emoji + '</div>';
-    return '<div class="product-card product-card--catalog product-card--minimal" data-product-id="' + p.id + '" onclick="location.href='product.html?id=' + p.id + ''" style="cursor:pointer">'
-        + '<div class="product-image product-image--cycle">' + imageBlock
-        + '<div class="product-image__overlay"><div class="product-swatches"></div>'
-        + '<div class="product-price-minimal-wrap">' + priceHtml + '</div>'
-        + '</div></div></div>';
-}
-
-function setupImageCycle(card) {
-    var img = card.querySelector('.product-img-cycle[data-product-images]');
-    if (!img) return;
-    var images = img.dataset.productImages.split('|').filter(Boolean);
-    if (images.length < 2) return;
-    var idx = 0, timer = null;
-    function showNext() { idx = (idx + 1) % images.length; img.src = images[idx]; }
-    function showPrev() { idx = (idx - 1 + images.length) % images.length; img.src = images[idx]; }
-    var btnNext = card.querySelector('.product-image-next');
-    var btnPrev = card.querySelector('.product-image-prev');
-    if (btnNext) btnNext.addEventListener('click', function(e){ e.stopPropagation(); showNext(); });
-    if (btnPrev) btnPrev.addEventListener('click', function(e){ e.stopPropagation(); showPrev(); });
-    var wrap = card.querySelector('.product-image--cycle');
-    if (wrap) {
-        wrap.addEventListener('mouseenter', function(){ timer = setInterval(showNext, 800); });
-        wrap.addEventListener('mouseleave', function(){ clearInterval(timer); idx = 0; img.src = images[0]; });
-    }
-}
-
-function initAccPage() {
-    var panel = document.getElementById('panel-women');
-    if (panel) { panel.style.display = 'block'; panel.classList.add('active'); }
-    document.getElementById('acc-women').innerHTML = ACC_WOMEN.map(renderAccCard).join('');
-    document.querySelectorAll('.product-card--catalog').forEach(setupImageCycle);
-}
-
-initAccPage();
-
+    grid.innerHTML = items.map(function(p) {
+        return '<div class="product-card product-card--minimal" data-product-id="' + p.id + '" onclick="location.href=\'product.html?id=' + p.id + '\'" style="cursor:pointer">'
+            + '<div class="product-image">'
+            + '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy" style="width:100%;height:100%;object-fit:cover">'
+            + '<div class="product-image__overlay"><div class="product-swatches"></div>'
+            + '<div class="product-price-minimal-wrap"><span class="product-price-minimal">' + p.price + ' MDL</span></div>'
+            + '</div></div></div>';
+    }).join('');
+});
 </script>
 </body>
 </html>
