@@ -695,9 +695,11 @@ function initHeroBanner() {
         slide1.classList.toggle('hero-slide--active', isOne);
         slide1.classList.toggle('hero-slide--hidden', !isOne);
         slide1.setAttribute('aria-hidden', String(!isOne));
-        slide2.classList.toggle('hero-slide--active', !isOne);
-        slide2.classList.toggle('hero-slide--hidden', isOne);
-        slide2.setAttribute('aria-hidden', String(isOne));
+        if (slide2) {
+            slide2.classList.toggle('hero-slide--active', !isOne);
+            slide2.classList.toggle('hero-slide--hidden', isOne);
+            slide2.setAttribute('aria-hidden', String(isOne));
+        }
 
         // Content visibility
         if (content1) {
@@ -1153,32 +1155,7 @@ function updateAddToCartButtons() {
     });
 }
 
-// Инициализация улучшенного функционала
-document.addEventListener('DOMContentLoaded', function() {
-    displayWomenTopSales();
-    displayAccessoriesTopSales();
-    updateCartCount();
-    
-    initializePlaceholderImages();
-    updateAddToCartButtons();
-    
-    const cartIcon = document.querySelector('.cart-icon');
-    if (cartIcon) {
-        cartIcon.addEventListener('click', showCart);
-    }
-    
-    const cartOverlay = document.getElementById('cart-overlay');
-    if (cartOverlay) {
-        cartOverlay.addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeCart();
-            }
-        });
-    }
-    
-    attachCheckoutFormHandler();
-    updateCheckoutSummary();
-});
+// (duplicate DOMContentLoaded removed)
 // Функция для перехода на страницу товара
 function goToProductPage(productId) {
     window.location.href = `product.html?id=${productId}`;
@@ -1201,83 +1178,8 @@ function makeProductCardsClickable() {
     });
 }
 
-// Обновляем функции отображения товаров чтобы добавлять data-product-id
-function displayWomenTopSales(page = 1) {
-    const grid = document.getElementById('women-top-grid');
-    const pagination = document.getElementById('women-pagination');
-    if (!grid) return;
-
-    syncTopProductsWithCatalog();
-    currentWomenPage = page;
-    const womenProducts = topProducts.women.slice(0, 4);
-    const totalPages = 1;
-    
-    const startIndex = (page - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
-    const pageProducts = womenProducts.slice(startIndex, endIndex);
-    
-    grid.innerHTML = '';
-    pageProducts.forEach(product => {
-        const productImage = getProductImage(product);
-        const swatches = getSwatchColorsForCard(product);
-        const swatchesHtml = swatches.length
-            ? `<div class="product-swatches">${swatches.map(s => `<span class="product-swatch" style="background-color:${s.hex}" title="${s.name}"></span>`).join('')}</div>`
-            : '<div class="product-swatches"></div>';
-        const oldPrice = product.originalPrice || product.oldPrice;
-        const priceHtml = oldPrice
-            ? `<span class="product-price-minimal product-price-minimal--old">${oldPrice} MDL</span> <span class="product-price-minimal">${product.price} MDL</span>`
-            : `<span class="product-price-minimal">${product.price} MDL</span>`;
-        grid.innerHTML += `
-            <div class="product-card product-card--minimal" data-product-id="${product.id}">
-                <div class="product-image">${productImage}<div class="product-emoji" style="display: ${product.image ? 'none' : 'flex'}">👜</div><div class="product-image__overlay">${swatchesHtml}<div class="product-price-minimal-wrap">${priceHtml}</div></div></div>
-            </div>
-        `;
-    });
-    makeProductCardsClickable();
-    createPagination(pagination, page, totalPages, 'women');
-}
-
-// Обновляем инициализацию
-document.addEventListener('DOMContentLoaded', function() {
-    displayWomenTopSales();
-    displayAccessoriesTopSales();
-    updateCartCount();
-    
-    initializePlaceholderImages();
-    updateAddToCartButtons();
-    
-    const cartIcon = document.querySelector('.cart-icon');
-    if (cartIcon) {
-        cartIcon.addEventListener('click', showCart);
-    }
-    
-    const cartOverlay = document.getElementById('cart-overlay');
-    if (cartOverlay) {
-        cartOverlay.addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeCart();
-            }
-        });
-    }
-});
+// (duplicate displayWomenTopSales removed)
 // Функция для перехода на страницу товара
-function goToProductPage(productId) {
-    window.location.href = `product.html?id=${productId}`;
-}
+
 
 // Сделать карточки товаров кликабельными
-function makeProductCardsClickable() {
-    const productCards = document.querySelectorAll('.product-card');
-    productCards.forEach(card => {
-        const productId = card.dataset.productId;
-        if (productId) {
-            card.style.cursor = 'pointer';
-            card.addEventListener('click', (e) => {
-                // Не переходим если кликнули на кнопку "В корзину"
-                if (!e.target.closest('.add-to-cart')) {
-                    goToProductPage(parseInt(productId));
-                }
-            });
-        }
-    });
-}
