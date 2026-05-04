@@ -454,9 +454,11 @@ body {
     overflow: hidden;
 }
 
+@media (hover: hover) {
 .product-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
 }
 
 .product-image {
@@ -490,6 +492,7 @@ body {
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+@media (hover: hover) {
 .product-card:hover .product-img,
 .product-card:hover .product-img-hover {
     transform: scale(1.05);
@@ -497,6 +500,7 @@ body {
 
 .product-card:hover .product-img-hover {
     opacity: 1;
+}
 }
 
 .product-emoji {
@@ -4608,8 +4612,8 @@ main > .video-hero + .top-sales-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     padding: 0;
     border: none;
     background: transparent;
@@ -4783,7 +4787,7 @@ a.header-icon {
 .hero-dot::after {
     content: '';
     position: absolute;
-    inset: -10px;
+    inset: -18px;
 }
 .hero-dot--active {
     background: #fff;
@@ -4917,10 +4921,7 @@ a.header-icon {
     filter: brightness(0) invert(1);
 }
 
-.header-over-banner.header-over-first-banner:hover 
-
-
-.header-over-banner:hover 
+.header-over-banner:hover,
 .header-over-banner.is-scrolled {
     background: transparent !important;
     backdrop-filter: none !important;
@@ -5385,9 +5386,9 @@ a.header-icon {
         padding-bottom: calc((100vw - 60px) / 2);
     }
     .community-gallery__arrow {
-        width: 36px;
-        height: 36px;
-        font-size: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
     }
     .community-gallery__arrow--prev {
         left: 4px;
@@ -6741,7 +6742,7 @@ a.header-icon {
     /* index.html header grid */
     .header-container {
         display: grid !important;
-        grid-template-columns: 44px 1fr 44px !important;
+        grid-template-columns: 44px 1fr auto !important;
         align-items: center !important;
         padding: 8px 12px !important;
         min-height: 54px !important;
@@ -6793,7 +6794,7 @@ a.header-icon {
     #panel-men .products-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
 
     /* General */
-    .video-hero { height: 100svh; min-height: 500px; }
+    /* hero height handled below */
     .hero-banner h1 { font-size: 26px !important; }
     .container { padding-left: 12px !important; padding-right: 12px !important; }
 
@@ -6844,6 +6845,7 @@ a.header-icon {
 
     /* Hero banner mobile */
     .video-hero {
+        height: 100svh !important;
         height: 100vh !important;
         min-height: 500px !important;
         width: 100% !important;
