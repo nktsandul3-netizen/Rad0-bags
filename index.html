@@ -44,7 +44,6 @@
                 <nav class="header-categories">
                     <div class="container">
                         <a href="women.html">Женские сумки</a>
-                        <a href="men.html">Мужские сумки</a>
                         <div class="nav-dropdown mobile-accordion">
                             <a href="accessories.html" class="nav-dropdown__trigger nav-desktop-only">Аксессуары</a>
                             <button class="mobile-acc-toggle mobile-only" type="button">
@@ -53,7 +52,6 @@
                             </button>
                             <div class="nav-dropdown__menu mobile-acc-panel">
                                 <a href="accessories.html#women">Для неё</a>
-                                <a href="accessories.html#men">Для него</a>
                             </div>
                         </div>
                         <a href="about.html">О нас</a>
@@ -87,32 +85,10 @@
                 </div>
             </div>
 
-            <!-- Slide 2: RADO MEN (hidden by default) -->
-            <div class="hero-slide hero-slide--hidden" id="hero-slide-2" aria-hidden="true">
-                <video
-                    class="hero-slide__video"
-                    id="hero-video-2"
-                    muted
-                    playsinline
-                    loop
-                    preload="none"
-                    poster="Images/poster-men.jpg"
-                    aria-hidden="true"
-                >
-                    <source src="Images/hero-video.mp4" type="video/mp4">
-                </video>
-                <div class="video-overlay" aria-hidden="true"></div>
-                <div class="video-hero-content hero-slide-active" id="hero-slide2-content">
-                    <h1 class="hero-title">RADO MEN</h1>
-                    <p class="hero-subtitle">Минимализм и функциональность</p>
-                    <a class="hero-btn" href="men.html">СМОТРЕТЬ КОЛЛЕКЦИЮ</a>
-                </div>
-            </div>
 
             <!-- Dots navigation -->
             <nav class="hero-dots" aria-label="Переключение слайдов">
                 <button class="hero-dot hero-dot--active" data-slide="1" aria-label="Слайд 1: RADO WOMEN" aria-current="true"></button>
-                <button class="hero-dot" data-slide="2" aria-label="Слайд 2: RADO MEN"></button>
             </nav>
 
         </section>
@@ -130,29 +106,6 @@
             </div>
         </section>
 
-        <!-- Баннер после топ продаж -->
-        <section class="hero-banner-second hero-banner-third">
-            <video class="hero-banner-third-video" autoplay muted loop playsinline>
-                <source src="Images/banner-men-video.mp4" type="video/mp4">
-            </video>
-            <div class="hero-banner-second-overlay"></div>
-            <div class="hero-banner-second-content">
-                <h2>RADO MEN</h2>
-                <p>Минимализм и функциональность</p>
-                <button class="hero-btn" onclick="location.href='men.html'">Смотреть коллекцию</button>
-            </div>
-        </section>
-
-        <!-- Мужские сумки -->
-        <section class="top-sales-section top-sales-section--men top-sales-section--women-label">
-            <div class="container">
-                <a href="men.html" class="section-corner-label">Мужские сумки</a>
-                <div class="products-grid" id="men-top-grid">
-                    <!-- Мужские товары добавляются через JavaScript -->
-                </div>
-                <div class="pagination" id="men-pagination"></div>
-            </div>
-        </section>
 
         <!-- Баннер Аксессуары (только видео) -->
         <section class="hero-banner-second hero-banner-fourth" id="hero-banner-fourth">

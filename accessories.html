@@ -19,14 +19,12 @@
         </div>
         <nav class="nav">
             <a href="women.html">ЖЕНСКИЕ СУМКИ</a>
-            <a href="men.html">МУЖСКИЕ СУМКИ</a>
             <div class="nav-dropdown">
                 <a href="accessories.html" class="nav-dropdown__trigger">АКСЕССУАРЫ</a>
                 <div class="nav-dropdown__menu">
                     <div class="nav-dropdown__menu-inner">
                         <a href="accessories.html#women">Для неё</a>
-                        <a href="accessories.html#men">Для него</a>
-                    </div>
+                            </div>
                 </div>
             </div>
             <a href="about.html">О НАС</a>
@@ -59,9 +57,6 @@
     <div class="acc-panel" id="panel-women">
         <div class="products-grid" id="acc-women"></div>
     </div>
-    <div class="acc-panel" id="panel-men">
-        <div class="products-grid" id="acc-men"></div>
-    </div>
 </div>
 </section>
 </main>
@@ -92,12 +87,7 @@ var ACC_WOMEN = [
   { id: 230, name: 'RADO Шёлковый платок', price: 550, images: ['Images/products/women/scarf230-1.png','Images/products/women/scarf230-2.png','Images/products/women/scarf230-3.png','Images/products/women/scarf230-4.png'], emoji: '🧣' },
   { id: 231, name: 'RADO Браслет кожаный', price: 220, images: ['Images/products/women/bracelet231-1.png','Images/products/women/bracelet231-2.png'], emoji: '📿' }
 ];
-var ACC_MEN = [
-  { id: 502, name: 'RADO Ремень кожаный', price: 267, images: ['Images/products/women/belt202-1.png','Images/products/women/belt202-2.png'], emoji: '🪢' },
-  { id: 503, name: 'RADO Чехол для очков', price: 179, images: ['Images/products/women/glasses203-1.png','Images/products/women/glasses203-2.png','Images/products/women/glasses203-3.png'], emoji: '🕶' },
-  { id: 220, name: 'RADO Портмоне мужское', price: 160, images: ['Images/products/women/portmone220-1.png','Images/products/women/portmone220-2.png','Images/products/women/portmone220-3.png'], emoji: '💳' },
-  { id: 221, name: 'RADO Обложка для паспорта', price: 320, images: ['Images/products/women/passport221-1.png','Images/products/women/passport221-2.png'], emoji: '📕' }
-];
+
 
 function renderAccCard(p) {
     var allImages = p.images && p.images.length ? p.images : (p.image ? [p.image] : []);
@@ -110,27 +100,14 @@ function renderAccCard(p) {
     var imageBlock = firstImg
         ? '<img src="' + firstImg + '" alt="" class="product-img product-img-cycle"'
           + (imagesList ? ' data-product-images="' + imagesList + '"' : '')
-          + ' onerror="this.style.display=\'none\'">'
+          + ' onerror="this.style.display='none'">'
           + (allImages.length > 1 ? '<button type="button" class="product-image-prev" aria-label="Назад">&#8249;</button><button type="button" class="product-image-next" aria-label="Вперёд">&#8250;</button>' : '')
         : '<div class="product-emoji">' + emoji + '</div>';
-    return '<div class="product-card product-card--catalog product-card--minimal" data-product-id="' + p.id + '" onclick="location.href=\'product.html?id=' + p.id + '\'" style="cursor:pointer">'
+    return '<div class="product-card product-card--catalog product-card--minimal" data-product-id="' + p.id + '" onclick="location.href='product.html?id=' + p.id + ''" style="cursor:pointer">'
         + '<div class="product-image product-image--cycle">' + imageBlock
         + '<div class="product-image__overlay"><div class="product-swatches"></div>'
         + '<div class="product-price-minimal-wrap">' + priceHtml + '</div>'
         + '</div></div></div>';
-}
-
-function switchAccTab(tab) {
-    var panelW = document.getElementById('panel-women');
-    var panelM = document.getElementById('panel-men');
-    if (tab === 'men') {
-        panelW.style.display = 'none'; panelW.classList.remove('active');
-        panelM.style.display = 'block'; panelM.classList.add('active');
-    } else {
-        panelM.style.display = 'none'; panelM.classList.remove('active');
-        panelW.style.display = 'block'; panelW.classList.add('active');
-    }
-    window.history.replaceState(null, '', '#' + tab);
 }
 
 function setupImageCycle(card) {
@@ -154,139 +131,11 @@ function setupImageCycle(card) {
 
 function initAccPage() {
     document.getElementById('acc-women').innerHTML = ACC_WOMEN.map(renderAccCard).join('');
-    document.getElementById('acc-men').innerHTML = ACC_MEN.map(renderAccCard).join('');
-    var startTab = window.location.hash === '#men' ? 'men' : 'women';
-    switchAccTab(startTab);
     document.querySelectorAll('.product-card--catalog').forEach(setupImageCycle);
 }
 
 initAccPage();
 
-window.addEventListener('hashchange', function() {
-    switchAccTab(window.location.hash === '#men' ? 'men' : 'women');
-});
-</script>
-
-
-<script>
-(function () {
-  // Build mobile nav from existing header links
-  function buildMobNav() {
-    var links = [];
-    // index.html uses .header-categories, others use .header .nav
-    var src = document.querySelector('.header-categories .container') ||
-              document.querySelector('.header .nav');
-    if (!src) return;
-
-    var nav = document.createElement('div');
-    nav.id = 'mob-nav';
-
-    src.childNodes.forEach(function (node) {
-      if (node.nodeType !== 1) return;
-      // Simple link
-      if (node.tagName === 'A') {
-        var a = document.createElement('a');
-        a.href = node.href;
-        a.textContent = node.textContent.trim();
-        nav.appendChild(a);
-      }
-      // Dropdown wrapper
-      if (node.classList && node.classList.contains('nav-dropdown')) {
-        var item = document.createElement('div');
-        item.className = 'mob-acc-item';
-
-        // Trigger label from the desktop link or accordion button
-        var label = '';
-        var desktopLink = node.querySelector('.nav-desktop-only') || node.querySelector('.nav-dropdown__trigger');
-        var mobileBtn  = node.querySelector('.mobile-acc-toggle');
-        if (desktopLink) label = desktopLink.textContent.trim();
-        else if (mobileBtn) label = mobileBtn.childNodes[0].textContent.trim();
-
-        var btn = document.createElement('button');
-        btn.className = 'mob-acc-btn';
-        btn.type = 'button';
-        btn.innerHTML = label +
-          '<svg width="12" height="12" viewBox="0 0 12 12" fill="none">' +
-          '<path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-          '</svg>';
-
-        var panel = document.createElement('div');
-        panel.className = 'mob-acc-panel';
-
-        var subLinks = node.querySelectorAll('.nav-dropdown__menu a, .mobile-acc-panel a');
-        subLinks.forEach(function (sub) {
-          var a = document.createElement('a');
-          a.href = sub.href;
-          a.textContent = sub.textContent.trim();
-          panel.appendChild(a);
-        });
-
-        btn.addEventListener('click', function () {
-          var open = item.classList.contains('is-open');
-          document.querySelectorAll('#mob-nav .mob-acc-item.is-open').forEach(function(i){i.classList.remove('is-open');});
-          if (!open) item.classList.add('is-open');
-        });
-
-        item.appendChild(btn);
-        item.appendChild(panel);
-        nav.appendChild(item);
-      }
-    });
-
-    // Close on any link click
-    nav.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', close);
-    });
-
-    document.body.appendChild(nav);
-    return nav;
-  }
-
-  var overlay = document.createElement('div');
-  overlay.id = 'mob-overlay';
-  document.body.appendChild(overlay);
-
-  var nav = buildMobNav();
-  var burger = document.getElementById('header-hamburger');
-  if (!burger) return;
-
-  function open() {
-    if (nav) nav.classList.add('is-open');
-    overlay.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    burger.setAttribute('aria-expanded', 'true');
-    // Animate burger
-    var header = burger.closest('.header');
-    if (header) header.classList.add('menu-open');
-  }
-
-  function close() {
-    if (nav) {
-      nav.classList.remove('is-open');
-      nav.querySelectorAll('.mob-acc-item.is-open').forEach(function(i){i.classList.remove('is-open');});
-    }
-    overlay.style.display = 'none';
-    document.body.style.overflow = '';
-    burger.setAttribute('aria-expanded', 'false');
-    var header = burger.closest('.header');
-    if (header) header.classList.remove('menu-open');
-  }
-
-  burger.addEventListener('click', function (e) {
-    e.stopPropagation();
-    nav && nav.classList.contains('is-open') ? close() : open();
-  });
-
-  overlay.addEventListener('click', close);
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') close();
-  });
-
-  window.addEventListener('resize', function () {
-    if (window.innerWidth > 768) close();
-  });
-})();
 </script>
 </body>
 </html>

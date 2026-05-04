@@ -1,15 +1,6 @@
 // База товаров для главной страницы с картинками
 // База товаров для главной страницы с картинками
 const topProducts = {
-    men: [
-        { id: 210, name: "RADO Мужские сумки — артикул 210. Дорожная сумка из натуральной кожи", price: 1400, category: "men", image: "Images/products/men/men210-1.png", color: "коричнево-бордовый", size: "L", material: "натуральная кожа", description: "Дорожная сумка RADO BAGS из натуральной кожи коричнево-бордового оттенка. Две ручки, съёмный плечевой ремень, основное отделение на молнии.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Дорожные сумки' }, { name: 'Материал', value: 'Натуральная кожа' }, { name: 'Цвет', value: 'Коричнево-бордовый' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-        { id: 211, name: "RADO Мужские сумки — артикул 211. Сумка через плечо из текстиля", price: 1470, category: "men", image: "Images/products/men/men211-1.png", color: "серый", size: "M", material: "текстиль", description: "Сумка через плечо RADO BAGS из текстиля серого цвета. Основное отделение на молнии, передний и боковой карманы.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Сумки через плечо' }, { name: 'Материал', value: 'Текстиль' }, { name: 'Цвет', value: 'Серый' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-        { id: 212, name: "RADO Мужские сумки — артикул 212. Сумка для ноутбука из натуральной кожи", price: 1540, category: "men", image: "Images/products/men/men212-1.png", color: "черный", size: "M", material: "натуральная кожа", description: "Сумка для ноутбука RADO BAGS из чёрной натуральной кожи. Два отделения и передние карманы на молнии, съёмный плечевой ремень.", emoji: "💼", specifications: [{ name: 'Категория', value: 'Сумки для ноутбука' }, { name: 'Материал', value: 'Натуральная кожа' }, { name: 'Цвет', value: 'Чёрный' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-        { id: 213, name: "RADO Мужские сумки — артикул 213. Сумка для ноутбука из плетёной кожи", price: 1610, category: "men", image: "Images/products/men/men213-1.png", color: "черный", size: "M", material: "натуральная кожа", description: "Сумка для ноутбука RADO BAGS из чёрной кожи с плетёной текстурой. Два отделения и передний карман на молнии, съёмный плечевой ремень.", emoji: "💼", specifications: [{ name: 'Категория', value: 'Сумки для ноутбука' }, { name: 'Материал', value: 'Натуральная кожа' }, { name: 'Цвет', value: 'Чёрный' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-        { id: 214, name: "RADO Мужские сумки — артикул 214. Сумка через плечо из текстиля", price: 1680, category: "men", image: "Images/products/men/men214-1.png", color: "черный", size: "M", material: "текстиль", description: "Сумка через плечо RADO BAGS из чёрного текстиля. Основное отделение и передний карман на молнии, регулируемый ремень.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Сумки через плечо' }, { name: 'Материал', value: 'Текстиль' }, { name: 'Цвет', value: 'Чёрный' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-        { id: 215, name: "RADO Мужские сумки — артикул 215. Рюкзак из натуральной кожи", price: 1750, category: "men", image: "Images/products/men/men215-1.png", color: "черный", size: "M", material: "натуральная кожа", description: "Рюкзак RADO BAGS из чёрной натуральной кожи. Клапан с ремнём, основное отделение и передний карман на молнии, регулируемые ремни.", emoji: "🎒", specifications: [{ name: 'Категория', value: 'Рюкзаки' }, { name: 'Материал', value: 'Натуральная кожа' }, { name: 'Цвет', value: 'Чёрный' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
-        { id: 216, name: "RADO Мужские сумки — артикул 216. Сумка через плечо из текстиля", price: 1820, category: "men", image: "Images/products/men/men216-1.png", color: "черный", size: "M", material: "текстиль", description: "Сумка через плечо RADO BAGS из чёрного текстиля. Два отделения и передний карман на молнии, регулируемый ремень.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Сумки через плечо' }, { name: 'Материал', value: 'Текстиль' }, { name: 'Цвет', value: 'Чёрный' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] }
-    ],
     accessories: [
         { id: 500, name: "RADO Кошелёк женский", price: 320, category: "accessories", subcategory: "women", image: "Images/products/women/wallet200-1.png", color: "бежевый", size: "", material: "натуральная кожа", description: "Женский кошелёк RADO из натуральной кожи.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Аксессуары' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
         { id: 501, name: "RADO Визитница", price: 280, category: "accessories", subcategory: "women", image: "Images/products/women/vizit201-1.png", color: "бежевый", size: "", material: "натуральная кожа", description: "Визитница RADO из натуральной кожи.", emoji: "👜", specifications: [{ name: 'Категория', value: 'Аксессуары' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
@@ -41,17 +32,10 @@ function syncTopProductsWithCatalog(limit = TOP_PRODUCTS_LIMIT) {
     
     const normalizeCategory = value => (value || '').toLowerCase();
     const womenFromCatalog = products.filter(p => normalizeCategory(p.category) === 'women' && p.id >= 116 && p.id <= 127);
-    // На главной в блоке «Мужские сумки» — те же артикулы, что и на men.html: 102–106 (с фото) + 210–216 (мужская линия)
-    const menWithPhotos = products.filter(p => p.onSale && p.id >= 102 && p.id <= 106);
-    const menLine = products.filter(p => normalizeCategory(p.category) === 'men' && p.id >= 210 && p.id <= 216);
-    const menFromCatalog = [...menWithPhotos, ...menLine];
     const accessoriesFromCatalog = products.filter(p => normalizeCategory(p.category) === 'accessories' && p.id);
     
     if (womenFromCatalog.length) {
         topProducts.women = womenFromCatalog.slice(0, limit);
-    }
-    if (menFromCatalog.length) {
-        topProducts.men = menFromCatalog.slice(0, limit);
     }
     if (accessoriesFromCatalog.length) {
         topProducts.accessories = accessoriesFromCatalog.slice(0, limit);
@@ -68,14 +52,13 @@ function findProductById(productId) {
         if (catalogProduct) return catalogProduct;
     }
     syncTopProductsWithCatalog();
-    return topProducts.women.find(function (p) { return p.id === id; }) || topProducts.men.find(function (p) { return p.id === id; }) || (topProducts.accessories && topProducts.accessories.find(function (p) { return p.id === id; })) || null;
+    return topProducts.women.find(function (p) { return p.id === id; }) || (topProducts.accessories && topProducts.accessories.find(function (p) { return p.id === id; })) || null;
 }
 
 function getAllProductsForSearch() {
     syncTopProductsWithCatalog();
     var list = [];
     if (topProducts.women) list = list.concat(topProducts.women);
-    if (topProducts.men) list = list.concat(topProducts.men);
     if (topProducts.accessories) list = list.concat(topProducts.accessories);
     if (typeof products !== 'undefined' && Array.isArray(products)) {
         var ids = {};
@@ -90,7 +73,6 @@ function getAllProductsForSearch() {
 // Настройки пагинации
 const ITEMS_PER_PAGE = 4;
 let currentWomenPage = 1;
-let currentMenPage = 1;
 let currentAccessoriesPage = 1;
 
 // Корзина (при загрузке синхронизируем счётчик и сумму с массивом cart)
@@ -190,44 +172,6 @@ function getSwatchColorsForCard(p) {
 }
 
 // Топ продаж — мужские
-function displayMenTopSales(page = 1) {
-    const grid = document.getElementById('men-top-grid');
-    const pagination = document.getElementById('men-pagination');
-    if (!grid) return;
-
-    syncTopProductsWithCatalog();
-    currentMenPage = page;
-    const menProducts = topProducts.men || [];
-    const totalPages = Math.max(1, Math.ceil(menProducts.length / ITEMS_PER_PAGE));
-    const startIndex = (page - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
-    const pageProducts = menProducts.slice(startIndex, endIndex);
-
-    grid.innerHTML = '';
-    if (pageProducts.length === 0) {
-        grid.innerHTML = '<p class="top-sales-empty">Товары мужской линии скоро появятся. <a href="men.html">Перейти в каталог</a></p>';
-        if (pagination) pagination.innerHTML = '';
-        return;
-    }
-    pageProducts.forEach(product => {
-        const productImage = getProductImage(product);
-        const swatches = getSwatchColorsForCard(product);
-        const swatchesHtml = swatches.length
-            ? `<div class="product-swatches">${swatches.map(s => `<span class="product-swatch" style="background-color:${s.hex}" title="${s.name}"></span>`).join('')}</div>`
-            : '<div class="product-swatches"></div>';
-        const oldPrice = product.originalPrice || product.oldPrice;
-        const priceHtml = oldPrice
-            ? `<span class="product-price-minimal product-price-minimal--old">${oldPrice} MDL</span> <span class="product-price-minimal">${product.price} MDL</span>`
-            : `<span class="product-price-minimal">${product.price} MDL</span>`;
-        grid.innerHTML += `
-            <div class="product-card product-card--minimal" data-product-id="${product.id}">
-                <div class="product-image">${productImage}<div class="product-emoji" style="display: ${product.image ? 'none' : 'flex'}">👜</div><div class="product-image__overlay">${swatchesHtml}<div class="product-price-minimal-wrap">${priceHtml}</div></div></div>
-            </div>
-        `;
-    });
-    makeProductCardsClickable();
-    createPagination(pagination, page, totalPages, 'men');
-}
 
 // Топ продаж — аксессуары
 function displayAccessoriesTopSales(page = 1) {
@@ -318,7 +262,7 @@ function createPagination(container, currentPage, totalPages, type) {
     prevButton.className = 'page-btn';
     prevButton.innerHTML = '‹';
     prevButton.disabled = currentPage === 1;
-    const displayFn = type === 'men' ? displayMenTopSales : type === 'accessories' ? displayAccessoriesTopSales : displayWomenTopSales;
+    const displayFn = type === 'accessories' ? displayAccessoriesTopSales : displayWomenTopSales;
     prevButton.onclick = () => displayFn(currentPage - 1);
     container.appendChild(prevButton);
     
@@ -921,7 +865,6 @@ function fillSearchPopular() {
     syncTopProductsWithCatalog();
     var list = [];
     if (topProducts.women && topProducts.women.length) list = list.concat(topProducts.women.slice(0, 4));
-    if (list.length < 4 && topProducts.men && topProducts.men.length) list = list.concat(topProducts.men.slice(0, 4 - list.length));
     if (list.length < 4 && topProducts.accessories && topProducts.accessories.length) list = list.concat(topProducts.accessories.slice(0, 4 - list.length));
     if (list.length === 0) {
         var all = getAllProductsForSearch();
@@ -1137,7 +1080,6 @@ function initMobileMenu() {
 
 document.addEventListener('DOMContentLoaded', function() {
     try { displayWomenTopSales(); } catch(e) {}
-    try { displayMenTopSales(); } catch(e) {}
     try { displayAccessoriesTopSales(); } catch(e) {}
     try { initCart(); } catch(e) {}
     try { initHeaderOverBannerScroll(); } catch(e) {}
@@ -1210,7 +1152,6 @@ function updateAddToCartButtons() {
 // Инициализация улучшенного функционала
 document.addEventListener('DOMContentLoaded', function() {
     displayWomenTopSales();
-    displayMenTopSales();
     displayAccessoriesTopSales();
     updateCartCount();
     
@@ -1295,7 +1236,6 @@ function displayWomenTopSales(page = 1) {
 // Обновляем инициализацию
 document.addEventListener('DOMContentLoaded', function() {
     displayWomenTopSales();
-    displayMenTopSales();
     displayAccessoriesTopSales();
     updateCartCount();
     
