@@ -2344,22 +2344,26 @@ const products = [
   { id: 220, name: "RADO Галстуки", price: 420, category: "accessories", subcategory: "women", images: ["Images/products/women/ties220-1.png"], image: "Images/products/women/ties220-1.png", color: "разные", size: "", material: "шёлк", description: "Коллекция стильных узких галстуков с характером. Чёткие линии, выразительные принты и актуальные оттенки — идеальный выбор для тех, кто хочет выглядеть современно без лишнего пафоса. Подходят как под классический образ, так и под casual стиль.", emoji: "👔", specifications: [{ name: 'Категория', value: 'Аксессуары' }, { name: 'Бренд', value: 'RADO BAGS' }, { name: 'Страна', value: 'Молдова' }] },
   {
     id: 221,
-    name: "RADO Обложка для паспорта",
+    name: "RADO Платок",
     price: 320,
     category: "accessories",
-    subcategory: "men_acc",
-    image: "Images/products/women/passport221-1.png",
+    subcategory: "women",
+    image: "Images/products/women/scarf230-1.png",
     images: [
-      "Images/products/women/passport221-1.png",
-      "Images/products/women/passport221-2.png"
+      "Images/products/women/scarf230-1.png",
+      "Images/products/women/scarf230-2.png"
     ],
     isNew: false,
     onSale: false,
     color: "",
     size: "",
-    material: "",
-    description: "",
-    emoji: "🎁",
+    material: "шёлк",
+    description: "Коллекция стильных платков с художественными принтами — от классических мотивов до современной абстракции. Это аксессуар, который легко превращает базовый образ в продуманный и выразительный.
+
+Лёгкая ткань, комфорт в носке и универсальные размеры позволяют носить платок по-разному: на шее, на сумке или как акцент в образе. Подходит как для повседневного стиля, так и для особых случаев.
+
+Один платок — и образ выглядит дороже, собраннее и интереснее.",
+    emoji: "🧣",
     specifications: [
         { name: 'Категория', value: 'Аксессуары' },
         { name: 'Бренд', value: 'RADO BAGS' },
