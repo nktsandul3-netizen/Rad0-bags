@@ -7,8 +7,7 @@
 <title>Аксессуары - RADO BAGS</title>
 <link rel="stylesheet" href="style.css">
 <style>
-  .acc-panel { display: none; }
-  .acc-panel.active { display: block; }
+  .acc-panel { display: block; }
 </style>
 </head>
 <body>
@@ -130,6 +129,8 @@ function setupImageCycle(card) {
 }
 
 function initAccPage() {
+    var panel = document.getElementById('panel-women');
+    if (panel) { panel.style.display = 'block'; panel.classList.add('active'); }
     document.getElementById('acc-women').innerHTML = ACC_WOMEN.map(renderAccCard).join('');
     document.querySelectorAll('.product-card--catalog').forEach(setupImageCycle);
 }
