@@ -680,7 +680,7 @@ function initHeroBanner() {
     var content2 = document.getElementById('hero-slide2-content');
     var dots   = document.querySelectorAll('.hero-dot');
 
-    if (!slide1 || !slide2) return;
+    if (!slide1) return;
 
     var current = 1; // active slide index
 
